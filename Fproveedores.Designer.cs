@@ -40,6 +40,10 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbDatospanes = new System.Windows.Forms.GroupBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.lbltelefono = new System.Windows.Forms.Label();
+            this.Txtcargo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
             this.txtnombrecontacto = new System.Windows.Forms.TextBox();
@@ -54,10 +58,6 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.Txtcargo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txttelefono = new System.Windows.Forms.TextBox();
-            this.lbltelefono = new System.Windows.Forms.Label();
             this.grbEdicion.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
             this.grbDatospanes.SuspendLayout();
@@ -133,7 +133,7 @@
             this.grbNavegacion.Margin = new System.Windows.Forms.Padding(1);
             this.grbNavegacion.Name = "grbNavegacion";
             this.grbNavegacion.Padding = new System.Windows.Forms.Padding(1);
-            this.grbNavegacion.Size = new System.Drawing.Size(553, 103);
+            this.grbNavegacion.Size = new System.Drawing.Size(354, 103);
             this.grbNavegacion.TabIndex = 20;
             this.grbNavegacion.TabStop = false;
             this.grbNavegacion.Text = "Navegacion";
@@ -149,10 +149,10 @@
             // 
             // btnultimo
             // 
-            this.btnultimo.Location = new System.Drawing.Point(404, 46);
+            this.btnultimo.Location = new System.Drawing.Point(265, 46);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
-            this.btnultimo.Size = new System.Drawing.Size(141, 33);
+            this.btnultimo.Size = new System.Drawing.Size(70, 33);
             this.btnultimo.TabIndex = 3;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = true;
@@ -160,10 +160,10 @@
             // 
             // btnsiguiente
             // 
-            this.btnsiguiente.Location = new System.Drawing.Point(286, 46);
+            this.btnsiguiente.Location = new System.Drawing.Point(202, 46);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(107, 33);
+            this.btnsiguiente.Size = new System.Drawing.Size(61, 33);
             this.btnsiguiente.TabIndex = 2;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = true;
@@ -171,10 +171,10 @@
             // 
             // btnanterior
             // 
-            this.btnanterior.Location = new System.Drawing.Point(159, 46);
+            this.btnanterior.Location = new System.Drawing.Point(103, 46);
             this.btnanterior.Margin = new System.Windows.Forms.Padding(1);
             this.btnanterior.Name = "btnanterior";
-            this.btnanterior.Size = new System.Drawing.Size(90, 33);
+            this.btnanterior.Size = new System.Drawing.Size(57, 33);
             this.btnanterior.TabIndex = 1;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = true;
@@ -182,10 +182,10 @@
             // 
             // btnprimero
             // 
-            this.btnprimero.Location = new System.Drawing.Point(7, 46);
+            this.btnprimero.Location = new System.Drawing.Point(25, 46);
             this.btnprimero.Margin = new System.Windows.Forms.Padding(1);
             this.btnprimero.Name = "btnprimero";
-            this.btnprimero.Size = new System.Drawing.Size(141, 33);
+            this.btnprimero.Size = new System.Drawing.Size(76, 33);
             this.btnprimero.TabIndex = 0;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = true;
@@ -219,6 +219,42 @@
             this.grbDatospanes.TabIndex = 19;
             this.grbDatospanes.TabStop = false;
             this.grbDatospanes.Text = "Datos de Proveedores";
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(130, 213);
+            this.txttelefono.Margin = new System.Windows.Forms.Padding(1);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(81, 20);
+            this.txttelefono.TabIndex = 20;
+            // 
+            // lbltelefono
+            // 
+            this.lbltelefono.AutoSize = true;
+            this.lbltelefono.Location = new System.Drawing.Point(52, 216);
+            this.lbltelefono.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lbltelefono.Name = "lbltelefono";
+            this.lbltelefono.Size = new System.Drawing.Size(67, 13);
+            this.lbltelefono.TabIndex = 19;
+            this.lbltelefono.Text = "TELEFONO:";
+            // 
+            // Txtcargo
+            // 
+            this.Txtcargo.Location = new System.Drawing.Point(130, 143);
+            this.Txtcargo.Margin = new System.Windows.Forms.Padding(1);
+            this.Txtcargo.Name = "Txtcargo";
+            this.Txtcargo.Size = new System.Drawing.Size(81, 20);
+            this.Txtcargo.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 146);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "CARGO:";
             // 
             // txtemail
             // 
@@ -338,7 +374,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(10, 449);
+            this.btnVolver.Location = new System.Drawing.Point(415, 379);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(119, 42);
             this.btnVolver.TabIndex = 18;
@@ -346,47 +382,11 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
-            // Txtcargo
-            // 
-            this.Txtcargo.Location = new System.Drawing.Point(130, 143);
-            this.Txtcargo.Margin = new System.Windows.Forms.Padding(1);
-            this.Txtcargo.Name = "Txtcargo";
-            this.Txtcargo.Size = new System.Drawing.Size(81, 20);
-            this.Txtcargo.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 146);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "CARGO:";
-            // 
-            // txttelefono
-            // 
-            this.txttelefono.Location = new System.Drawing.Point(130, 213);
-            this.txttelefono.Margin = new System.Windows.Forms.Padding(1);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(81, 20);
-            this.txttelefono.TabIndex = 20;
-            // 
-            // lbltelefono
-            // 
-            this.lbltelefono.AutoSize = true;
-            this.lbltelefono.Location = new System.Drawing.Point(52, 216);
-            this.lbltelefono.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lbltelefono.Name = "lbltelefono";
-            this.lbltelefono.Size = new System.Drawing.Size(67, 13);
-            this.lbltelefono.TabIndex = 19;
-            this.lbltelefono.Text = "TELEFONO:";
-            // 
             // Fproveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 500);
+            this.ClientSize = new System.Drawing.Size(579, 456);
             this.Controls.Add(this.grbEdicion);
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbDatospanes);

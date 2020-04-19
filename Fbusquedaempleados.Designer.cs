@@ -34,6 +34,7 @@
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.lblbuscar = new System.Windows.Forms.Label();
             this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,13 +73,14 @@
             this.grdBusquedaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdBusquedaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idempleado,
+            this.CODIGO,
             this.nombre,
             this.apellido,
             this.direccion,
             this.dui,
             this.telefono,
             this.SALARIO});
-            this.grdBusquedaClientes.Location = new System.Drawing.Point(10, 59);
+            this.grdBusquedaClientes.Location = new System.Drawing.Point(10, 56);
             this.grdBusquedaClientes.Margin = new System.Windows.Forms.Padding(1);
             this.grdBusquedaClientes.Name = "grdBusquedaClientes";
             this.grdBusquedaClientes.ReadOnly = true;
@@ -86,7 +88,6 @@
             this.grdBusquedaClientes.RowTemplate.Height = 40;
             this.grdBusquedaClientes.Size = new System.Drawing.Size(720, 354);
             this.grdBusquedaClientes.TabIndex = 25;
-           
             // 
             // txtbuscar
             // 
@@ -116,6 +117,12 @@
             this.idempleado.ReadOnly = true;
             this.idempleado.Visible = false;
             this.idempleado.Width = 150;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.HeaderText = "CODIGO";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
             // 
             // nombre
             // 
@@ -194,6 +201,7 @@
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idempleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;

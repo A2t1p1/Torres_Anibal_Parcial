@@ -35,10 +35,12 @@
             this.lblbuscar = new System.Windows.Forms.Label();
             this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_p = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,11 +74,13 @@
             this.grdBusquedaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idcliente,
             this.codigo,
-            this.nombre,
-            this.descripcion,
-            this.tipo,
-            this.precio});
-            this.grdBusquedaClientes.Location = new System.Drawing.Point(12, 61);
+            this.nombre_p,
+            this.nombre_contacto,
+            this.cargo,
+            this.direccion,
+            this.telefono,
+            this.email});
+            this.grdBusquedaClientes.Location = new System.Drawing.Point(8, 64);
             this.grdBusquedaClientes.Margin = new System.Windows.Forms.Padding(1);
             this.grdBusquedaClientes.Name = "grdBusquedaClientes";
             this.grdBusquedaClientes.ReadOnly = true;
@@ -123,41 +127,53 @@
             this.codigo.ReadOnly = true;
             this.codigo.Width = 150;
             // 
-            // nombre
+            // nombre_p
             // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "NOMBRE";
-            this.nombre.MinimumWidth = 12;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 150;
+            this.nombre_p.DataPropertyName = "nombre_proveedor";
+            this.nombre_p.HeaderText = "NOMBRE_PROVEEDOR";
+            this.nombre_p.MinimumWidth = 12;
+            this.nombre_p.Name = "nombre_p";
+            this.nombre_p.ReadOnly = true;
+            this.nombre_p.Width = 150;
             // 
-            // descripcion
+            // nombre_contacto
             // 
-            this.descripcion.DataPropertyName = "descripcion";
-            this.descripcion.HeaderText = "DESCRIPCION";
-            this.descripcion.MinimumWidth = 12;
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            this.descripcion.Width = 150;
+            this.nombre_contacto.HeaderText = "NOMBRE_CONTACTO";
+            this.nombre_contacto.Name = "nombre_contacto";
+            this.nombre_contacto.ReadOnly = true;
             // 
-            // tipo
+            // cargo
             // 
-            this.tipo.DataPropertyName = "telefono";
-            this.tipo.HeaderText = "TIPO";
-            this.tipo.MinimumWidth = 12;
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            this.tipo.Width = 250;
+            this.cargo.HeaderText = "CARGO_CONTACTO";
+            this.cargo.Name = "cargo";
+            this.cargo.ReadOnly = true;
             // 
-            // precio
+            // direccion
             // 
-            this.precio.DataPropertyName = "precio";
-            this.precio.HeaderText = "PRECIO";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "DIRECCION";
+            this.direccion.MinimumWidth = 12;
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Width = 150;
             // 
-            // Fbusquedapanes
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "TELEFONO";
+            this.telefono.MinimumWidth = 12;
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            this.telefono.Width = 250;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "EMAIL";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // Fbusquedaproveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,8 +183,8 @@
             this.Controls.Add(this.grdBusquedaClientes);
             this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.lblbuscar);
-            this.Name = "Fbusquedapanes";
-            this.Text = "Fbusquedapanes";
+            this.Name = "Fbusquedaproveedores";
+            this.Text = "Fbusquedaproveedores";
             ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,9 +200,11 @@
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_p;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_contacto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }

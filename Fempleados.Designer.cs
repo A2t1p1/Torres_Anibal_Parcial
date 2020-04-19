@@ -133,7 +133,7 @@
             this.grbNavegacion.Margin = new System.Windows.Forms.Padding(1);
             this.grbNavegacion.Name = "grbNavegacion";
             this.grbNavegacion.Padding = new System.Windows.Forms.Padding(1);
-            this.grbNavegacion.Size = new System.Drawing.Size(553, 103);
+            this.grbNavegacion.Size = new System.Drawing.Size(417, 77);
             this.grbNavegacion.TabIndex = 16;
             this.grbNavegacion.TabStop = false;
             this.grbNavegacion.Text = "Navegacion";
@@ -141,7 +141,7 @@
             // lblnregistros
             // 
             this.lblnregistros.AutoSize = true;
-            this.lblnregistros.Location = new System.Drawing.Point(83, 26);
+            this.lblnregistros.Location = new System.Drawing.Point(89, 8);
             this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnregistros.Name = "lblnregistros";
             this.lblnregistros.Size = new System.Drawing.Size(0, 13);
@@ -149,10 +149,10 @@
             // 
             // btnultimo
             // 
-            this.btnultimo.Location = new System.Drawing.Point(404, 46);
+            this.btnultimo.Location = new System.Drawing.Point(277, 28);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
-            this.btnultimo.Size = new System.Drawing.Size(141, 33);
+            this.btnultimo.Size = new System.Drawing.Size(105, 33);
             this.btnultimo.TabIndex = 3;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = true;
@@ -160,10 +160,10 @@
             // 
             // btnsiguiente
             // 
-            this.btnsiguiente.Location = new System.Drawing.Point(286, 46);
+            this.btnsiguiente.Location = new System.Drawing.Point(225, 28);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(107, 33);
+            this.btnsiguiente.Size = new System.Drawing.Size(50, 33);
             this.btnsiguiente.TabIndex = 2;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = true;
@@ -171,10 +171,10 @@
             // 
             // btnanterior
             // 
-            this.btnanterior.Location = new System.Drawing.Point(159, 46);
+            this.btnanterior.Location = new System.Drawing.Point(124, 28);
             this.btnanterior.Margin = new System.Windows.Forms.Padding(1);
             this.btnanterior.Name = "btnanterior";
-            this.btnanterior.Size = new System.Drawing.Size(90, 33);
+            this.btnanterior.Size = new System.Drawing.Size(50, 33);
             this.btnanterior.TabIndex = 1;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = true;
@@ -182,10 +182,10 @@
             // 
             // btnprimero
             // 
-            this.btnprimero.Location = new System.Drawing.Point(7, 46);
+            this.btnprimero.Location = new System.Drawing.Point(17, 28);
             this.btnprimero.Margin = new System.Windows.Forms.Padding(1);
             this.btnprimero.Name = "btnprimero";
-            this.btnprimero.Size = new System.Drawing.Size(141, 33);
+            this.btnprimero.Size = new System.Drawing.Size(105, 33);
             this.btnprimero.TabIndex = 0;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = true;
@@ -375,23 +375,23 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(10, 449);
+            this.btnVolver.Location = new System.Drawing.Point(462, 370);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(119, 42);
-            this.btnVolver.TabIndex = 14;
+            this.btnVolver.Size = new System.Drawing.Size(101, 42);
+            this.btnVolver.TabIndex = 18;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
             // 
             // Fempleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 497);
+            this.ClientSize = new System.Drawing.Size(579, 429);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.grbEdicion);
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbDatosClientes);
-            this.Controls.Add(this.btnVolver);
             this.Name = "Fempleados";
             this.Text = "Fempleados";
             this.grbEdicion.ResumeLayout(false);
@@ -432,8 +432,8 @@
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label lblcodigo;
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtsalario;
         private System.Windows.Forms.Label lblsueldo;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

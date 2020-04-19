@@ -27,9 +27,9 @@ namespace Torres_Anibal_Parcial
             ds.Clear();
             comandosSQL.Connection = miConexion;
 
-            comandosSQL.CommandText = "select * from clientes";
+            comandosSQL.CommandText = "select * from usuarios";
             miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(ds, "clientes");
+            miAdaptadorDatos.Fill(ds, "usuarios");
 
             comandosSQL.CommandText = "select * from empleados";
             miAdaptadorDatos.SelectCommand = comandosSQL;
@@ -43,26 +43,20 @@ namespace Torres_Anibal_Parcial
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "productos");
 
-            comandosSQL.CommandText = "select * from facturas";
+            comandosSQL.CommandText = "select * from categorias";
             miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(ds, "facturas");
+            miAdaptadorDatos.Fill(ds, "categorias");
 
-            comandosSQL.CommandText = "select * from detalles";
-            miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(ds, "detalles");
-
-            comandosSQL.CommandText = "select * from ventas";
-            miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(ds, "ventas");
+            
 
             return ds;
         }
-        public void Mantenimiento_clientes(String[] datos, String accion)
+        public void Mantenimiento_usuarios(String[] datos, String accion)
         {
             String sql = "";
             if (accion == "Nuevo")
             {
-                sql = "INSERT INTO clientes (codigo,nombre,apellido,direccion,dui,telefono) VALUES(" +
+                sql = "INSERT INTO usuarios (codigo,nombre,apellido,direccion,dui,telefono) VALUES(" +
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'," +
@@ -73,18 +67,18 @@ namespace Torres_Anibal_Parcial
             }
             else if (accion == "Modificar")
             {
-                sql = "UPDATE clientes SET " +
+                sql = "UPDATE usuarios SET " +
                     "codigo          = '" + datos[1] + "'," +
                     "nombre          = '" + datos[2] + "'," +
                     "apellido        = '" + datos[3] + "'," +
                     "direccion       = '" + datos[4] + "'," +
                     "dui             = '" + datos[5] + "'," +
                     "telefono        = '" + datos[6] + "' " +
-                    "WHERE idcliente = '" + datos[0] + "'";
+                    "WHERE idusuario = '" + datos[0] + "'";
             }
             else if (accion == "Eliminar")
             {
-                sql = "DELETE clientes FROM clientes WHERE idcliente='" + datos[0] + "'";
+                sql = "DELETE usuarios FROM usuarios WHERE idusuario='" + datos[0] + "'";
             }
             ProcesarSQL(sql);
         }
@@ -126,7 +120,7 @@ namespace Torres_Anibal_Parcial
             string sql = "";
             if (accion == "Nuevo")
             {
-                sql = "insert into proveedores(codigo,nombre_proveedor,nombre_contacto,cargo_contacto,direccion,telefono,email) values(" +
+                sql = "insert into proveedores(codigo,nombrep,nombrec,cargoc,direccion,telefono,email) values(" +
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'," +
@@ -140,19 +134,48 @@ namespace Torres_Anibal_Parcial
             {
                 sql = "update proveedores set  " +
                     "codigo =                   '" + datos[1] + "'," +
-                    "nombre_proveedor =         '" + datos[2] + "'," +
-                    "nombre_contacto =          '" + datos[3] + "'," +
-                    "cargo_contacto=            '" + datos[4] + "'," +
+                    "nombrep =         '" + datos[2] + "'," +
+                    "nombrec =          '" + datos[3] + "'," +
+                    "cargoc=            '" + datos[4] + "'," +
                     "direccion=                 '" + datos[5] + "'," +
                     "telefono=                  '" + datos[6] + "'," +
                     "email=                     '" + datos[7] + "'" +
-                    "where idproveedor =              '" + datos[0] + "'";
+                    "where idproveedor =        '" + datos[0] + "'";
             }
             else if (accion == "Eliminar")
             {
                 sql = "delete proveedores from proveedores where idproveedor='" + datos[0] + "'";
             }
             ProcesarSQL(sql);
+        }
+        public void Mantenimiento_productos_categorias(string[] datos, string accion)
+        {
+            string sql = "";
+            if (accion=="Nuevo")
+            {
+                sql = "insert into productos(idcategoria,codigo,nombre,descripcion,precio) values(" +
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'," +
+                    "'" + datos[5] + "'" +
+                    ")";
+            }
+            else if (accion=="Modificar")
+            {
+                sql = "update productos set  " +
+                   "idcategoria =        '" + datos[1] + "'," +
+                   "codigo =             '" + datos[2] + "'," +
+                   "nombre=             '" + datos[3] + "'," +
+                   "descripcion=         '" + datos[4] + "'," +
+                   "precio=              '" + datos[5] + "'"  +
+                   "where idproducto =   '" + datos[0] + "'";
+            }
+            else
+            {
+                sql = "delete productos from productos where idproducto='" + datos[0] + "'";
+
+            }ProcesarSQL(sql);
         }
         void ProcesarSQL(String sql)
         {

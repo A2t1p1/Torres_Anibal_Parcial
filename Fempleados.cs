@@ -128,7 +128,7 @@ namespace Torres_Anibal_Parcial
 
         private void Btneliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de Clientes",
+            if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de Empleados",
                MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblidempleado.Text };
@@ -175,7 +175,7 @@ namespace Torres_Anibal_Parcial
             }
             else
             {
-                MessageBox.Show("Primer Registro...", "Registros de Cliente",
+                MessageBox.Show("Primer Registro...", "Registros de Empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -189,7 +189,7 @@ namespace Torres_Anibal_Parcial
             }
             else
             {
-                MessageBox.Show("Ultimo Registro...", "Registros de Cliente",
+                MessageBox.Show("Ultimo Registro...", "Registros de Empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -198,6 +198,14 @@ namespace Torres_Anibal_Parcial
         {
             posicion = tbl.Rows.Count - 1;
             MostrarDatos();
+        }
+
+        private void btnVolver_Click_1(object sender, EventArgs e)
+        {
+            Fmenu cambio = new Fmenu();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
         }
     }
 }

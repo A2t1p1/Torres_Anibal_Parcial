@@ -125,7 +125,7 @@ namespace Torres_Anibal_Parcial
 
         private void Btneliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + txtnombreproveedor.Text, "Registro de Panes",
+            if (MessageBox.Show("Esta seguro de elimina a " + txtnombreproveedor.Text, "Registro de Proveedores",
               MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblidpan.Text };

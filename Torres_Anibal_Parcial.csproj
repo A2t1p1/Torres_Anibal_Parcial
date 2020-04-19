@@ -63,11 +63,17 @@
   <ItemGroup>
     <Compile Include="ConexionDB.cs" />
     <Compile Include="Convertidor.cs" />
-    <Compile Include="Fbusquedacliente.cs">
+    <Compile Include="Fbusquedaproductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fbusquedacliente.Designer.cs">
-      <DependentUpon>Fbusquedacliente.cs</DependentUpon>
+    <Compile Include="Fbusquedaproductos.Designer.cs">
+      <DependentUpon>Fbusquedaproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fbusquedausuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fbusquedausuarios.Designer.cs">
+      <DependentUpon>Fbusquedausuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Fbusquedaempleados.cs">
       <SubType>Form</SubType>
@@ -81,11 +87,11 @@
     <Compile Include="Fbusquedaproveedores.Designer.cs">
       <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fclientes.cs">
+    <Compile Include="Fusuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fclientes.Designer.cs">
-      <DependentUpon>Fclientes.cs</DependentUpon>
+    <Compile Include="Fusuarios.Designer.cs">
+      <DependentUpon>Fusuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Fempleados.cs">
       <SubType>Form</SubType>
@@ -105,6 +111,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fproductos-categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fproductos-categorias.Designer.cs">
+      <DependentUpon>Fproductos-categorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fproveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,8 +131,11 @@
     <Compile Include="Proyecto.Designer.cs">
       <DependentUpon>Proyecto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Fbusquedacliente.resx">
-      <DependentUpon>Fbusquedacliente.cs</DependentUpon>
+    <EmbeddedResource Include="Fbusquedaproductos.resx">
+      <DependentUpon>Fbusquedaproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fbusquedausuarios.resx">
+      <DependentUpon>Fbusquedausuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fbusquedaempleados.resx">
       <DependentUpon>Fbusquedaempleados.cs</DependentUpon>
@@ -128,8 +143,8 @@
     <EmbeddedResource Include="Fbusquedaproveedores.resx">
       <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fclientes.resx">
-      <DependentUpon>Fclientes.cs</DependentUpon>
+    <EmbeddedResource Include="Fusuarios.resx">
+      <DependentUpon>Fusuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fempleados.resx">
       <DependentUpon>Fempleados.cs</DependentUpon>
@@ -139,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fproductos-categorias.resx">
+      <DependentUpon>Fproductos-categorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fproveedores.resx">
       <DependentUpon>Fproveedores.cs</DependentUpon>

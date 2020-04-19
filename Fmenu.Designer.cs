@@ -39,23 +39,24 @@
             // btnMateriales
             // 
             this.btnMateriales.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMateriales.Location = new System.Drawing.Point(414, 153);
+            this.btnMateriales.Location = new System.Drawing.Point(407, 40);
             this.btnMateriales.Name = "btnMateriales";
             this.btnMateriales.Size = new System.Drawing.Size(145, 67);
             this.btnMateriales.TabIndex = 11;
             this.btnMateriales.Text = "Proveedores";
             this.btnMateriales.UseVisualStyleBackColor = true;
+            this.btnMateriales.Click += new System.EventHandler(this.btnMateriales_Click);
             // 
             // btnPanes
             // 
             this.btnPanes.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPanes.Location = new System.Drawing.Point(414, 40);
+            this.btnPanes.Location = new System.Drawing.Point(407, 153);
             this.btnPanes.Name = "btnPanes";
             this.btnPanes.Size = new System.Drawing.Size(145, 67);
             this.btnPanes.TabIndex = 10;
             this.btnPanes.Text = "Productos";
             this.btnPanes.UseVisualStyleBackColor = true;
-            this.btnPanes.Click += new System.EventHandler(this.BtnPanes_Click);
+            this.btnPanes.Click += new System.EventHandler(this.BtnProducto_Click);
             // 
             // btnCliente
             // 

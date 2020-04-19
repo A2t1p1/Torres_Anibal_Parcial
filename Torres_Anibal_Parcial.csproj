@@ -75,11 +75,11 @@
     <Compile Include="Fbusquedaempleados.Designer.cs">
       <DependentUpon>Fbusquedaempleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fbusquedapanes.cs">
+    <Compile Include="Fbusquedaproductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fbusquedapanes.Designer.cs">
-      <DependentUpon>Fbusquedapanes.cs</DependentUpon>
+    <Compile Include="Fbusquedaproductos.Designer.cs">
+      <DependentUpon>Fbusquedaproductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Fclientes.cs">
       <SubType>Form</SubType>
@@ -105,11 +105,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fpanes.cs">
+    <Compile Include="Fproductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fpanes.Designer.cs">
-      <DependentUpon>Fpanes.cs</DependentUpon>
+    <Compile Include="Fproductos.Designer.cs">
+      <DependentUpon>Fproductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,8 +125,8 @@
     <EmbeddedResource Include="Fbusquedaempleados.resx">
       <DependentUpon>Fbusquedaempleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fbusquedapanes.resx">
-      <DependentUpon>Fbusquedapanes.cs</DependentUpon>
+    <EmbeddedResource Include="Fbusquedaproductos.resx">
+      <DependentUpon>Fbusquedaproductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fclientes.resx">
       <DependentUpon>Fclientes.cs</DependentUpon>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fpanes.resx">
-      <DependentUpon>Fpanes.cs</DependentUpon>
+    <EmbeddedResource Include="Fproductos.resx">
+      <DependentUpon>Fproductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

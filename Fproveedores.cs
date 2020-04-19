@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace Torres_Anibal_Parcial
 {
-    public partial class Fpanes : Form
+    public partial class Fproveedores : Form
     {
         ConexionDB objConexion = new ConexionDB();
         int posicion = 0;
 
         string accion="Nuevo";
         DataTable tblp = new DataTable();
-        public Fpanes()
+        public Fproveedores()
         {
             InitializeComponent();
         }
         void ActualizarDs()
         {
-            tblp = objConexion.Obtener_datos().Tables["panes"];
-            tblp.PrimaryKey = new DataColumn[] { tblp.Columns["idpan"] };
+            tblp = objConexion.Obtener_datos().Tables["proveedores"];
+            tblp.PrimaryKey = new DataColumn[] { tblp.Columns["idproveedor"] };
             MostrarDatos();
         }
         void MostrarDatos()
@@ -33,15 +33,17 @@ namespace Torres_Anibal_Parcial
             {
                 lblidpan.Text = tblp.Rows[posicion].ItemArray[0].ToString();
                 txtcodigo.Text = tblp.Rows[posicion].ItemArray[1].ToString();
-                txtnombre.Text = tblp.Rows[posicion].ItemArray[2].ToString();
-                txttipo.Text = tblp.Rows[posicion].ItemArray[3].ToString();
-                txtprecio.Text = tblp.Rows[posicion].ItemArray[4].ToString();
+                txtnombreproveedor.Text = tblp.Rows[posicion].ItemArray[2].ToString();
+                txtnombrecontacto.Text = tblp.Rows[posicion].ItemArray[3].ToString();
+                txtdireccion.Text = tblp.Rows[posicion].ItemArray[4].ToString();
+                txttelefono.Text = tblp.Rows[posicion].ItemArray[5].ToString();
+                txtemail.Text = tblp.Rows[posicion].ItemArray[6].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tblp.Rows.Count;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No hay Datos que mostrar", "Registros de Panes",
+                MessageBox.Show("No hay Datos que mostrar", "Registros de Proveedores",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar_cajas();
             }
@@ -49,10 +51,12 @@ namespace Torres_Anibal_Parcial
         void Limpiar_cajas()
         {
             txtcodigo.Text = "";
-            txtnombre.Text = "";
-            txtdescripcion.Text = "";
-            txttipo.Text = "";
-            txtprecio.Text = "";
+            txtnombreproveedor.Text = "";
+            txtnombrecontacto.Text = "";
+            Txtcargo.Text = "";
+            txtdireccion.Text = "";
+            txttelefono.Text = "";
+            txtemail.Text = "";
         }
         void Controles(Boolean valor)
         {
@@ -78,13 +82,13 @@ namespace Torres_Anibal_Parcial
                 String[] valores = {
                     lblidpan.Text,
                     txtcodigo.Text,
-                    txtnombre.Text,
-                    txtdescripcion.Text,
-                    txttipo.Text,
-                    txtprecio.Text,
+                    txtnombreproveedor.Text,
+                    txtnombrecontacto.Text,
+                    txtdireccion.Text,
+                    txtemail.Text,
                 };
 
-                objConexion.Mantenimiento_panes(valores, accion);
+                objConexion.Mantenimiento_proveedores(valores, accion);
                 ActualizarDs();
                 posicion = tblp.Rows.Count - 1;
                 MostrarDatos();
@@ -121,11 +125,11 @@ namespace Torres_Anibal_Parcial
 
         private void Btneliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de Panes",
+            if (MessageBox.Show("Esta seguro de elimina a " + txtnombreproveedor.Text, "Registro de Panes",
               MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblidpan.Text };
-                objConexion.Mantenimiento_panes(valores, "eliminar");
+                objConexion.Mantenimiento_proveedores(valores, "eliminar");
 
                 ActualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
@@ -135,12 +139,12 @@ namespace Torres_Anibal_Parcial
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            Fbusquedapanes frmBusquedapanes = new Fbusquedapanes();
-            frmBusquedapanes.ShowDialog();
+            Fbusquedaproveedores frmBusquedaproveedores = new Fbusquedaproveedores();
+            frmBusquedaproveedores.ShowDialog();
 
-            if (frmBusquedapanes._idpan > 0)
+            if (frmBusquedaproveedores._idproveedor > 0)
             {
-                posicion = tblp.Rows.IndexOf(tblp.Rows.Find(frmBusquedapanes._idpan));
+                posicion = tblp.Rows.IndexOf(tblp.Rows.Find(frmBusquedaproveedores._idproveedor));
                 MostrarDatos();
             }
         }
@@ -151,6 +155,46 @@ namespace Torres_Anibal_Parcial
             this.Hide();
             cambio.ShowDialog();
             this.Close();
+        }
+
+        private void btnprimero_Click(object sender, EventArgs e)
+        {
+            posicion = 0;
+            MostrarDatos();
+        }
+
+        private void btnultimo_Click(object sender, EventArgs e)
+        {
+            posicion = tblp.Rows.Count - 1;
+            MostrarDatos();
+        }
+
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            if (posicion > 0)
+            {
+                posicion--;
+                MostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Primer Registro...", "Registros de Proveedor",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnsiguiente_Click(object sender, EventArgs e)
+        {
+            if (posicion < tblp.Rows.Count - 1)
+            {
+                posicion++;
+                MostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Ultimo Registro...", "Registros de Proveedor",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

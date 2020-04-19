@@ -27,7 +27,7 @@ namespace Torres_Anibal_Parcial
 
         private void BtnPanes_Click(object sender, EventArgs e)
         {
-            Fproductos cambio = new Fproductos();
+            Fproveedores cambio = new Fproveedores();
             this.Hide();
             cambio.ShowDialog();
             this.Close();

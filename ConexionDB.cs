@@ -35,9 +35,13 @@ namespace Torres_Anibal_Parcial
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "empleados");
 
-            comandosSQL.CommandText = "select * from panes";
+            comandosSQL.CommandText = "select * from proveedores";
             miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(ds, "panes");
+            miAdaptadorDatos.Fill(ds, "proveedores");
+
+            comandosSQL.CommandText = "select * from productos";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "productos");
 
             comandosSQL.CommandText = "select * from facturas";
             miAdaptadorDatos.SelectCommand = comandosSQL;
@@ -117,31 +121,36 @@ namespace Torres_Anibal_Parcial
             }
             ProcesarSQL(sql);
         }
-        public void Mantenimiento_panes(string[] datos, string accion)
+        public void Mantenimiento_proveedores(string[] datos, string accion)
         {
             string sql = "";
             if (accion == "Nuevo")
             {
-                sql = "insert into panes(codigo,nombre,descripcion,precio) values(" +
+                sql = "insert into proveedores(codigo,nombre_proveedor,nombre_contacto,cargo_contacto,direccion,telefono,email) values(" +
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'" +
+                    "'" + datos[4] + "'," +
+                    "'" + datos[5] + "'," +
+                    "'" + datos[6] + "'," +
+                    "'" + datos[7] + "'"  +
                     ")";
             }
             else if (accion == "Modificar")
             {
-                sql = "update panes set  " +
-                    "codigo =        '" + datos[1] + "'," +
-                    "nombre =        '" + datos[2] + "'," +
-                    "descripcion =   '" + datos[3] + "'," +
-                    "precio=         '" + datos[4] + "',"  +
-                    "tipo=           '" + datos[5] + "'" +
-                    "where idpan = '" + datos[0] + "'";
+                sql = "update proveedores set  " +
+                    "codigo =                   '" + datos[1] + "'," +
+                    "nombre_proveedor =         '" + datos[2] + "'," +
+                    "nombre_contacto =          '" + datos[3] + "'," +
+                    "cargo_contacto=            '" + datos[4] + "'," +
+                    "direccion=                 '" + datos[5] + "'," +
+                    "telefono=                  '" + datos[6] + "'," +
+                    "email=                     '" + datos[7] + "'" +
+                    "where idproveedor =              '" + datos[0] + "'";
             }
             else if (accion == "Eliminar")
             {
-                sql = "delete panes from panes where idpan='" + datos[0] + "'";
+                sql = "delete proveedores from proveedores where idproveedor='" + datos[0] + "'";
             }
             ProcesarSQL(sql);
         }

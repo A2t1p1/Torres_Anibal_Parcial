@@ -1,6 +1,6 @@
 ﻿namespace Torres_Anibal_Parcial
 {
-    partial class Fproductos
+    partial class Fproveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -40,20 +40,24 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbDatospanes = new System.Windows.Forms.GroupBox();
-            this.txtprecio = new System.Windows.Forms.TextBox();
-            this.lblprecio = new System.Windows.Forms.Label();
-            this.txtdescripcion = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.lblemail = new System.Windows.Forms.Label();
+            this.txtnombrecontacto = new System.Windows.Forms.TextBox();
             this.lbldescripcion = new System.Windows.Forms.Label();
             this.lblidpan = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lbl6 = new System.Windows.Forms.Label();
-            this.txttipo = new System.Windows.Forms.TextBox();
-            this.lbltipo = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.lbldireccion = new System.Windows.Forms.Label();
+            this.txtnombreproveedor = new System.Windows.Forms.TextBox();
             this.lblnombre = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.Txtcargo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.lbltelefono = new System.Windows.Forms.Label();
             this.grbEdicion.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
             this.grbDatospanes.SuspendLayout();
@@ -72,7 +76,7 @@
             this.grbEdicion.Size = new System.Drawing.Size(182, 330);
             this.grbEdicion.TabIndex = 21;
             this.grbEdicion.TabStop = false;
-            this.grbEdicion.Text = "Edicion de Productos";
+            this.grbEdicion.Text = "Edicion de Proveedores";
             // 
             // btnBuscar
             // 
@@ -152,6 +156,7 @@
             this.btnultimo.TabIndex = 3;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = true;
+            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
             // 
             // btnsiguiente
             // 
@@ -162,6 +167,7 @@
             this.btnsiguiente.TabIndex = 2;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // btnanterior
             // 
@@ -172,6 +178,7 @@
             this.btnanterior.TabIndex = 1;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = true;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnprimero
             // 
@@ -182,19 +189,24 @@
             this.btnprimero.TabIndex = 0;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = true;
+            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
             // grbDatospanes
             // 
-            this.grbDatospanes.Controls.Add(this.txtprecio);
-            this.grbDatospanes.Controls.Add(this.lblprecio);
-            this.grbDatospanes.Controls.Add(this.txtdescripcion);
+            this.grbDatospanes.Controls.Add(this.txttelefono);
+            this.grbDatospanes.Controls.Add(this.lbltelefono);
+            this.grbDatospanes.Controls.Add(this.Txtcargo);
+            this.grbDatospanes.Controls.Add(this.label1);
+            this.grbDatospanes.Controls.Add(this.txtemail);
+            this.grbDatospanes.Controls.Add(this.lblemail);
+            this.grbDatospanes.Controls.Add(this.txtnombrecontacto);
             this.grbDatospanes.Controls.Add(this.lbldescripcion);
             this.grbDatospanes.Controls.Add(this.lblidpan);
             this.grbDatospanes.Controls.Add(this.textBox6);
             this.grbDatospanes.Controls.Add(this.lbl6);
-            this.grbDatospanes.Controls.Add(this.txttipo);
-            this.grbDatospanes.Controls.Add(this.lbltipo);
-            this.grbDatospanes.Controls.Add(this.txtnombre);
+            this.grbDatospanes.Controls.Add(this.txtdireccion);
+            this.grbDatospanes.Controls.Add(this.lbldireccion);
+            this.grbDatospanes.Controls.Add(this.txtnombreproveedor);
             this.grbDatospanes.Controls.Add(this.lblnombre);
             this.grbDatospanes.Controls.Add(this.txtcodigo);
             this.grbDatospanes.Controls.Add(this.lblcodigo);
@@ -206,43 +218,43 @@
             this.grbDatospanes.Size = new System.Drawing.Size(354, 330);
             this.grbDatospanes.TabIndex = 19;
             this.grbDatospanes.TabStop = false;
-            this.grbDatospanes.Text = "Datos de Productos";
+            this.grbDatospanes.Text = "Datos de Proveedores";
             // 
-            // txtprecio
+            // txtemail
             // 
-            this.txtprecio.Location = new System.Drawing.Point(85, 246);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(1);
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(81, 20);
-            this.txtprecio.TabIndex = 16;
+            this.txtemail.Location = new System.Drawing.Point(130, 255);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(1);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(81, 20);
+            this.txtemail.TabIndex = 16;
             // 
-            // lblprecio
+            // lblemail
             // 
-            this.lblprecio.AutoSize = true;
-            this.lblprecio.Location = new System.Drawing.Point(3, 246);
-            this.lblprecio.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(50, 13);
-            this.lblprecio.TabIndex = 15;
-            this.lblprecio.Text = "PRECIO:";
+            this.lblemail.AutoSize = true;
+            this.lblemail.Location = new System.Drawing.Point(76, 262);
+            this.lblemail.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(42, 13);
+            this.lblemail.TabIndex = 15;
+            this.lblemail.Text = "EMAIL:";
             // 
-            // txtdescripcion
+            // txtnombrecontacto
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(85, 116);
-            this.txtdescripcion.Margin = new System.Windows.Forms.Padding(1);
-            this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(205, 20);
-            this.txtdescripcion.TabIndex = 14;
+            this.txtnombrecontacto.Location = new System.Drawing.Point(130, 108);
+            this.txtnombrecontacto.Margin = new System.Windows.Forms.Padding(1);
+            this.txtnombrecontacto.Name = "txtnombrecontacto";
+            this.txtnombrecontacto.Size = new System.Drawing.Size(205, 20);
+            this.txtnombrecontacto.TabIndex = 14;
             // 
             // lbldescripcion
             // 
             this.lbldescripcion.AutoSize = true;
-            this.lbldescripcion.Location = new System.Drawing.Point(0, 116);
+            this.lbldescripcion.Location = new System.Drawing.Point(0, 108);
             this.lbldescripcion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldescripcion.Name = "lbldescripcion";
-            this.lbldescripcion.Size = new System.Drawing.Size(83, 13);
+            this.lbldescripcion.Size = new System.Drawing.Size(119, 13);
             this.lbldescripcion.TabIndex = 13;
-            this.lbldescripcion.Text = "DESCRIPCION:";
+            this.lbldescripcion.Text = "NOMBRE CONTACTO:";
             // 
             // lblidpan
             // 
@@ -270,31 +282,31 @@
             this.lbl6.Size = new System.Drawing.Size(0, 13);
             this.lbl6.TabIndex = 8;
             // 
-            // txttipo
+            // txtdireccion
             // 
-            this.txttipo.Location = new System.Drawing.Point(85, 177);
-            this.txttipo.Margin = new System.Windows.Forms.Padding(1);
-            this.txttipo.Name = "txttipo";
-            this.txttipo.Size = new System.Drawing.Size(81, 20);
-            this.txttipo.TabIndex = 5;
+            this.txtdireccion.Location = new System.Drawing.Point(130, 177);
+            this.txtdireccion.Margin = new System.Windows.Forms.Padding(1);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(81, 20);
+            this.txtdireccion.TabIndex = 5;
             // 
-            // lbltipo
+            // lbldireccion
             // 
-            this.lbltipo.AutoSize = true;
-            this.lbltipo.Location = new System.Drawing.Point(3, 177);
-            this.lbltipo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lbltipo.Name = "lbltipo";
-            this.lbltipo.Size = new System.Drawing.Size(35, 13);
-            this.lbltipo.TabIndex = 4;
-            this.lbltipo.Text = "TIPO:";
+            this.lbldireccion.AutoSize = true;
+            this.lbldireccion.Location = new System.Drawing.Point(50, 184);
+            this.lbldireccion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lbldireccion.Name = "lbldireccion";
+            this.lbldireccion.Size = new System.Drawing.Size(69, 13);
+            this.lbldireccion.TabIndex = 4;
+            this.lbldireccion.Text = "DIRECCION:";
             // 
-            // txtnombre
+            // txtnombreproveedor
             // 
-            this.txtnombre.Location = new System.Drawing.Point(85, 62);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(1);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(205, 20);
-            this.txtnombre.TabIndex = 3;
+            this.txtnombreproveedor.Location = new System.Drawing.Point(130, 62);
+            this.txtnombreproveedor.Margin = new System.Windows.Forms.Padding(1);
+            this.txtnombreproveedor.Name = "txtnombreproveedor";
+            this.txtnombreproveedor.Size = new System.Drawing.Size(205, 20);
+            this.txtnombreproveedor.TabIndex = 3;
             // 
             // lblnombre
             // 
@@ -302,13 +314,13 @@
             this.lblnombre.Location = new System.Drawing.Point(0, 62);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(57, 13);
+            this.lblnombre.Size = new System.Drawing.Size(128, 13);
             this.lblnombre.TabIndex = 2;
-            this.lblnombre.Text = "NOMBRE:";
+            this.lblnombre.Text = "NOMBRE PROVEEDOR:";
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(85, 28);
+            this.txtcodigo.Location = new System.Drawing.Point(130, 25);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(1);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(76, 20);
@@ -334,7 +346,43 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
-            // Fproductos
+            // Txtcargo
+            // 
+            this.Txtcargo.Location = new System.Drawing.Point(130, 143);
+            this.Txtcargo.Margin = new System.Windows.Forms.Padding(1);
+            this.Txtcargo.Name = "Txtcargo";
+            this.Txtcargo.Size = new System.Drawing.Size(81, 20);
+            this.Txtcargo.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 146);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "CARGO:";
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(130, 213);
+            this.txttelefono.Margin = new System.Windows.Forms.Padding(1);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(81, 20);
+            this.txttelefono.TabIndex = 20;
+            // 
+            // lbltelefono
+            // 
+            this.lbltelefono.AutoSize = true;
+            this.lbltelefono.Location = new System.Drawing.Point(52, 216);
+            this.lbltelefono.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lbltelefono.Name = "lbltelefono";
+            this.lbltelefono.Size = new System.Drawing.Size(67, 13);
+            this.lbltelefono.TabIndex = 19;
+            this.lbltelefono.Text = "TELEFONO:";
+            // 
+            // Fproveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -343,8 +391,8 @@
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbDatospanes);
             this.Controls.Add(this.btnVolver);
-            this.Name = "Fproductos";
-            this.Text = "Fpanes";
+            this.Name = "Fproveedores";
+            this.Text = "Fproveedores";
             this.grbEdicion.ResumeLayout(false);
             this.grbNavegacion.ResumeLayout(false);
             this.grbNavegacion.PerformLayout();
@@ -368,19 +416,23 @@
         private System.Windows.Forms.Button btnanterior;
         private System.Windows.Forms.Button btnprimero;
         private System.Windows.Forms.GroupBox grbDatospanes;
-        private System.Windows.Forms.TextBox txtprecio;
-        private System.Windows.Forms.Label lblprecio;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Label lblidpan;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label lbl6;
-        private System.Windows.Forms.TextBox txttipo;
-        private System.Windows.Forms.Label lbltipo;
-        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.Label lbldireccion;
+        private System.Windows.Forms.TextBox txtnombreproveedor;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label lblcodigo;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.TextBox txtdescripcion;
+        private System.Windows.Forms.TextBox txtnombrecontacto;
         private System.Windows.Forms.Label lbldescripcion;
+        private System.Windows.Forms.TextBox Txtcargo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label lbltelefono;
     }
 }

@@ -159,5 +159,45 @@ namespace Torres_Anibal_Parcial
             cambio.ShowDialog();
             this.Close();
         }
+
+        private void btnprimero_Click(object sender, EventArgs e)
+        {
+            posicion = 0;
+            MostrarDatos();
+        }
+
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            if (posicion > 0)
+            {
+                posicion--;
+                MostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Primer Registro...", "Registros de Cliente",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnsiguiente_Click(object sender, EventArgs e)
+        {
+            if (posicion < tbl.Rows.Count - 1)
+            {
+                posicion++;
+                MostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Ultimo Registro...", "Registros de Cliente",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnultimo_Click(object sender, EventArgs e)
+        {
+            posicion = tbl.Rows.Count - 1;
+            MostrarDatos();
+        }
     }
 }

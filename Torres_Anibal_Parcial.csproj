@@ -75,11 +75,11 @@
     <Compile Include="Fbusquedaempleados.Designer.cs">
       <DependentUpon>Fbusquedaempleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fbusquedaproductos.cs">
+    <Compile Include="Fbusquedaproveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fbusquedaproductos.Designer.cs">
-      <DependentUpon>Fbusquedaproductos.cs</DependentUpon>
+    <Compile Include="Fbusquedaproveedores.Designer.cs">
+      <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Fclientes.cs">
       <SubType>Form</SubType>
@@ -105,11 +105,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fproductos.cs">
+    <Compile Include="Fproveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fproductos.Designer.cs">
-      <DependentUpon>Fproductos.cs</DependentUpon>
+    <Compile Include="Fproveedores.Designer.cs">
+      <DependentUpon>Fproveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,8 +125,8 @@
     <EmbeddedResource Include="Fbusquedaempleados.resx">
       <DependentUpon>Fbusquedaempleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fbusquedaproductos.resx">
-      <DependentUpon>Fbusquedaproductos.cs</DependentUpon>
+    <EmbeddedResource Include="Fbusquedaproveedores.resx">
+      <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fclientes.resx">
       <DependentUpon>Fclientes.cs</DependentUpon>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fproductos.resx">
-      <DependentUpon>Fproductos.cs</DependentUpon>
+    <EmbeddedResource Include="Fproveedores.resx">
+      <DependentUpon>Fproveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

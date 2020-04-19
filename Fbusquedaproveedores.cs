@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Torres_Anibal_Parcial
 {
-    public partial class Fbusquedaproductos : Form
+    public partial class Fbusquedaproveedores : Form
     {
         ConexionDB objConexion = new ConexionDB();
-        public int _idpan;
-        public Fbusquedaproductos()
+        public int _idproveedor;
+        public Fbusquedaproveedores()
         {
             InitializeComponent();
         }
@@ -23,12 +23,12 @@ namespace Torres_Anibal_Parcial
         {
             if (grdBusquedaClientes.RowCount > 0)
             {
-                _idpan = int.Parse(grdBusquedaClientes.CurrentRow.Cells["idpan"].Value.ToString());
+                _idproveedor = int.Parse(grdBusquedaClientes.CurrentRow.Cells["idproveedor"].Value.ToString());
                 Close();
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Panes",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Proveedor",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -46,8 +46,8 @@ namespace Torres_Anibal_Parcial
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = grdBusquedaClientes.DataSource;
-            bs.Filter = "nombre like '%" + valor + "%'";
-            bs.Filter = "descripcion like '%" + valor + "%'";
+            bs.Filter = "nombre_proveedor like '%" + valor + "%'";
+            bs.Filter = "nombre_contacto like '%" + valor + "%'";
             grdBusquedaClientes.DataSource = bs;
         }
     }

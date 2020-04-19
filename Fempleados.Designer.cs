@@ -40,6 +40,8 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbDatosClientes = new System.Windows.Forms.GroupBox();
+            this.txtsalario = new System.Windows.Forms.TextBox();
+            this.lblsueldo = new System.Windows.Forms.Label();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.lblapellido = new System.Windows.Forms.Label();
             this.lblidempleado = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.txtsalario = new System.Windows.Forms.TextBox();
-            this.lblsueldo = new System.Windows.Forms.Label();
             this.grbEdicion.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
             this.grbDatosClientes.SuspendLayout();
@@ -156,6 +156,7 @@
             this.btnultimo.TabIndex = 3;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = true;
+            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
             // 
             // btnsiguiente
             // 
@@ -166,6 +167,7 @@
             this.btnsiguiente.TabIndex = 2;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // btnanterior
             // 
@@ -176,6 +178,7 @@
             this.btnanterior.TabIndex = 1;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = true;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnprimero
             // 
@@ -186,6 +189,7 @@
             this.btnprimero.TabIndex = 0;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = true;
+            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
             // grbDatosClientes
             // 
@@ -215,6 +219,24 @@
             this.grbDatosClientes.TabIndex = 15;
             this.grbDatosClientes.TabStop = false;
             this.grbDatosClientes.Text = "Datos de Empleados";
+            // 
+            // txtsalario
+            // 
+            this.txtsalario.Location = new System.Drawing.Point(82, 282);
+            this.txtsalario.Margin = new System.Windows.Forms.Padding(1);
+            this.txtsalario.Name = "txtsalario";
+            this.txtsalario.Size = new System.Drawing.Size(81, 20);
+            this.txtsalario.TabIndex = 16;
+            // 
+            // lblsueldo
+            // 
+            this.lblsueldo.AutoSize = true;
+            this.lblsueldo.Location = new System.Drawing.Point(18, 282);
+            this.lblsueldo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblsueldo.Name = "lblsueldo";
+            this.lblsueldo.Size = new System.Drawing.Size(54, 13);
+            this.lblsueldo.TabIndex = 15;
+            this.lblsueldo.Text = "SUELDO:";
             // 
             // txtapellido
             // 
@@ -360,24 +382,6 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
-            // 
-            // txtsalario
-            // 
-            this.txtsalario.Location = new System.Drawing.Point(82, 282);
-            this.txtsalario.Margin = new System.Windows.Forms.Padding(1);
-            this.txtsalario.Name = "txtsalario";
-            this.txtsalario.Size = new System.Drawing.Size(81, 20);
-            this.txtsalario.TabIndex = 16;
-            // 
-            // lblsueldo
-            // 
-            this.lblsueldo.AutoSize = true;
-            this.lblsueldo.Location = new System.Drawing.Point(18, 282);
-            this.lblsueldo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblsueldo.Name = "lblsueldo";
-            this.lblsueldo.Size = new System.Drawing.Size(54, 13);
-            this.lblsueldo.TabIndex = 15;
-            this.lblsueldo.Text = "SUELDO:";
             // 
             // Fempleados
             // 

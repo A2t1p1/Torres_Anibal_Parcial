@@ -1,6 +1,6 @@
 ﻿namespace Torres_Anibal_Parcial
 {
-    partial class Fbusquedapanes
+    partial class Fbusquedaproveedores
     {
         /// <summary>
         /// Required designer variable.

@@ -27,7 +27,7 @@ namespace Torres_Anibal_Parcial
 
         private void BtnPanes_Click(object sender, EventArgs e)
         {
-            Fpanes cambio = new Fpanes();
+            Fproductos cambio = new Fproductos();
             this.Hide();
             cambio.ShowDialog();
             this.Close();

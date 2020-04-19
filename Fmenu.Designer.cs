@@ -43,7 +43,7 @@
             this.btnMateriales.Name = "btnMateriales";
             this.btnMateriales.Size = new System.Drawing.Size(145, 67);
             this.btnMateriales.TabIndex = 11;
-            this.btnMateriales.Text = "Materia Prima";
+            this.btnMateriales.Text = "Proveedores";
             this.btnMateriales.UseVisualStyleBackColor = true;
             // 
             // btnPanes
@@ -53,7 +53,7 @@
             this.btnPanes.Name = "btnPanes";
             this.btnPanes.Size = new System.Drawing.Size(145, 67);
             this.btnPanes.TabIndex = 10;
-            this.btnPanes.Text = "Panes";
+            this.btnPanes.Text = "Productos";
             this.btnPanes.UseVisualStyleBackColor = true;
             this.btnPanes.Click += new System.EventHandler(this.BtnPanes_Click);
             // 
@@ -113,7 +113,7 @@
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.Btnsalir);
             this.Name = "Fmenu";
-            this.Text = "Fmenu";
+            this.Text = "}j";
             this.ResumeLayout(false);
 
         }

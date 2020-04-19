@@ -38,11 +38,6 @@ namespace Torres_Anibal_Parcial
             cbtipo.Items.AddRange(objconversion.tipo);
             cbtipo.SelectedIndex = 0; 
         }
-
-        private void txtcantidad_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
     }
 }
     

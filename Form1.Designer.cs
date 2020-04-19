@@ -137,10 +137,7 @@
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(100, 22);
             this.txtcantidad.TabIndex = 11;
-            this.txtcantidad.TextChanged += new System.EventHandler(this.txtcantidad_TextChanged);
-            // 
-            // label1
-            // 
+           
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(120, 110);

@@ -16,5 +16,18 @@ namespace Torres_Anibal_Parcial
         {
             InitializeComponent();
         }
+
+        private void BtnEntrar_Click(object sender, EventArgs e)
+        {
+            Fmenu cambio = new Fmenu();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

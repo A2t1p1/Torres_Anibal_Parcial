@@ -42,7 +42,7 @@
             this.grbDatosUsuarios = new System.Windows.Forms.GroupBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.lblapellido = new System.Windows.Forms.Label();
-            this.lblidcliente = new System.Windows.Forms.Label();
+            this.lblidusuario = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lbl6 = new System.Windows.Forms.Label();
             this.txtdui = new System.Windows.Forms.TextBox();
@@ -193,7 +193,7 @@
             // 
             this.grbDatosUsuarios.Controls.Add(this.txtapellido);
             this.grbDatosUsuarios.Controls.Add(this.lblapellido);
-            this.grbDatosUsuarios.Controls.Add(this.lblidcliente);
+            this.grbDatosUsuarios.Controls.Add(this.lblidusuario);
             this.grbDatosUsuarios.Controls.Add(this.textBox6);
             this.grbDatosUsuarios.Controls.Add(this.lbl6);
             this.grbDatosUsuarios.Controls.Add(this.txtdui);
@@ -234,14 +234,14 @@
             this.lblapellido.TabIndex = 13;
             this.lblapellido.Text = "APELLIDO:";
             // 
-            // lblidcliente
+            // lblidusuario
             // 
-            this.lblidcliente.AutoSize = true;
-            this.lblidcliente.Location = new System.Drawing.Point(199, 35);
-            this.lblidcliente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblidcliente.Name = "lblidcliente";
-            this.lblidcliente.Size = new System.Drawing.Size(0, 13);
-            this.lblidcliente.TabIndex = 12;
+            this.lblidusuario.AutoSize = true;
+            this.lblidusuario.Location = new System.Drawing.Point(199, 35);
+            this.lblidusuario.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblidusuario.Name = "lblidusuario";
+            this.lblidusuario.Size = new System.Drawing.Size(0, 13);
+            this.lblidusuario.TabIndex = 12;
             // 
             // textBox6
             // 
@@ -397,7 +397,7 @@
         private System.Windows.Forms.GroupBox grbDatosUsuarios;
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.Label lblapellido;
-        private System.Windows.Forms.Label lblidcliente;
+        private System.Windows.Forms.Label lblidusuario;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.TextBox txtdui;

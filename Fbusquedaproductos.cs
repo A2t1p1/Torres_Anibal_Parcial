@@ -18,12 +18,13 @@ namespace Torres_Anibal_Parcial
         public Fbusquedaproductos()
         {
             InitializeComponent();
+            grdBusquedaproductos.DataSource = objConexion.Obtener_datos().Tables["productos"].DefaultView;
         }
         private void btnseleccionar_Click(object sender, EventArgs e)
         {
-            if (grdBusquedaClientes.RowCount > 0)
+            if (grdBusquedaproductos.RowCount > 0)
             {
-                _idproducto = int.Parse(grdBusquedaClientes.CurrentRow.Cells["idprodcuto"].Value.ToString());
+                _idproducto = int.Parse(grdBusquedaproductos.CurrentRow.Cells["idprodcuto"].Value.ToString());
                 Close();
             }
             else
@@ -44,11 +45,11 @@ namespace Torres_Anibal_Parcial
 
         void Filtrar_datos(String valor)
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = grdBusquedaClientes.DataSource;
-            bs.Filter = "nombre like '%" + valor + "%'";
-            bs.Filter = "direccion like '%" + valor + "%'";
-            grdBusquedaClientes.DataSource = bs;
+            BindingSource ds = new BindingSource();
+            ds.DataSource = grdBusquedaproductos.DataSource;
+            ds.Filter = "nombre like '%" + valor + "%'";
+            ds.Filter = "direccion like '%" + valor + "%'";
+            grdBusquedaproductos.DataSource = ds;
         }
         
     }

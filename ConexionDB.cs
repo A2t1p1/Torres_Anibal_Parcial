@@ -47,8 +47,6 @@ namespace Torres_Anibal_Parcial
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "categorias");
 
-            
-
             return ds;
         }
         public void Mantenimiento_usuarios(String[] datos, String accion)
@@ -183,6 +181,5 @@ namespace Torres_Anibal_Parcial
             comandosSQL.CommandText = sql;
             comandosSQL.ExecuteNonQuery();
         }
-
     }
-}
+}       

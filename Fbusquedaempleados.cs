@@ -17,13 +17,14 @@ namespace Torres_Anibal_Parcial
         public Fbusquedaempleados()
         {
             InitializeComponent();
+            grdBusquedaempleados.DataSource = objConexion.Obtener_datos().Tables["empleados"].DefaultView;
         }
 
         private void Btnseleccionar_Click(object sender, EventArgs e)
         {
-            if (grdBusquedaClientes.RowCount > 0)
+            if (grdBusquedaempleados.RowCount > 0)
             {
-                _idempleado = int.Parse(grdBusquedaClientes.CurrentRow.Cells["idempleado"].Value.ToString());
+                _idempleado = int.Parse(grdBusquedaempleados.CurrentRow.Cells["idempleado"].Value.ToString());
                 Close();
             }
             else
@@ -44,12 +45,12 @@ namespace Torres_Anibal_Parcial
         }
         void Filtrar_datos(String valor)
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = grdBusquedaClientes.DataSource;
-            bs.Filter = "codigo like '%" + valor + "%'";
-            bs.Filter = "nombre like '%" + valor + "%'";
-            bs.Filter = "descripcion like '%" + valor + "%'";
-            grdBusquedaClientes.DataSource = bs;
+            BindingSource ds = new BindingSource();
+            ds.DataSource = grdBusquedaempleados.DataSource;
+            ds.Filter = "codigo like '%" + valor + "%'";
+            ds.Filter = "nombre like '%" + valor + "%'";
+            ds.Filter = "descripcion like '%" + valor + "%'";
+            grdBusquedaempleados.DataSource = ds;
         }
     }
 }

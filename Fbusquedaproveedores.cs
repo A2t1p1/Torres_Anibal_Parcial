@@ -17,13 +17,14 @@ namespace Torres_Anibal_Parcial
         public Fbusquedaproveedores()
         {
             InitializeComponent();
+            grdBusquedaproveedores.DataSource = objConexion.Obtener_datos().Tables["proveedores"].DefaultView;
         }
 
         private void Btnseleccionar_Click(object sender, EventArgs e)
         {
-            if (grdBusquedaClientes.RowCount > 0)
+            if (grdBusquedaproveedores.RowCount > 0)
             {
-                _idproveedor = int.Parse(grdBusquedaClientes.CurrentRow.Cells["idproveedor"].Value.ToString());
+                _idproveedor = int.Parse(grdBusquedaproveedores.CurrentRow.Cells["idproveedor"].Value.ToString());
                 Close();
             }
             else
@@ -44,11 +45,11 @@ namespace Torres_Anibal_Parcial
         }
         void Filtrar_datos(String valor)
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = grdBusquedaClientes.DataSource;
-            bs.Filter = "nombre_proveedor like '%" + valor + "%'";
-            bs.Filter = "nombre_contacto like '%" + valor + "%'";
-            grdBusquedaClientes.DataSource = bs;
+            BindingSource ds = new BindingSource();
+            ds.DataSource = grdBusquedaproveedores.DataSource;
+            ds.Filter = "nombre_proveedor like '%" + valor + "%'";
+            ds.Filter = "nombre_contacto like '%" + valor + "%'";
+            grdBusquedaproveedores.DataSource = ds;
         }
     }
 }

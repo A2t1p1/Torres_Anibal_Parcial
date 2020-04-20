@@ -15,7 +15,7 @@ namespace Torres_Anibal_Parcial
         ConexionDB objConexion = new ConexionDB();
         int posicion = 0;
 
-        string accion = "Nuevo";
+        public string accion = "Nuevo";
         DataTable tbl = new DataTable();
         public Fusuarios()
         {
@@ -31,7 +31,7 @@ namespace Torres_Anibal_Parcial
         {
             try
             {
-                lblidcliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                lblidusuario.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 txtcodigo.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtnombre.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtapellido.Text = tbl.Rows[posicion].ItemArray[3].ToString();
@@ -79,7 +79,7 @@ namespace Torres_Anibal_Parcial
             else
             {
                 String[] valores = {
-                    lblidcliente.Text,
+                    lblidusuario.Text,
                     txtcodigo.Text,
                     txtnombre.Text,
                     txtapellido.Text,
@@ -87,7 +87,6 @@ namespace Torres_Anibal_Parcial
                     txtdui.Text,
                     txttelefono.Text,
                 };
-
                 objConexion.Mantenimiento_usuarios(valores, accion);
                 ActualizarDs();
                 posicion = tbl.Rows.Count - 1;
@@ -99,14 +98,13 @@ namespace Torres_Anibal_Parcial
                 btnModificar.Text = "Modificar";
             }
         }
-
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             if (btnModificar.Text == "Modificar")
             {
                 btnNuevo.Text = "Guardar";
                 btnModificar.Text = "Cancelar";
-                accion = "modificar";
+                accion = "Modificar";
 
                 Controles(false);
 
@@ -122,21 +120,19 @@ namespace Torres_Anibal_Parcial
                 btnModificar.Text = "Modificar";
             }
         }
-
         private void Btneliminar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de Clientes",
                MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { lblidcliente.Text };
-                objConexion.Mantenimiento_usuarios(valores, "eliminar");
+                String[] valores = { lblidusuario.Text };
+                objConexion.Mantenimiento_usuarios(valores, "Eliminar");
 
                 ActualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
                 MostrarDatos();
             }
         }
-
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             Fbusquedausuarios frmBusquedausuarios = new Fbusquedausuarios();

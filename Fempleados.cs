@@ -109,7 +109,7 @@ namespace Torres_Anibal_Parcial
             {
                 btnNuevo.Text = "Guardar";
                 btnModificar.Text = "Cancelar";
-                accion = "modificar";
+                accion = "Modificar";
 
                 Controles(false);
 
@@ -132,7 +132,7 @@ namespace Torres_Anibal_Parcial
                MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblidempleado.Text };
-                objConexion.Mantenimiento_empleados(valores, "eliminar");
+                objConexion.Mantenimiento_empleados(valores, "Eliminar");
 
                 ActualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;

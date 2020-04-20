@@ -30,9 +30,7 @@
         {
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnseleccionar = new System.Windows.Forms.Button();
-            this.grdBusquedaClientes = new System.Windows.Forms.DataGridView();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
-            this.lblbuscar = new System.Windows.Forms.Label();
+            this.grdBusquedaempleados = new System.Windows.Forms.DataGridView();
             this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +39,9 @@
             this.dui = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SALARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaClientes)).BeginInit();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.lblbuscar = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaempleados)).BeginInit();
             this.SuspendLayout();
             // 
             // btncancelar
@@ -66,12 +66,12 @@
             this.btnseleccionar.UseVisualStyleBackColor = true;
             this.btnseleccionar.Click += new System.EventHandler(this.Btnseleccionar_Click);
             // 
-            // grdBusquedaClientes
+            // grdBusquedaempleados
             // 
-            this.grdBusquedaClientes.AllowUserToAddRows = false;
-            this.grdBusquedaClientes.AllowUserToDeleteRows = false;
-            this.grdBusquedaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdBusquedaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdBusquedaempleados.AllowUserToAddRows = false;
+            this.grdBusquedaempleados.AllowUserToDeleteRows = false;
+            this.grdBusquedaempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdBusquedaempleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idempleado,
             this.CODIGO,
             this.nombre,
@@ -80,33 +80,14 @@
             this.dui,
             this.telefono,
             this.SALARIO});
-            this.grdBusquedaClientes.Location = new System.Drawing.Point(10, 56);
-            this.grdBusquedaClientes.Margin = new System.Windows.Forms.Padding(1);
-            this.grdBusquedaClientes.Name = "grdBusquedaClientes";
-            this.grdBusquedaClientes.ReadOnly = true;
-            this.grdBusquedaClientes.RowHeadersWidth = 102;
-            this.grdBusquedaClientes.RowTemplate.Height = 40;
-            this.grdBusquedaClientes.Size = new System.Drawing.Size(720, 354);
-            this.grdBusquedaClientes.TabIndex = 25;
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(77, 21);
-            this.txtbuscar.Margin = new System.Windows.Forms.Padding(1);
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(341, 20);
-            this.txtbuscar.TabIndex = 24;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.Txtbuscar_TextChanged);
-            // 
-            // lblbuscar
-            // 
-            this.lblbuscar.AutoSize = true;
-            this.lblbuscar.Location = new System.Drawing.Point(10, 24);
-            this.lblbuscar.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblbuscar.Name = "lblbuscar";
-            this.lblbuscar.Size = new System.Drawing.Size(54, 13);
-            this.lblbuscar.TabIndex = 23;
-            this.lblbuscar.Text = "BUSCAR:";
+            this.grdBusquedaempleados.Location = new System.Drawing.Point(10, 56);
+            this.grdBusquedaempleados.Margin = new System.Windows.Forms.Padding(1);
+            this.grdBusquedaempleados.Name = "grdBusquedaempleados";
+            this.grdBusquedaempleados.ReadOnly = true;
+            this.grdBusquedaempleados.RowHeadersWidth = 102;
+            this.grdBusquedaempleados.RowTemplate.Height = 40;
+            this.grdBusquedaempleados.Size = new System.Drawing.Size(720, 354);
+            this.grdBusquedaempleados.TabIndex = 25;
             // 
             // idempleado
             // 
@@ -175,6 +156,25 @@
             this.SALARIO.Name = "SALARIO";
             this.SALARIO.ReadOnly = true;
             // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(77, 21);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(1);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(341, 20);
+            this.txtbuscar.TabIndex = 24;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.Txtbuscar_TextChanged);
+            // 
+            // lblbuscar
+            // 
+            this.lblbuscar.AutoSize = true;
+            this.lblbuscar.Location = new System.Drawing.Point(10, 24);
+            this.lblbuscar.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblbuscar.Name = "lblbuscar";
+            this.lblbuscar.Size = new System.Drawing.Size(54, 13);
+            this.lblbuscar.TabIndex = 23;
+            this.lblbuscar.Text = "BUSCAR:";
+            // 
             // Fbusquedaempleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,12 +182,12 @@
             this.ClientSize = new System.Drawing.Size(740, 420);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnseleccionar);
-            this.Controls.Add(this.grdBusquedaClientes);
+            this.Controls.Add(this.grdBusquedaempleados);
             this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.lblbuscar);
             this.Name = "Fbusquedaempleados";
             this.Text = "Fbusquedaempleados";
-            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaempleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +197,7 @@
 
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnseleccionar;
-        private System.Windows.Forms.DataGridView grdBusquedaClientes;
+        private System.Windows.Forms.DataGridView grdBusquedaempleados;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idempleado;

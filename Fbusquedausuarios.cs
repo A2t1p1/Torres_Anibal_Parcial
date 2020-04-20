@@ -17,6 +17,7 @@ namespace Torres_Anibal_Parcial
         public Fbusquedausuarios()
         {
             InitializeComponent();
+            grdBusquedaClientes.DataSource = objConexion.Obtener_datos().Tables["usuarios"].DefaultView;
         }
 
         private void Btnseleccionar_Click(object sender, EventArgs e)
@@ -40,15 +41,15 @@ namespace Torres_Anibal_Parcial
 
         private void Txtbuscar_TextChanged(object sender, EventArgs e)
         {
-            Filtrar_datos(txtbuscar.Text);
+            FiltrarDatos(txtbuscar.Text);
         }
-        void Filtrar_datos(String valor)
+        void FiltrarDatos(String valor)
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = grdBusquedaClientes.DataSource;
-            bs.Filter = "nombre like '%" + valor + "%'";
-            bs.Filter = "direccion like '%" + valor + "%'";
-            grdBusquedaClientes.DataSource = bs;
+            BindingSource ds = new BindingSource();
+            ds.DataSource = grdBusquedaClientes.DataSource;
+            ds.Filter = "nombre like '%" + valor + "%'";
+            ds.Filter = "direccion like '%" + valor + "%'";
+            grdBusquedaClientes.DataSource = ds;
         }
     }
 }

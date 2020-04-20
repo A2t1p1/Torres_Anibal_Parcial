@@ -30,16 +30,16 @@
         {
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnseleccionar = new System.Windows.Forms.Button();
-            this.grdBusquedaClientes = new System.Windows.Forms.DataGridView();
-            this.txtbuscar = new System.Windows.Forms.TextBox();
-            this.lblbuscar = new System.Windows.Forms.Label();
+            this.grdBusquedaproductos = new System.Windows.Forms.DataGridView();
             this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaClientes)).BeginInit();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.lblbuscar = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaproductos)).BeginInit();
             this.SuspendLayout();
             // 
             // btncancelar
@@ -64,45 +64,26 @@
             this.btnseleccionar.UseVisualStyleBackColor = true;
             this.btnseleccionar.Click += new System.EventHandler(this.btnseleccionar_Click);
             // 
-            // grdBusquedaClientes
+            // grdBusquedaproductos
             // 
-            this.grdBusquedaClientes.AllowUserToAddRows = false;
-            this.grdBusquedaClientes.AllowUserToDeleteRows = false;
-            this.grdBusquedaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdBusquedaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdBusquedaproductos.AllowUserToAddRows = false;
+            this.grdBusquedaproductos.AllowUserToDeleteRows = false;
+            this.grdBusquedaproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdBusquedaproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproducto,
             this.idcategoria,
             this.codigo,
             this.nombre,
             this.descripccion,
             this.precio});
-            this.grdBusquedaClientes.Location = new System.Drawing.Point(16, 68);
-            this.grdBusquedaClientes.Margin = new System.Windows.Forms.Padding(1);
-            this.grdBusquedaClientes.Name = "grdBusquedaClientes";
-            this.grdBusquedaClientes.ReadOnly = true;
-            this.grdBusquedaClientes.RowHeadersWidth = 102;
-            this.grdBusquedaClientes.RowTemplate.Height = 40;
-            this.grdBusquedaClientes.Size = new System.Drawing.Size(720, 354);
-            this.grdBusquedaClientes.TabIndex = 30;
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(83, 30);
-            this.txtbuscar.Margin = new System.Windows.Forms.Padding(1);
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(341, 20);
-            this.txtbuscar.TabIndex = 29;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
-            // 
-            // lblbuscar
-            // 
-            this.lblbuscar.AutoSize = true;
-            this.lblbuscar.Location = new System.Drawing.Point(16, 33);
-            this.lblbuscar.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblbuscar.Name = "lblbuscar";
-            this.lblbuscar.Size = new System.Drawing.Size(54, 13);
-            this.lblbuscar.TabIndex = 28;
-            this.lblbuscar.Text = "BUSCAR:";
+            this.grdBusquedaproductos.Location = new System.Drawing.Point(16, 68);
+            this.grdBusquedaproductos.Margin = new System.Windows.Forms.Padding(1);
+            this.grdBusquedaproductos.Name = "grdBusquedaproductos";
+            this.grdBusquedaproductos.ReadOnly = true;
+            this.grdBusquedaproductos.RowHeadersWidth = 102;
+            this.grdBusquedaproductos.RowTemplate.Height = 40;
+            this.grdBusquedaproductos.Size = new System.Drawing.Size(720, 354);
+            this.grdBusquedaproductos.TabIndex = 30;
             // 
             // idproducto
             // 
@@ -156,6 +137,25 @@
             this.precio.ReadOnly = true;
             this.precio.Width = 250;
             // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(83, 30);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(1);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(341, 20);
+            this.txtbuscar.TabIndex = 29;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
+            // lblbuscar
+            // 
+            this.lblbuscar.AutoSize = true;
+            this.lblbuscar.Location = new System.Drawing.Point(16, 33);
+            this.lblbuscar.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblbuscar.Name = "lblbuscar";
+            this.lblbuscar.Size = new System.Drawing.Size(54, 13);
+            this.lblbuscar.TabIndex = 28;
+            this.lblbuscar.Text = "BUSCAR:";
+            // 
             // Fbusquedaproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,12 +163,12 @@
             this.ClientSize = new System.Drawing.Size(762, 437);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnseleccionar);
-            this.Controls.Add(this.grdBusquedaClientes);
+            this.Controls.Add(this.grdBusquedaproductos);
             this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.lblbuscar);
             this.Name = "Fbusquedaproductos";
             this.Text = "Fbusquedaproductos";
-            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaproductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +178,7 @@
 
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnseleccionar;
-        private System.Windows.Forms.DataGridView grdBusquedaClientes;
+        private System.Windows.Forms.DataGridView grdBusquedaproductos;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;

@@ -48,7 +48,7 @@
             this.lblemail = new System.Windows.Forms.Label();
             this.txtnombrecontacto = new System.Windows.Forms.TextBox();
             this.lbldescripcion = new System.Windows.Forms.Label();
-            this.lblidpan = new System.Windows.Forms.Label();
+            this.lblidproducto = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lbl6 = new System.Windows.Forms.Label();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -201,7 +201,7 @@
             this.grbDatospanes.Controls.Add(this.lblemail);
             this.grbDatospanes.Controls.Add(this.txtnombrecontacto);
             this.grbDatospanes.Controls.Add(this.lbldescripcion);
-            this.grbDatospanes.Controls.Add(this.lblidpan);
+            this.grbDatospanes.Controls.Add(this.lblidproducto);
             this.grbDatospanes.Controls.Add(this.textBox6);
             this.grbDatospanes.Controls.Add(this.lbl6);
             this.grbDatospanes.Controls.Add(this.txtdireccion);
@@ -292,14 +292,14 @@
             this.lbldescripcion.TabIndex = 13;
             this.lbldescripcion.Text = "NOMBRE CONTACTO:";
             // 
-            // lblidpan
+            // lblidproducto
             // 
-            this.lblidpan.AutoSize = true;
-            this.lblidpan.Location = new System.Drawing.Point(199, 35);
-            this.lblidpan.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblidpan.Name = "lblidpan";
-            this.lblidpan.Size = new System.Drawing.Size(0, 13);
-            this.lblidpan.TabIndex = 12;
+            this.lblidproducto.AutoSize = true;
+            this.lblidproducto.Location = new System.Drawing.Point(244, 28);
+            this.lblidproducto.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblidproducto.Name = "lblidproducto";
+            this.lblidproducto.Size = new System.Drawing.Size(0, 13);
+            this.lblidproducto.TabIndex = 12;
             // 
             // textBox6
             // 
@@ -356,7 +356,7 @@
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(130, 25);
+            this.txtcodigo.Location = new System.Drawing.Point(103, 25);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(1);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(76, 20);
@@ -418,7 +418,7 @@
         private System.Windows.Forms.GroupBox grbDatospanes;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.Label lblidpan;
+        private System.Windows.Forms.Label lblidproducto;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.TextBox txtdireccion;

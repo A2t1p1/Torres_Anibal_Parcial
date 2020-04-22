@@ -62,7 +62,7 @@
             this.grdBusquedaClientes.ReadOnly = true;
             this.grdBusquedaClientes.RowHeadersWidth = 102;
             this.grdBusquedaClientes.RowTemplate.Height = 40;
-            this.grdBusquedaClientes.Size = new System.Drawing.Size(720, 354);
+            this.grdBusquedaClientes.Size = new System.Drawing.Size(725, 354);
             this.grdBusquedaClientes.TabIndex = 19;
             // 
             // txtbuscar
@@ -86,24 +86,26 @@
             // 
             // btncancelar
             // 
+            this.btncancelar.BackColor = System.Drawing.Color.Chartreuse;
             this.btncancelar.Location = new System.Drawing.Point(611, 15);
             this.btncancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(119, 31);
             this.btncancelar.TabIndex = 22;
             this.btncancelar.Text = "CANCELAR";
-            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.Btncancelar_Click);
             // 
             // btnseleccionar
             // 
+            this.btnseleccionar.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnseleccionar.Location = new System.Drawing.Point(465, 15);
             this.btnseleccionar.Margin = new System.Windows.Forms.Padding(1);
             this.btnseleccionar.Name = "btnseleccionar";
             this.btnseleccionar.Size = new System.Drawing.Size(125, 31);
             this.btnseleccionar.TabIndex = 21;
             this.btnseleccionar.Text = "SELECCIONAR";
-            this.btnseleccionar.UseVisualStyleBackColor = true;
+            this.btnseleccionar.UseVisualStyleBackColor = false;
             this.btnseleccionar.Click += new System.EventHandler(this.Btnseleccionar_Click);
             // 
             // idusuario
@@ -114,7 +116,7 @@
             this.idusuario.Name = "idusuario";
             this.idusuario.ReadOnly = true;
             this.idusuario.Visible = false;
-            this.idusuario.Width = 250;
+            this.idusuario.Width = 70;
             // 
             // codigo
             // 
@@ -122,6 +124,7 @@
             this.codigo.HeaderText = "CODIGO";
             this.codigo.Name = "codigo";
             this.codigo.ReadOnly = true;
+            this.codigo.Width = 70;
             // 
             // nombre
             // 
@@ -130,7 +133,7 @@
             this.nombre.MinimumWidth = 12;
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
-            this.nombre.Width = 150;
+            this.nombre.Width = 120;
             // 
             // apellido
             // 
@@ -139,7 +142,7 @@
             this.apellido.MinimumWidth = 12;
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
-            this.apellido.Width = 150;
+            this.apellido.Width = 120;
             // 
             // direccion
             // 
@@ -148,7 +151,7 @@
             this.direccion.MinimumWidth = 12;
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
-            this.direccion.Width = 150;
+            this.direccion.Width = 170;
             // 
             // dui
             // 
@@ -157,7 +160,7 @@
             this.dui.MinimumWidth = 12;
             this.dui.Name = "dui";
             this.dui.ReadOnly = true;
-            this.dui.Width = 250;
+            this.dui.Width = 70;
             // 
             // telefono
             // 
@@ -166,18 +169,20 @@
             this.telefono.MinimumWidth = 12;
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
-            this.telefono.Width = 250;
+            this.telefono.Width = 70;
             // 
             // Fbusquedausuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(745, 435);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnseleccionar);
             this.Controls.Add(this.grdBusquedaClientes);
             this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.lblbuscar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fbusquedausuarios";
             this.Text = "Fbusquedausuario";
             ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaClientes)).EndInit();

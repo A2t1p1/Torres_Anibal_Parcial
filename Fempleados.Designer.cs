@@ -80,46 +80,50 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnBuscar.Location = new System.Drawing.Point(43, 246);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 37);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // btneliminar
             // 
+            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btneliminar.Location = new System.Drawing.Point(43, 177);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(1);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(101, 34);
             this.btneliminar.TabIndex = 4;
             this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.Btneliminar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.LightBlue;
             this.btnModificar.Location = new System.Drawing.Point(43, 108);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(101, 35);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnNuevo.Location = new System.Drawing.Point(43, 43);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(101, 39);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // grbNavegacion
@@ -149,46 +153,50 @@
             // 
             // btnultimo
             // 
+            this.btnultimo.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnultimo.Location = new System.Drawing.Point(277, 28);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(105, 33);
             this.btnultimo.TabIndex = 3;
             this.btnultimo.Text = ">|";
-            this.btnultimo.UseVisualStyleBackColor = true;
+            this.btnultimo.UseVisualStyleBackColor = false;
             this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
             // 
             // btnsiguiente
             // 
+            this.btnsiguiente.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnsiguiente.Location = new System.Drawing.Point(225, 28);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(50, 33);
             this.btnsiguiente.TabIndex = 2;
             this.btnsiguiente.Text = ">";
-            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // btnanterior
             // 
+            this.btnanterior.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnanterior.Location = new System.Drawing.Point(124, 28);
             this.btnanterior.Margin = new System.Windows.Forms.Padding(1);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(50, 33);
             this.btnanterior.TabIndex = 1;
             this.btnanterior.Text = "<";
-            this.btnanterior.UseVisualStyleBackColor = true;
+            this.btnanterior.UseVisualStyleBackColor = false;
             this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnprimero
             // 
+            this.btnprimero.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnprimero.Location = new System.Drawing.Point(17, 28);
             this.btnprimero.Margin = new System.Windows.Forms.Padding(1);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(105, 33);
             this.btnprimero.TabIndex = 0;
             this.btnprimero.Text = "|<";
-            this.btnprimero.UseVisualStyleBackColor = true;
+            this.btnprimero.UseVisualStyleBackColor = false;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
             // grbDatosClientes
@@ -375,23 +383,26 @@
             // 
             // btnVolver
             // 
+            this.btnVolver.BackColor = System.Drawing.Color.Red;
             this.btnVolver.Location = new System.Drawing.Point(462, 370);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(101, 42);
+            this.btnVolver.Size = new System.Drawing.Size(89, 23);
             this.btnVolver.TabIndex = 18;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
             // 
             // Fempleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(579, 429);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.grbEdicion);
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbDatosClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fempleados";
             this.Text = "Fempleados";
             this.grbEdicion.ResumeLayout(false);

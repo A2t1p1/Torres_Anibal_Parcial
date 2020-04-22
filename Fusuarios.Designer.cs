@@ -67,7 +67,8 @@
             this.grbClientes.Controls.Add(this.btneliminar);
             this.grbClientes.Controls.Add(this.btnModificar);
             this.grbClientes.Controls.Add(this.btnNuevo);
-            this.grbClientes.Location = new System.Drawing.Point(381, 10);
+            this.grbClientes.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbClientes.Location = new System.Drawing.Point(394, 30);
             this.grbClientes.Margin = new System.Windows.Forms.Padding(1);
             this.grbClientes.Name = "grbClientes";
             this.grbClientes.Padding = new System.Windows.Forms.Padding(1);
@@ -78,46 +79,50 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnBuscar.Location = new System.Drawing.Point(43, 246);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 37);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // btneliminar
             // 
+            this.btneliminar.BackColor = System.Drawing.Color.Orange;
             this.btneliminar.Location = new System.Drawing.Point(43, 177);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(1);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(101, 34);
             this.btneliminar.TabIndex = 4;
             this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.Btneliminar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.LightBlue;
             this.btnModificar.Location = new System.Drawing.Point(43, 108);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(101, 35);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnNuevo.Location = new System.Drawing.Point(43, 43);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(101, 39);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // grbNavegacion
@@ -127,7 +132,8 @@
             this.grbNavegacion.Controls.Add(this.btnsiguiente);
             this.grbNavegacion.Controls.Add(this.btnanterior);
             this.grbNavegacion.Controls.Add(this.btnprimero);
-            this.grbNavegacion.Location = new System.Drawing.Point(10, 342);
+            this.grbNavegacion.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbNavegacion.Location = new System.Drawing.Point(23, 362);
             this.grbNavegacion.Margin = new System.Windows.Forms.Padding(1);
             this.grbNavegacion.Name = "grbNavegacion";
             this.grbNavegacion.Padding = new System.Windows.Forms.Padding(1);
@@ -142,51 +148,55 @@
             this.lblnregistros.Location = new System.Drawing.Point(95, 6);
             this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnregistros.Name = "lblnregistros";
-            this.lblnregistros.Size = new System.Drawing.Size(0, 13);
+            this.lblnregistros.Size = new System.Drawing.Size(0, 16);
             this.lblnregistros.TabIndex = 13;
             // 
             // btnultimo
             // 
+            this.btnultimo.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnultimo.Location = new System.Drawing.Point(246, 26);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(84, 33);
             this.btnultimo.TabIndex = 3;
             this.btnultimo.Text = ">|";
-            this.btnultimo.UseVisualStyleBackColor = true;
+            this.btnultimo.UseVisualStyleBackColor = false;
             this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
             // 
             // btnsiguiente
             // 
+            this.btnsiguiente.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnsiguiente.Location = new System.Drawing.Point(185, 26);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(34, 33);
             this.btnsiguiente.TabIndex = 2;
             this.btnsiguiente.Text = ">";
-            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // btnanterior
             // 
+            this.btnanterior.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnanterior.Location = new System.Drawing.Point(113, 26);
             this.btnanterior.Margin = new System.Windows.Forms.Padding(1);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(33, 33);
             this.btnanterior.TabIndex = 1;
             this.btnanterior.Text = "<";
-            this.btnanterior.UseVisualStyleBackColor = true;
+            this.btnanterior.UseVisualStyleBackColor = false;
             this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnprimero
             // 
+            this.btnprimero.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnprimero.Location = new System.Drawing.Point(14, 26);
             this.btnprimero.Margin = new System.Windows.Forms.Padding(1);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(84, 33);
             this.btnprimero.TabIndex = 0;
             this.btnprimero.Text = "|<";
-            this.btnprimero.UseVisualStyleBackColor = true;
+            this.btnprimero.UseVisualStyleBackColor = false;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
             // grbDatosUsuarios
@@ -207,7 +217,8 @@
             this.grbDatosUsuarios.Controls.Add(this.txtcodigo);
             this.grbDatosUsuarios.Controls.Add(this.lblcodigo);
             this.grbDatosUsuarios.Enabled = false;
-            this.grbDatosUsuarios.Location = new System.Drawing.Point(10, 10);
+            this.grbDatosUsuarios.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDatosUsuarios.Location = new System.Drawing.Point(23, 30);
             this.grbDatosUsuarios.Margin = new System.Windows.Forms.Padding(1);
             this.grbDatosUsuarios.Name = "grbDatosUsuarios";
             this.grbDatosUsuarios.Padding = new System.Windows.Forms.Padding(1);
@@ -221,7 +232,7 @@
             this.txtapellido.Location = new System.Drawing.Point(82, 85);
             this.txtapellido.Margin = new System.Windows.Forms.Padding(1);
             this.txtapellido.Name = "txtapellido";
-            this.txtapellido.Size = new System.Drawing.Size(205, 20);
+            this.txtapellido.Size = new System.Drawing.Size(205, 21);
             this.txtapellido.TabIndex = 14;
             // 
             // lblapellido
@@ -230,7 +241,7 @@
             this.lblapellido.Location = new System.Drawing.Point(15, 85);
             this.lblapellido.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(62, 13);
+            this.lblapellido.Size = new System.Drawing.Size(65, 16);
             this.lblapellido.TabIndex = 13;
             this.lblapellido.Text = "APELLIDO:";
             // 
@@ -240,7 +251,7 @@
             this.lblidusuario.Location = new System.Drawing.Point(199, 35);
             this.lblidusuario.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblidusuario.Name = "lblidusuario";
-            this.lblidusuario.Size = new System.Drawing.Size(0, 13);
+            this.lblidusuario.Size = new System.Drawing.Size(0, 16);
             this.lblidusuario.TabIndex = 12;
             // 
             // textBox6
@@ -248,7 +259,7 @@
             this.textBox6.Location = new System.Drawing.Point(154, 568);
             this.textBox6.Margin = new System.Windows.Forms.Padding(1);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(40, 20);
+            this.textBox6.Size = new System.Drawing.Size(40, 21);
             this.textBox6.TabIndex = 9;
             // 
             // lbl6
@@ -257,7 +268,7 @@
             this.lbl6.Location = new System.Drawing.Point(45, 568);
             this.lbl6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(0, 13);
+            this.lbl6.Size = new System.Drawing.Size(0, 16);
             this.lbl6.TabIndex = 8;
             // 
             // txtdui
@@ -265,7 +276,7 @@
             this.txtdui.Location = new System.Drawing.Point(82, 208);
             this.txtdui.Margin = new System.Windows.Forms.Padding(1);
             this.txtdui.Name = "txtdui";
-            this.txtdui.Size = new System.Drawing.Size(137, 20);
+            this.txtdui.Size = new System.Drawing.Size(137, 21);
             this.txtdui.TabIndex = 7;
             // 
             // lbldui
@@ -274,7 +285,7 @@
             this.lbldui.Location = new System.Drawing.Point(18, 210);
             this.lbldui.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldui.Name = "lbldui";
-            this.lbldui.Size = new System.Drawing.Size(29, 13);
+            this.lbldui.Size = new System.Drawing.Size(31, 16);
             this.lbldui.TabIndex = 6;
             this.lbldui.Text = "DUI:";
             // 
@@ -283,7 +294,7 @@
             this.txttelefono.Location = new System.Drawing.Point(82, 247);
             this.txttelefono.Margin = new System.Windows.Forms.Padding(1);
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(81, 20);
+            this.txttelefono.Size = new System.Drawing.Size(81, 21);
             this.txttelefono.TabIndex = 5;
             // 
             // lbltelefono
@@ -292,7 +303,7 @@
             this.lbltelefono.Location = new System.Drawing.Point(18, 247);
             this.lbltelefono.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbltelefono.Name = "lbltelefono";
-            this.lbltelefono.Size = new System.Drawing.Size(30, 13);
+            this.lbltelefono.Size = new System.Drawing.Size(31, 16);
             this.lbltelefono.TabIndex = 4;
             this.lbltelefono.Text = "TEL:";
             // 
@@ -311,7 +322,7 @@
             this.lbldireccion.Location = new System.Drawing.Point(11, 120);
             this.lbldireccion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldireccion.Name = "lbldireccion";
-            this.lbldireccion.Size = new System.Drawing.Size(69, 13);
+            this.lbldireccion.Size = new System.Drawing.Size(75, 16);
             this.lbldireccion.TabIndex = 2;
             this.lbldireccion.Text = "DIRECCION:";
             // 
@@ -320,7 +331,7 @@
             this.txtnombre.Location = new System.Drawing.Point(82, 63);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(1);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(205, 20);
+            this.txtnombre.Size = new System.Drawing.Size(205, 21);
             this.txtnombre.TabIndex = 3;
             // 
             // lblnombre
@@ -329,7 +340,7 @@
             this.lblnombre.Location = new System.Drawing.Point(15, 63);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(57, 13);
+            this.lblnombre.Size = new System.Drawing.Size(63, 16);
             this.lblnombre.TabIndex = 2;
             this.lblnombre.Text = "NOMBRE:";
             // 
@@ -338,7 +349,7 @@
             this.txtcodigo.Location = new System.Drawing.Point(82, 35);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(1);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(76, 20);
+            this.txtcodigo.Size = new System.Drawing.Size(76, 21);
             this.txtcodigo.TabIndex = 1;
             // 
             // lblcodigo
@@ -347,29 +358,33 @@
             this.lblcodigo.Location = new System.Drawing.Point(15, 35);
             this.lblcodigo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblcodigo.Name = "lblcodigo";
-            this.lblcodigo.Size = new System.Drawing.Size(52, 13);
+            this.lblcodigo.Size = new System.Drawing.Size(57, 16);
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "CODIGO:";
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(406, 363);
+            this.btnVolver.BackColor = System.Drawing.Color.Red;
+            this.btnVolver.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(486, 398);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(119, 42);
+            this.btnVolver.Size = new System.Drawing.Size(77, 32);
             this.btnVolver.TabIndex = 10;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
             // Fusuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 424);
+            this.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ClientSize = new System.Drawing.Size(595, 452);
             this.Controls.Add(this.grbClientes);
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbDatosUsuarios);
             this.Controls.Add(this.btnVolver);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fusuarios";
             this.Text = "Fusuarios";
             this.grbClientes.ResumeLayout(false);

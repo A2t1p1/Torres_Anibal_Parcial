@@ -35,9 +35,10 @@ namespace Torres_Anibal_Parcial
                 txtcodigo.Text = tblp.Rows[posicion].ItemArray[1].ToString();
                 txtnombreproveedor.Text = tblp.Rows[posicion].ItemArray[2].ToString();
                 txtnombrecontacto.Text = tblp.Rows[posicion].ItemArray[3].ToString();
-                txtdireccion.Text = tblp.Rows[posicion].ItemArray[4].ToString();
-                txttelefono.Text = tblp.Rows[posicion].ItemArray[5].ToString();
-                txtemail.Text = tblp.Rows[posicion].ItemArray[6].ToString();
+                txtcargo.Text = tblp.Rows[posicion].ItemArray[4].ToString();
+                txtdireccion.Text = tblp.Rows[posicion].ItemArray[5].ToString();
+                txttelefono.Text = tblp.Rows[posicion].ItemArray[6].ToString();
+                txtemail.Text = tblp.Rows[posicion].ItemArray[7].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tblp.Rows.Count;
             }
@@ -53,7 +54,7 @@ namespace Torres_Anibal_Parcial
             txtcodigo.Text = "";
             txtnombreproveedor.Text = "";
             txtnombrecontacto.Text = "";
-            Txtcargo.Text = "";
+            txtcargo.Text = "";
             txtdireccion.Text = "";
             txttelefono.Text = "";
             txtemail.Text = "";

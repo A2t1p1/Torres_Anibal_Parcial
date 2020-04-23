@@ -132,9 +132,9 @@ namespace Torres_Anibal_Parcial
             {
                 sql = "update proveedores set  " +
                     "codigo =                   '" + datos[1] + "'," +
-                    "nombrep =         '" + datos[2] + "'," +
-                    "nombrec =          '" + datos[3] + "'," +
-                    "cargoc=            '" + datos[4] + "'," +
+                    "nombrep =                  '" + datos[2] + "'," +
+                    "nombrec =                  '" + datos[3] + "'," +
+                    "cargoc=                    '" + datos[4] + "'," +
                     "direccion=                 '" + datos[5] + "'," +
                     "telefono=                  '" + datos[6] + "'," +
                     "email=                     '" + datos[7] + "'" +

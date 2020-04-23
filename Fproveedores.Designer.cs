@@ -42,7 +42,7 @@
             this.grbDatospanes = new System.Windows.Forms.GroupBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.lbltelefono = new System.Windows.Forms.Label();
-            this.Txtcargo = new System.Windows.Forms.TextBox();
+            this.txtcargo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
@@ -203,7 +203,7 @@
             // 
             this.grbDatospanes.Controls.Add(this.txttelefono);
             this.grbDatospanes.Controls.Add(this.lbltelefono);
-            this.grbDatospanes.Controls.Add(this.Txtcargo);
+            this.grbDatospanes.Controls.Add(this.txtcargo);
             this.grbDatospanes.Controls.Add(this.label1);
             this.grbDatospanes.Controls.Add(this.txtemail);
             this.grbDatospanes.Controls.Add(this.lblemail);
@@ -246,13 +246,13 @@
             this.lbltelefono.TabIndex = 19;
             this.lbltelefono.Text = "TELEFONO:";
             // 
-            // Txtcargo
+            // txtcargo
             // 
-            this.Txtcargo.Location = new System.Drawing.Point(150, 143);
-            this.Txtcargo.Margin = new System.Windows.Forms.Padding(1);
-            this.Txtcargo.Name = "Txtcargo";
-            this.Txtcargo.Size = new System.Drawing.Size(81, 20);
-            this.Txtcargo.TabIndex = 18;
+            this.txtcargo.Location = new System.Drawing.Point(150, 143);
+            this.txtcargo.Margin = new System.Windows.Forms.Padding(1);
+            this.txtcargo.Name = "txtcargo";
+            this.txtcargo.Size = new System.Drawing.Size(81, 20);
+            this.txtcargo.TabIndex = 18;
             // 
             // label1
             // 
@@ -441,7 +441,7 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtnombrecontacto;
         private System.Windows.Forms.Label lbldescripcion;
-        private System.Windows.Forms.TextBox Txtcargo;
+        private System.Windows.Forms.TextBox txtcargo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label lbltelefono;

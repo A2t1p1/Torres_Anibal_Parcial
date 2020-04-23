@@ -104,7 +104,7 @@ namespace Torres_Anibal_Parcial
                     "direccion       = '" + datos[4] + "'," +
                     "dui             = '" + datos[5] + "'," +
                     "telefono        = '" + datos[6] + "'," +
-                    "salario         = '" + datos[6] + "' " +
+                    "salario         = '" + datos[7] + "' " +
                     "WHERE idempleado='"  + datos[0] + "'";
             }
             else if (accion == "Eliminar")

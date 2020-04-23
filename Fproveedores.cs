@@ -31,7 +31,7 @@ namespace Torres_Anibal_Parcial
         {
             try
             {
-                lblidproducto.Text = tblp.Rows[posicion].ItemArray[0].ToString();
+                lblidproveedor.Text = tblp.Rows[posicion].ItemArray[0].ToString();
                 txtcodigo.Text = tblp.Rows[posicion].ItemArray[1].ToString();
                 txtnombreproveedor.Text = tblp.Rows[posicion].ItemArray[2].ToString();
                 txtnombrecontacto.Text = tblp.Rows[posicion].ItemArray[3].ToString();
@@ -81,11 +81,13 @@ namespace Torres_Anibal_Parcial
             else
             {
                 String[] valores = {
-                    lblidproducto.Text,
+                    lblidproveedor.Text,
                     txtcodigo.Text,
                     txtnombreproveedor.Text,
                     txtnombrecontacto.Text,
+                    txtcargo.Text,
                     txtdireccion.Text,
+                    txttelefono.Text,
                     txtemail.Text,
                 };
 
@@ -129,7 +131,7 @@ namespace Torres_Anibal_Parcial
             if (MessageBox.Show("Esta seguro de elimina a " + txtnombreproveedor.Text, "Registro de Proveedores",
               MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { lblidproducto.Text };
+                String[] valores = { lblidproveedor.Text };
                 objConexion.Mantenimiento_proveedores(valores, "Eliminar");
 
                 ActualizarDs();

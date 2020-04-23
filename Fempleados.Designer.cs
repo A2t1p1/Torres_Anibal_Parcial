@@ -404,7 +404,7 @@
             this.Controls.Add(this.grbDatosClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fempleados";
-            this.Text = "Fempleados";
+            this.Text = " ";
             this.grbEdicion.ResumeLayout(false);
             this.grbNavegacion.ResumeLayout(false);
             this.grbNavegacion.PerformLayout();

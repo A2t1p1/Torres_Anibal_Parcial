@@ -47,8 +47,7 @@ namespace Torres_Anibal_Parcial
         {
             BindingSource ds = new BindingSource();
             ds.DataSource = grdBusquedaClientes.DataSource;
-            ds.Filter = "nombre like '%" + valor + "%'";
-            ds.Filter = "direccion like '%" + valor + "%'";
+            ds.Filter = "nombre like '%" + valor + "%' or direccion like '%" + valor + "%' or apellido like '%" + valor + "'%";
             grdBusquedaClientes.DataSource = ds;
         }
     }

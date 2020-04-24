@@ -24,7 +24,7 @@ namespace Torres_Anibal_Parcial
         {
             if (grdBusquedaproductos.RowCount > 0)
             {
-                _idproducto = int.Parse(grdBusquedaproductos.CurrentRow.Cells["idprodcuto"].Value.ToString());
+                _idproducto = int.Parse(grdBusquedaproductos.CurrentRow.Cells["idproducto"].Value.ToString());
                 Close();
             }
             else
@@ -47,8 +47,7 @@ namespace Torres_Anibal_Parcial
         {
             BindingSource ds = new BindingSource();
             ds.DataSource = grdBusquedaproductos.DataSource;
-            ds.Filter = "nombre like '%" + valor + "%'";
-            ds.Filter = "direccion like '%" + valor + "%'";
+            ds.Filter = "nombre like '%" + valor + "%' or codigo like '%" + valor + "%' or descripcion like '%" + valor + "%'";
             grdBusquedaproductos.DataSource = ds;
         }
         

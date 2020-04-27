@@ -17,7 +17,7 @@ namespace Torres_Anibal_Parcial
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnmenu_Click(object sender, EventArgs e)
         {
             Fmenu cambio = new Fmenu();
             this.Hide();

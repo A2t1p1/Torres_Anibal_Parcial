@@ -17,7 +17,12 @@ namespace Torres_Anibal_Parcial
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             FClientes cambio = new FClientes();
             this.Hide();
@@ -25,7 +30,7 @@ namespace Torres_Anibal_Parcial
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             FPeliculas cambio = new FPeliculas();
             this.Hide();
@@ -33,17 +38,12 @@ namespace Torres_Anibal_Parcial
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-            FAlquiler cambio = new FAlquiler();
+            FPeliculas cambio = new FPeliculas();
             this.Hide();
             cambio.ShowDialog();
             this.Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

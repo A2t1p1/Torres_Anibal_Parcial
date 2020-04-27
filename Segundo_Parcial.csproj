@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,24 @@
     </Compile>
     <Compile Include="FAlquiler.Designer.cs">
       <DependentUpon>FAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBusquedaclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBusquedaclientes.Designer.cs">
+      <DependentUpon>FBusquedaclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBusquedapeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBusquedapeliculas.Designer.cs">
+      <DependentUpon>FBusquedapeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBusquedaregistroalquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBusquedaregistroalquiler.Designer.cs">
+      <DependentUpon>FBusquedaregistroalquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="FClientes.cs">
       <SubType>Form</SubType>
@@ -89,6 +108,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FAlquiler.resx">
       <DependentUpon>FAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBusquedaclientes.resx">
+      <DependentUpon>FBusquedaclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBusquedapeliculas.resx">
+      <DependentUpon>FBusquedapeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBusquedaregistroalquiler.resx">
+      <DependentUpon>FBusquedaregistroalquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FClientes.resx">
       <DependentUpon>FClientes.cs</DependentUpon>

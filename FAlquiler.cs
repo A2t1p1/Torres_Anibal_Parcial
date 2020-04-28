@@ -24,5 +24,13 @@ namespace Torres_Anibal_Parcial
             cambio.ShowDialog();
             this.Close();
         }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            FBusquedaregistroalquiler cambio = new FBusquedaregistroalquiler();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
     }
 }

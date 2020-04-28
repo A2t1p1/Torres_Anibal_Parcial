@@ -66,7 +66,7 @@
             this.valor});
             this.dgvregistroalquiler.Location = new System.Drawing.Point(7, 3);
             this.dgvregistroalquiler.Name = "dgvregistroalquiler";
-            this.dgvregistroalquiler.Size = new System.Drawing.Size(634, 249);
+            this.dgvregistroalquiler.Size = new System.Drawing.Size(642, 249);
             this.dgvregistroalquiler.TabIndex = 1;
             // 
             // idalquiler
@@ -137,6 +137,7 @@
             this.btncancelar.TabIndex = 6;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnseleccionar
             // 

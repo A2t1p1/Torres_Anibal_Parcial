@@ -35,11 +35,6 @@
             this.btnseleccionar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvclientes = new System.Windows.Forms.DataGridView();
-            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dui = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).BeginInit();
@@ -63,6 +58,7 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(230, 20);
             this.txtbuscar.TabIndex = 8;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // lblbuscar
             // 
@@ -70,7 +66,7 @@
             this.lblbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbuscar.Location = new System.Drawing.Point(12, 22);
             this.lblbuscar.Name = "lblbuscar";
-            this.lblbuscar.Size = new System.Drawing.Size(57, 16);
+            this.lblbuscar.Size = new System.Drawing.Size(56, 16);
             this.lblbuscar.TabIndex = 7;
             this.lblbuscar.Text = "Buscar";
             // 
@@ -83,6 +79,7 @@
             this.btncancelar.TabIndex = 6;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnseleccionar
             // 
@@ -93,6 +90,7 @@
             this.btnseleccionar.TabIndex = 5;
             this.btnseleccionar.Text = "Seleccionar";
             this.btnseleccionar.UseVisualStyleBackColor = true;
+            this.btnseleccionar.Click += new System.EventHandler(this.btnseleccionar_Click);
             // 
             // panel1
             // 
@@ -105,47 +103,16 @@
             // dgvclientes
             // 
             this.dgvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvclientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idcliente,
-            this.nombre,
-            this.direccion,
-            this.telefono,
-            this.dui});
             this.dgvclientes.Location = new System.Drawing.Point(6, 19);
             this.dgvclientes.Name = "dgvclientes";
             this.dgvclientes.Size = new System.Drawing.Size(543, 252);
             this.dgvclientes.TabIndex = 1;
             // 
-            // idcliente
-            // 
-            this.idcliente.HeaderText = "ID Cliente";
-            this.idcliente.Name = "idcliente";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Direccion";
-            this.direccion.Name = "direccion";
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            // 
-            // dui
-            // 
-            this.dui.HeaderText = "Dui";
-            this.dui.Name = "dui";
-            // 
             // FBusquedaclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 372);
+            this.ClientSize = new System.Drawing.Size(554, 366);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FBusquedaclientes";
@@ -167,10 +134,5 @@
         private System.Windows.Forms.Button btnseleccionar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvclientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dui;
     }
 }

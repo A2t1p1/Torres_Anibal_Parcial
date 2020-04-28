@@ -24,5 +24,18 @@ namespace Torres_Anibal_Parcial
             cambio.ShowDialog();
             this.Close();
         }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            FBusquedapeliculas cambio = new FBusquedapeliculas();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

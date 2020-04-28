@@ -54,7 +54,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(559, 61);
+            this.panel2.Size = new System.Drawing.Size(553, 61);
             this.panel2.TabIndex = 8;
             // 
             // txtbuscar
@@ -83,6 +83,7 @@
             this.btncancelar.TabIndex = 6;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnseleccionar
             // 
@@ -145,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 395);
+            this.ClientSize = new System.Drawing.Size(553, 366);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FBusquedapeliculas";

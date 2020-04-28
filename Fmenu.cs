@@ -40,7 +40,7 @@ namespace Torres_Anibal_Parcial
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            FPeliculas cambio = new FPeliculas();
+            FAlquiler cambio = new FAlquiler();
             this.Hide();
             cambio.ShowDialog();
             this.Close();

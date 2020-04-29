@@ -77,6 +77,7 @@
             this.btneliminar.TabIndex = 4;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
@@ -89,6 +90,7 @@
             this.btnmodificar.TabIndex = 3;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnagregar
             // 
@@ -101,6 +103,7 @@
             this.btnagregar.TabIndex = 2;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // popciones
             // 
@@ -136,6 +139,7 @@
             this.btncerrar.TabIndex = 1;
             this.btncerrar.Text = "Cerrar";
             this.btncerrar.UseVisualStyleBackColor = true;
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
             // btnmenu
             // 
@@ -186,6 +190,7 @@
             this.cbclientes.Name = "cbclientes";
             this.cbclientes.Size = new System.Drawing.Size(147, 21);
             this.cbclientes.TabIndex = 17;
+            this.cbclientes.SelectedIndexChanged += new System.EventHandler(this.cbclientes_SelectedIndexChanged);
             // 
             // txtvalor
             // 

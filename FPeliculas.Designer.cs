@@ -43,20 +43,21 @@
             this.txtgenero = new System.Windows.Forms.TextBox();
             this.txtsinopsis = new System.Windows.Forms.TextBox();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
-            this.lblidpelicula = new System.Windows.Forms.Label();
+            this.lblidp = new System.Windows.Forms.Label();
             this.lblgenero = new System.Windows.Forms.Label();
             this.lbldescripcion = new System.Windows.Forms.Label();
             this.lblsinopsis = new System.Windows.Forms.Label();
             this.lblduracion = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnavegacion = new System.Windows.Forms.Panel();
+            this.btnultimo = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
+            this.btnatras = new System.Windows.Forms.Button();
+            this.btnprimero = new System.Windows.Forms.Button();
+            this.lblregistro = new System.Windows.Forms.Label();
             this.pfunciones.SuspendLayout();
             this.popciones.SuspendLayout();
             this.pdatos.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnavegacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnmenu
@@ -88,55 +89,62 @@
             // btnbuscar
             // 
             this.btnbuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnbuscar.BackgroundImage")));
-            this.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscar.Location = new System.Drawing.Point(29, 239);
+            this.btnbuscar.Location = new System.Drawing.Point(3, 235);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(95, 32);
+            this.btnbuscar.Size = new System.Drawing.Size(139, 36);
             this.btnbuscar.TabIndex = 2;
+            this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btneliminar
             // 
             this.btneliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btneliminar.BackgroundImage")));
-            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btneliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(29, 167);
+            this.btneliminar.Location = new System.Drawing.Point(3, 163);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(95, 32);
+            this.btneliminar.Size = new System.Drawing.Size(139, 36);
             this.btneliminar.TabIndex = 4;
+            this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
             this.btnmodificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmodificar.BackgroundImage")));
-            this.btnmodificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnmodificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnmodificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificar.Location = new System.Drawing.Point(29, 100);
+            this.btnmodificar.Location = new System.Drawing.Point(3, 96);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(95, 32);
+            this.btnmodificar.Size = new System.Drawing.Size(139, 36);
             this.btnmodificar.TabIndex = 3;
+            this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnagregar
             // 
             this.btnagregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnagregar.BackgroundImage")));
-            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(29, 25);
+            this.btnagregar.Location = new System.Drawing.Point(3, 21);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(95, 32);
+            this.btnagregar.Size = new System.Drawing.Size(139, 36);
             this.btnagregar.TabIndex = 2;
+            this.btnagregar.Text = "Nuevo";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // popciones
             // 
@@ -169,11 +177,12 @@
             this.pdatos.Controls.Add(this.txtgenero);
             this.pdatos.Controls.Add(this.txtsinopsis);
             this.pdatos.Controls.Add(this.txtdescripcion);
-            this.pdatos.Controls.Add(this.lblidpelicula);
+            this.pdatos.Controls.Add(this.lblidp);
             this.pdatos.Controls.Add(this.lblgenero);
             this.pdatos.Controls.Add(this.lbldescripcion);
             this.pdatos.Controls.Add(this.lblsinopsis);
             this.pdatos.Controls.Add(this.lblduracion);
+            this.pdatos.Enabled = false;
             this.pdatos.Location = new System.Drawing.Point(12, 12);
             this.pdatos.Name = "pdatos";
             this.pdatos.Size = new System.Drawing.Size(341, 319);
@@ -191,7 +200,7 @@
             // 
             // txtduracion
             // 
-            this.txtduracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(136)))), ((int)(((byte)(176)))));
+            this.txtduracion.BackColor = System.Drawing.Color.MistyRose;
             this.txtduracion.Location = new System.Drawing.Point(144, 251);
             this.txtduracion.Name = "txtduracion";
             this.txtduracion.Size = new System.Drawing.Size(100, 20);
@@ -199,7 +208,7 @@
             // 
             // txtgenero
             // 
-            this.txtgenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(136)))), ((int)(((byte)(176)))));
+            this.txtgenero.BackColor = System.Drawing.Color.MistyRose;
             this.txtgenero.Location = new System.Drawing.Point(144, 200);
             this.txtgenero.Name = "txtgenero";
             this.txtgenero.Size = new System.Drawing.Size(100, 20);
@@ -207,7 +216,7 @@
             // 
             // txtsinopsis
             // 
-            this.txtsinopsis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(136)))), ((int)(((byte)(176)))));
+            this.txtsinopsis.BackColor = System.Drawing.Color.MistyRose;
             this.txtsinopsis.Location = new System.Drawing.Point(144, 133);
             this.txtsinopsis.Multiline = true;
             this.txtsinopsis.Name = "txtsinopsis";
@@ -216,20 +225,20 @@
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(136)))), ((int)(((byte)(176)))));
+            this.txtdescripcion.BackColor = System.Drawing.Color.MistyRose;
             this.txtdescripcion.Location = new System.Drawing.Point(144, 73);
             this.txtdescripcion.Multiline = true;
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(100, 41);
             this.txtdescripcion.TabIndex = 7;
             // 
-            // lblidpelicula
+            // lblidp
             // 
-            this.lblidpelicula.AutoSize = true;
-            this.lblidpelicula.Location = new System.Drawing.Point(244, 40);
-            this.lblidpelicula.Name = "lblidpelicula";
-            this.lblidpelicula.Size = new System.Drawing.Size(0, 13);
-            this.lblidpelicula.TabIndex = 6;
+            this.lblidp.AutoSize = true;
+            this.lblidp.Location = new System.Drawing.Point(310, 79);
+            this.lblidp.Name = "lblidp";
+            this.lblidp.Size = new System.Drawing.Size(0, 13);
+            this.lblidp.TabIndex = 6;
             // 
             // lblgenero
             // 
@@ -271,69 +280,82 @@
             this.lblduracion.TabIndex = 2;
             this.lblduracion.Text = "Duracion";
             // 
-            // panel1
+            // pnavegacion
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(136)))), ((int)(((byte)(176)))));
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(233, 337);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(271, 101);
-            this.panel1.TabIndex = 11;
+            this.pnavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(136)))), ((int)(((byte)(176)))));
+            this.pnavegacion.Controls.Add(this.lblregistro);
+            this.pnavegacion.Controls.Add(this.btnultimo);
+            this.pnavegacion.Controls.Add(this.btnsiguiente);
+            this.pnavegacion.Controls.Add(this.btnatras);
+            this.pnavegacion.Controls.Add(this.btnprimero);
+            this.pnavegacion.Location = new System.Drawing.Point(233, 337);
+            this.pnavegacion.Name = "pnavegacion";
+            this.pnavegacion.Size = new System.Drawing.Size(271, 101);
+            this.pnavegacion.TabIndex = 11;
             // 
-            // button4
+            // btnultimo
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(221, 45);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(47, 30);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnultimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnultimo.BackgroundImage")));
+            this.btnultimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnultimo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnultimo.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnultimo.Location = new System.Drawing.Point(221, 45);
+            this.btnultimo.Name = "btnultimo";
+            this.btnultimo.Size = new System.Drawing.Size(47, 30);
+            this.btnultimo.TabIndex = 4;
+            this.btnultimo.UseVisualStyleBackColor = true;
+            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
             // 
-            // button3
+            // btnsiguiente
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(168, 45);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(47, 30);
-            this.button3.TabIndex = 3;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnsiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsiguiente.BackgroundImage")));
+            this.btnsiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnsiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsiguiente.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsiguiente.Location = new System.Drawing.Point(168, 45);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(47, 30);
+            this.btnsiguiente.TabIndex = 3;
+            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
-            // button2
+            // btnatras
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(56, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 30);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnatras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnatras.BackgroundImage")));
+            this.btnatras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnatras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnatras.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnatras.Location = new System.Drawing.Point(56, 45);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(47, 30);
+            this.btnatras.TabIndex = 2;
+            this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 
-            // button1
+            // btnprimero
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 30);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnprimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnprimero.BackgroundImage")));
+            this.btnprimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnprimero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnprimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnprimero.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprimero.Location = new System.Drawing.Point(3, 45);
+            this.btnprimero.Name = "btnprimero";
+            this.btnprimero.Size = new System.Drawing.Size(47, 30);
+            this.btnprimero.TabIndex = 1;
+            this.btnprimero.UseVisualStyleBackColor = true;
+            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
+            // 
+            // lblregistro
+            // 
+            this.lblregistro.AutoSize = true;
+            this.lblregistro.Location = new System.Drawing.Point(123, 55);
+            this.lblregistro.Name = "lblregistro";
+            this.lblregistro.Size = new System.Drawing.Size(0, 13);
+            this.lblregistro.TabIndex = 12;
             // 
             // FPeliculas
             // 
@@ -341,7 +363,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(137)))), ((int)(((byte)(147)))));
             this.ClientSize = new System.Drawing.Size(516, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnavegacion);
             this.Controls.Add(this.pdatos);
             this.Controls.Add(this.pfunciones);
             this.Controls.Add(this.popciones);
@@ -352,7 +374,8 @@
             this.popciones.ResumeLayout(false);
             this.pdatos.ResumeLayout(false);
             this.pdatos.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pnavegacion.ResumeLayout(false);
+            this.pnavegacion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -372,15 +395,16 @@
         private System.Windows.Forms.TextBox txtgenero;
         private System.Windows.Forms.TextBox txtsinopsis;
         private System.Windows.Forms.TextBox txtdescripcion;
-        private System.Windows.Forms.Label lblidpelicula;
+        private System.Windows.Forms.Label lblidp;
         private System.Windows.Forms.Label lblgenero;
         private System.Windows.Forms.Label lbldescripcion;
         private System.Windows.Forms.Label lblsinopsis;
         private System.Windows.Forms.Label lblduracion;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnavegacion;
+        private System.Windows.Forms.Button btnultimo;
+        private System.Windows.Forms.Button btnsiguiente;
+        private System.Windows.Forms.Button btnatras;
+        private System.Windows.Forms.Button btnprimero;
+        private System.Windows.Forms.Label lblregistro;
     }
 }

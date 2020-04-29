@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelcontrol = new System.Windows.Forms.Panel();
             this.btnultimo = new System.Windows.Forms.Button();
+            this.lblregistro = new System.Windows.Forms.Label();
             this.btnadelante = new System.Windows.Forms.Button();
             this.btnatras = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
@@ -44,8 +45,6 @@
             this.panelopciones = new System.Windows.Forms.Panel();
             this.btncerrar = new System.Windows.Forms.Button();
             this.paneldatos = new System.Windows.Forms.Panel();
-            this.lblregistro = new System.Windows.Forms.Label();
-            this.lbltitulo = new System.Windows.Forms.Label();
             this.grdatos = new System.Windows.Forms.GroupBox();
             this.txtdui = new System.Windows.Forms.TextBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbltitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelcontrol.SuspendLayout();
             this.pfunciones.SuspendLayout();
@@ -116,6 +116,14 @@
             this.btnultimo.TabIndex = 8;
             this.btnultimo.UseVisualStyleBackColor = true;
             this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
+            // 
+            // lblregistro
+            // 
+            this.lblregistro.AutoSize = true;
+            this.lblregistro.Location = new System.Drawing.Point(132, 45);
+            this.lblregistro.Name = "lblregistro";
+            this.lblregistro.Size = new System.Drawing.Size(0, 13);
+            this.lblregistro.TabIndex = 12;
             // 
             // btnadelante
             // 
@@ -264,24 +272,6 @@
             this.paneldatos.Size = new System.Drawing.Size(341, 319);
             this.paneldatos.TabIndex = 6;
             // 
-            // lblregistro
-            // 
-            this.lblregistro.AutoSize = true;
-            this.lblregistro.Location = new System.Drawing.Point(132, 45);
-            this.lblregistro.Name = "lblregistro";
-            this.lblregistro.Size = new System.Drawing.Size(0, 13);
-            this.lblregistro.TabIndex = 12;
-            // 
-            // lbltitulo
-            // 
-            this.lbltitulo.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.Location = new System.Drawing.Point(3, 11);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(241, 29);
-            this.lbltitulo.TabIndex = 11;
-            this.lbltitulo.Text = "Registro de Clientes";
-            this.lbltitulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // grdatos
             // 
             this.grdatos.Controls.Add(this.txtdui);
@@ -309,7 +299,7 @@
             this.txtdui.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdui.Location = new System.Drawing.Point(156, 208);
             this.txtdui.Name = "txtdui";
-            this.txtdui.Size = new System.Drawing.Size(100, 21);
+            this.txtdui.Size = new System.Drawing.Size(107, 21);
             this.txtdui.TabIndex = 27;
             // 
             // txttelefono
@@ -318,13 +308,13 @@
             this.txttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttelefono.Location = new System.Drawing.Point(156, 157);
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(100, 21);
+            this.txttelefono.Size = new System.Drawing.Size(107, 21);
             this.txttelefono.TabIndex = 26;
             // 
             // lblidc
             // 
             this.lblidc.AutoSize = true;
-            this.lblidc.Location = new System.Drawing.Point(282, 33);
+            this.lblidc.Location = new System.Drawing.Point(310, 35);
             this.lblidc.Name = "lblidc";
             this.lblidc.Size = new System.Drawing.Size(0, 16);
             this.lblidc.TabIndex = 19;
@@ -336,7 +326,7 @@
             this.txtdireccion.Location = new System.Drawing.Point(156, 81);
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(100, 40);
+            this.txtdireccion.Size = new System.Drawing.Size(126, 40);
             this.txtdireccion.TabIndex = 25;
             // 
             // txtnombre
@@ -345,7 +335,7 @@
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombre.Location = new System.Drawing.Point(156, 30);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(100, 21);
+            this.txtnombre.Size = new System.Drawing.Size(126, 21);
             this.txtnombre.TabIndex = 24;
             // 
             // label3
@@ -387,6 +377,16 @@
             this.label2.Size = new System.Drawing.Size(31, 19);
             this.label2.TabIndex = 21;
             this.label2.Text = "Dui";
+            // 
+            // lbltitulo
+            // 
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(3, 11);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(241, 29);
+            this.lbltitulo.TabIndex = 11;
+            this.lbltitulo.Text = "Registro de Clientes";
+            this.lbltitulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // FClientes
             // 

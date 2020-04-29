@@ -63,6 +63,7 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(230, 20);
             this.txtbuscar.TabIndex = 8;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // lblbuscar
             // 
@@ -70,7 +71,7 @@
             this.lblbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbuscar.Location = new System.Drawing.Point(12, 22);
             this.lblbuscar.Name = "lblbuscar";
-            this.lblbuscar.Size = new System.Drawing.Size(57, 16);
+            this.lblbuscar.Size = new System.Drawing.Size(56, 16);
             this.lblbuscar.TabIndex = 7;
             this.lblbuscar.Text = "Buscar";
             // 
@@ -94,6 +95,7 @@
             this.btnseleccionar.TabIndex = 5;
             this.btnseleccionar.Text = "Seleccionar";
             this.btnseleccionar.UseVisualStyleBackColor = true;
+            this.btnseleccionar.Click += new System.EventHandler(this.btnseleccionar_Click);
             // 
             // panel1
             // 

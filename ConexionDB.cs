@@ -31,6 +31,10 @@ namespace Torres_Anibal_Parcial
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(bs, "clientes");
 
+            comandosSQL.CommandText = "select * from peliculas";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(bs,"clientes");
+
             return bs;
         }
 
@@ -59,6 +63,33 @@ namespace Torres_Anibal_Parcial
             {
                 sql = "DELETE clientes FROM clientes WHERE idcliente='" + datos[0] + "'";
             } 
+            procesarSQL(sql);
+        }
+        public void movimiento_peliculas(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "Nuevo")
+            {
+                sql = "insert into peliculas(descripcion,sinopsis,genero,duracion) values (" +
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'" +
+                    ")";
+            }
+            else if (accion == "Modificar")
+            {
+                sql = "update peliculas set " +
+                    "descripcion ='" + datos[1] + "'," +
+                    "sinopsis='" + datos[2] + "'," +
+                    "genero='" + datos[3] + "'," +
+                    "duracion='" + datos[4] + "'" +
+                    "where idpelicula ='" + datos[0] + "'";
+            }
+            else if (accion == "Eliminar")
+            {
+                sql = "DELETE peliculas FROM peliculas WHERE idpelicula='" + datos[0] + "'";
+            }
             procesarSQL(sql);
         }
         void procesarSQL(String sql)

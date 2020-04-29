@@ -248,11 +248,6 @@ ServiceFabricBackup/
 # SQL Server files
 
 # Business Intelligence projects
-*.rdl.data
-*.bim.layout
-*.bim_*.settings
-*.rptproj.rsuser
-*- Backup*.rdl
 
 # Microsoft Fakes
 FakesAssemblies/

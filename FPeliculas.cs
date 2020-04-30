@@ -14,8 +14,8 @@ namespace Torres_Anibal_Parcial
     public partial class FPeliculas : Form
     {
         ConexionDB objConexion = new ConexionDB();
-        public String accion = "Nuevo";
         int posicion = 0;
+        public string accion = "Nuevo";
         DataTable tbl = new DataTable();
         public FPeliculas()
         {
@@ -80,7 +80,7 @@ namespace Torres_Anibal_Parcial
                     txtgenero.Text,
                     txtduracion.Text,
                 };
-                objConexion.movimiento_clientes(valores, accion);
+                objConexion.movimiento_peliculas(valores, accion);
                 ActualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 MostrarDatos();

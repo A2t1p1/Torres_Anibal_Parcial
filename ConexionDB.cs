@@ -33,7 +33,7 @@ namespace Torres_Anibal_Parcial
 
             comandosSQL.CommandText = "select * from peliculas";
             miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(bs,"clientes");
+            miAdaptadorDatos.Fill(bs,"Peliculas");
 
             return bs;
         }

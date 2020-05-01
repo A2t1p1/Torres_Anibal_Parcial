@@ -47,6 +47,10 @@ namespace Torres_Anibal_Parcial
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "categorias");
 
+            comandosSQL.CommandText = "select * from pagos";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "pagos");
+
             return ds;
         }
         public void Mantenimiento_usuarios(String[] datos, String accion)
@@ -174,6 +178,34 @@ namespace Torres_Anibal_Parcial
                 sql = "delete productos from productos where idproducto='" + datos[0] + "'";
 
             }ProcesarSQL(sql);
+        }
+        public void Mantenimiento_pagos(string[] datos, string accion)
+        {
+            string sql = "";
+            if (accion == "Nuevo")
+            {
+                sql = "insert into pagos(idempleado,cargo,tipopago,fechap) values(" +
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'" +  
+                    ")";
+            }
+            else if (accion == "Modificar")
+            {
+                sql = "update pagos set  " +
+                   "idempleado =        '" + datos[1] + "'," +
+                   "cargo =             '" + datos[2] + "'," +
+                   "tipopago=             '" + datos[3] + "'," +
+                   "fechap=         '" + datos[4] + "'" +
+                   "where idpago =   '" + datos[0] + "'";
+            }
+            else
+            {
+                sql = "delete pagos from pagos where idpago='" + datos[0] + "'";
+
+            }
+            ProcesarSQL(sql);
         }
         void ProcesarSQL(String sql)
         {

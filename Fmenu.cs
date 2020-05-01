@@ -41,10 +41,7 @@ namespace Torres_Anibal_Parcial
             this.Close();
         }
           
-        private void BtnVenta_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -54,6 +51,14 @@ namespace Torres_Anibal_Parcial
         private void btnMateriales_Click(object sender, EventArgs e)
         {
             Fproveedores cambio = new Fproveedores();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+
+        private void btnpagos_Click_1(object sender, EventArgs e)
+        {
+            FPagos_Empleados cambio = new FPagos_Empleados();
             this.Hide();
             cambio.ShowDialog();
             this.Close();

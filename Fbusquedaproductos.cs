@@ -29,7 +29,7 @@ namespace Torres_Anibal_Parcial
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Empleados",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

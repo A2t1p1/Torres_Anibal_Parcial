@@ -108,7 +108,7 @@ namespace Torres_Anibal_Parcial
             {
                 btnNuevo.Text = "Guardar";
                 btnModificar.Text = "Cancelar";
-                accion = "modificar";
+                accion = "Modificar";
 
                 Controles(false);
 
@@ -127,7 +127,16 @@ namespace Torres_Anibal_Parcial
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            
+            if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de Productos",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                String[] valores = { lblidproducto.Text };
+                objConexion.Mantenimiento_usuarios(valores, "Eliminar");
+
+                ActualizarDs();
+                posicion = posicion > 0 ? posicion - 1 : 0;
+                MostrarDatos();
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -150,6 +159,44 @@ namespace Torres_Anibal_Parcial
             this.Close();
         }
 
-        
+        private void btnprimero_Click(object sender, EventArgs e)
+        {
+            posicion = 0;
+            MostrarDatos();
+        }
+
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            if (posicion > 0)
+            {
+                posicion--;
+                MostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Primer Registro...", "Registros de Productos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnsiguiente_Click(object sender, EventArgs e)
+        {
+            if (posicion < tbl.Rows.Count - 1)
+            {
+                posicion++;
+                MostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Ultimo Registro...", "Registros de Productos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnultimo_Click(object sender, EventArgs e)
+        {
+            posicion = tbl.Rows.Count - 1;
+            MostrarDatos();
+        }
     }
 }

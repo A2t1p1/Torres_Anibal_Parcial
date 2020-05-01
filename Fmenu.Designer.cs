@@ -33,7 +33,7 @@
             this.btnCliente = new System.Windows.Forms.Button();
             this.Btnsalir = new System.Windows.Forms.Button();
             this.btnEmpleado = new System.Windows.Forms.Button();
-            this.btnVenta = new System.Windows.Forms.Button();
+            this.btnpagos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMateriales
@@ -96,16 +96,17 @@
             this.btnEmpleado.UseVisualStyleBackColor = false;
             this.btnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
             // 
-            // btnVenta
+            // btnpagos
             // 
-            this.btnVenta.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnVenta.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenta.Location = new System.Drawing.Point(279, 340);
-            this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new System.Drawing.Size(145, 67);
-            this.btnVenta.TabIndex = 13;
-            this.btnVenta.UseVisualStyleBackColor = false;
-            this.btnVenta.Click += new System.EventHandler(this.BtnVenta_Click);
+            this.btnpagos.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnpagos.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpagos.Location = new System.Drawing.Point(279, 340);
+            this.btnpagos.Name = "btnpagos";
+            this.btnpagos.Size = new System.Drawing.Size(145, 67);
+            this.btnpagos.TabIndex = 13;
+            this.btnpagos.Text = "Pagos";
+            this.btnpagos.UseVisualStyleBackColor = false;
+            this.btnpagos.Click += new System.EventHandler(this.btnpagos_Click_1);
             // 
             // Fmenu
             // 
@@ -113,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(718, 453);
-            this.Controls.Add(this.btnVenta);
+            this.Controls.Add(this.btnpagos);
             this.Controls.Add(this.btnEmpleado);
             this.Controls.Add(this.btnMateriales);
             this.Controls.Add(this.btnPanes);
@@ -132,6 +133,6 @@
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button Btnsalir;
         private System.Windows.Forms.Button btnEmpleado;
-        private System.Windows.Forms.Button btnVenta;
+        private System.Windows.Forms.Button btnpagos;
     }
 }

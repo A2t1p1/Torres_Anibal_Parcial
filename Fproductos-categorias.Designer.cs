@@ -141,7 +141,7 @@
             // lblnregistros
             // 
             this.lblnregistros.AutoSize = true;
-            this.lblnregistros.Location = new System.Drawing.Point(83, 26);
+            this.lblnregistros.Location = new System.Drawing.Point(228, 35);
             this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnregistros.Name = "lblnregistros";
             this.lblnregistros.Size = new System.Drawing.Size(0, 13);
@@ -150,46 +150,50 @@
             // btnultimo
             // 
             this.btnultimo.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnultimo.Location = new System.Drawing.Point(340, 16);
+            this.btnultimo.Location = new System.Drawing.Point(372, 16);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
-            this.btnultimo.Size = new System.Drawing.Size(101, 33);
+            this.btnultimo.Size = new System.Drawing.Size(69, 33);
             this.btnultimo.TabIndex = 3;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = false;
+            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
             // 
             // btnsiguiente
             // 
             this.btnsiguiente.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnsiguiente.Location = new System.Drawing.Point(219, 16);
+            this.btnsiguiente.Location = new System.Drawing.Point(298, 16);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(119, 33);
+            this.btnsiguiente.Size = new System.Drawing.Size(72, 32);
             this.btnsiguiente.TabIndex = 2;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = false;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
             // btnanterior
             // 
             this.btnanterior.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnanterior.Location = new System.Drawing.Point(102, 16);
+            this.btnanterior.Location = new System.Drawing.Point(82, 15);
             this.btnanterior.Margin = new System.Windows.Forms.Padding(1);
             this.btnanterior.Name = "btnanterior";
-            this.btnanterior.Size = new System.Drawing.Size(106, 33);
+            this.btnanterior.Size = new System.Drawing.Size(74, 33);
             this.btnanterior.TabIndex = 1;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = false;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnprimero
             // 
             this.btnprimero.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnprimero.Location = new System.Drawing.Point(2, 16);
+            this.btnprimero.Location = new System.Drawing.Point(2, 15);
             this.btnprimero.Margin = new System.Windows.Forms.Padding(1);
             this.btnprimero.Name = "btnprimero";
-            this.btnprimero.Size = new System.Drawing.Size(98, 33);
+            this.btnprimero.Size = new System.Drawing.Size(66, 33);
             this.btnprimero.TabIndex = 0;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = false;
+            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
             // grbDatosProductos
             // 
@@ -239,7 +243,7 @@
             // lblidproducto
             // 
             this.lblidproducto.AutoSize = true;
-            this.lblidproducto.Location = new System.Drawing.Point(189, 89);
+            this.lblidproducto.Location = new System.Drawing.Point(328, 86);
             this.lblidproducto.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblidproducto.Name = "lblidproducto";
             this.lblidproducto.Size = new System.Drawing.Size(0, 13);

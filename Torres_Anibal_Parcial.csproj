@@ -62,7 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDB.cs" />
-    <Compile Include="Convertidor.cs" />
+    <Compile Include="FBusquedaPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBusquedaPagos.Designer.cs">
+      <DependentUpon>FBusquedaPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fbusquedaproductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +92,12 @@
     <Compile Include="Fbusquedaproveedores.Designer.cs">
       <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FPagos-Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPagos-Empleados.Designer.cs">
+      <DependentUpon>FPagos-Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fusuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +115,6 @@
     </Compile>
     <Compile Include="Fmenu.Designer.cs">
       <DependentUpon>Fmenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Fproductos-categorias.cs">
       <SubType>Form</SubType>
@@ -131,6 +136,9 @@
     <Compile Include="Proyecto.Designer.cs">
       <DependentUpon>Proyecto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FBusquedaPagos.resx">
+      <DependentUpon>FBusquedaPagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fbusquedaproductos.resx">
       <DependentUpon>Fbusquedaproductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +151,9 @@
     <EmbeddedResource Include="Fbusquedaproveedores.resx">
       <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FPagos-Empleados.resx">
+      <DependentUpon>FPagos-Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fusuarios.resx">
       <DependentUpon>Fusuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fmenu.resx">
       <DependentUpon>Fmenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fproductos-categorias.resx">
       <DependentUpon>Fproductos-categorias.cs</DependentUpon>

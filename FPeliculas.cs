@@ -194,5 +194,11 @@ namespace Torres_Anibal_Parcial
         {
             Close();
         }
+
+        private void FPeliculas_Load(object sender, EventArgs e)
+        {
+            ActualizarDs();
+            MostrarDatos();
+        }
     }
 }

@@ -28,6 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAlquiler));
+            this.grbnavegacion = new System.Windows.Forms.Panel();
+            this.lblregistro = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbopeliculas = new System.Windows.Forms.ComboBox();
+            this.cboclientes = new System.Windows.Forms.ComboBox();
+            this.txtvalor = new System.Windows.Forms.TextBox();
+            this.lblvalor = new System.Windows.Forms.Label();
+            this.txtfdevolucion = new System.Windows.Forms.TextBox();
+            this.lbldevolucion = new System.Windows.Forms.Label();
+            this.lbltitulo = new System.Windows.Forms.Label();
+            this.txtfprestamo = new System.Windows.Forms.TextBox();
+            this.lblidalquiler = new System.Windows.Forms.Label();
+            this.lblfprestamo = new System.Windows.Forms.Label();
+            this.lblidcliente = new System.Windows.Forms.Label();
+            this.lblidpelicula = new System.Windows.Forms.Label();
             this.pfunciones = new System.Windows.Forms.Panel();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
@@ -36,160 +56,132 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btncerrar = new System.Windows.Forms.Button();
             this.btnmenu = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbpeliculas = new System.Windows.Forms.ComboBox();
-            this.cbclientes = new System.Windows.Forms.ComboBox();
-            this.txtvalor = new System.Windows.Forms.TextBox();
-            this.lblvalor = new System.Windows.Forms.Label();
-            this.txtfdevolucion = new System.Windows.Forms.TextBox();
-            this.lbldevolucion = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtduracion = new System.Windows.Forms.TextBox();
-            this.txtfprestamo = new System.Windows.Forms.TextBox();
-            this.lblida = new System.Windows.Forms.Label();
-            this.lblfprestamo = new System.Windows.Forms.Label();
-            this.lblidalquiler = new System.Windows.Forms.Label();
-            this.lblidpelicula = new System.Windows.Forms.Label();
-            this.lblduracion = new System.Windows.Forms.Label();
+            this.grbnavegacion.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pfunciones.SuspendLayout();
             this.popciones.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pfunciones
+            // grbnavegacion
             // 
-            this.pfunciones.Controls.Add(this.btneliminar);
-            this.pfunciones.Controls.Add(this.btnmodificar);
-            this.pfunciones.Controls.Add(this.btnagregar);
-            this.pfunciones.Location = new System.Drawing.Point(359, 12);
-            this.pfunciones.Name = "pfunciones";
-            this.pfunciones.Size = new System.Drawing.Size(146, 319);
-            this.pfunciones.TabIndex = 14;
+            this.grbnavegacion.BackColor = System.Drawing.Color.White;
+            this.grbnavegacion.Controls.Add(this.lblregistro);
+            this.grbnavegacion.Controls.Add(this.button4);
+            this.grbnavegacion.Controls.Add(this.button3);
+            this.grbnavegacion.Controls.Add(this.button2);
+            this.grbnavegacion.Controls.Add(this.button1);
+            this.grbnavegacion.Location = new System.Drawing.Point(86, 428);
+            this.grbnavegacion.Name = "grbnavegacion";
+            this.grbnavegacion.Size = new System.Drawing.Size(267, 66);
+            this.grbnavegacion.TabIndex = 20;
             // 
-            // btneliminar
+            // lblregistro
             // 
-            this.btneliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(29, 241);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(95, 32);
-            this.btneliminar.TabIndex = 4;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = true;
+            this.lblregistro.AutoSize = true;
+            this.lblregistro.Location = new System.Drawing.Point(134, 34);
+            this.lblregistro.Name = "lblregistro";
+            this.lblregistro.Size = new System.Drawing.Size(0, 13);
+            this.lblregistro.TabIndex = 5;
             // 
-            // btnmodificar
+            // button4
             // 
-            this.btnmodificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmodificar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificar.Location = new System.Drawing.Point(29, 132);
-            this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(95, 32);
-            this.btnmodificar.TabIndex = 3;
-            this.btnmodificar.Text = "Modificar";
-            this.btnmodificar.UseVisualStyleBackColor = true;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(219, 17);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(47, 30);
+            this.button4.TabIndex = 4;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btnagregar
+            // button3
             // 
-            this.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnagregar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(29, 25);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(95, 32);
-            this.btnagregar.TabIndex = 2;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.UseVisualStyleBackColor = true;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(166, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(47, 30);
+            this.button3.TabIndex = 3;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // popciones
+            // button2
             // 
-            this.popciones.Controls.Add(this.btnbuscar);
-            this.popciones.Controls.Add(this.btncerrar);
-            this.popciones.Controls.Add(this.btnmenu);
-            this.popciones.Location = new System.Drawing.Point(12, 337);
-            this.popciones.Name = "popciones";
-            this.popciones.Size = new System.Drawing.Size(493, 101);
-            this.popciones.TabIndex = 13;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(54, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 30);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnbuscar
+            // button1
             // 
-            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscar.Location = new System.Drawing.Point(383, 32);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(95, 43);
-            this.btnbuscar.TabIndex = 2;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
-            // 
-            // btncerrar
-            // 
-            this.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncerrar.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncerrar.Location = new System.Drawing.Point(15, 32);
-            this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(95, 43);
-            this.btncerrar.TabIndex = 1;
-            this.btncerrar.Text = "Cerrar";
-            this.btncerrar.UseVisualStyleBackColor = true;
-            // 
-            // btnmenu
-            // 
-            this.btnmenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.btnmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenu.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmenu.Location = new System.Drawing.Point(199, 32);
-            this.btnmenu.Name = "btnmenu";
-            this.btnmenu.Size = new System.Drawing.Size(95, 43);
-            this.btnmenu.TabIndex = 0;
-            this.btnmenu.Text = "Menu";
-            this.btnmenu.UseVisualStyleBackColor = true;
-            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 30);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cbpeliculas);
-            this.panel1.Controls.Add(this.cbclientes);
+            this.panel1.Controls.Add(this.cbopeliculas);
+            this.panel1.Controls.Add(this.cboclientes);
             this.panel1.Controls.Add(this.txtvalor);
             this.panel1.Controls.Add(this.lblvalor);
             this.panel1.Controls.Add(this.txtfdevolucion);
             this.panel1.Controls.Add(this.lbldevolucion);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtduracion);
+            this.panel1.Controls.Add(this.lbltitulo);
             this.panel1.Controls.Add(this.txtfprestamo);
-            this.panel1.Controls.Add(this.lblida);
-            this.panel1.Controls.Add(this.lblfprestamo);
             this.panel1.Controls.Add(this.lblidalquiler);
+            this.panel1.Controls.Add(this.lblfprestamo);
+            this.panel1.Controls.Add(this.lblidcliente);
             this.panel1.Controls.Add(this.lblidpelicula);
-            this.panel1.Controls.Add(this.lblduracion);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 319);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 19;
             // 
-            // cbpeliculas
+            // cbopeliculas
             // 
-            this.cbpeliculas.FormattingEnabled = true;
-            this.cbpeliculas.Location = new System.Drawing.Point(180, 106);
-            this.cbpeliculas.Name = "cbpeliculas";
-            this.cbpeliculas.Size = new System.Drawing.Size(147, 21);
-            this.cbpeliculas.TabIndex = 18;
+            this.cbopeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbopeliculas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbopeliculas.FormattingEnabled = true;
+            this.cbopeliculas.Location = new System.Drawing.Point(128, 103);
+            this.cbopeliculas.Name = "cbopeliculas";
+            this.cbopeliculas.Size = new System.Drawing.Size(199, 21);
+            this.cbopeliculas.TabIndex = 19;
             // 
-            // cbclientes
+            // cboclientes
             // 
-            this.cbclientes.FormattingEnabled = true;
-            this.cbclientes.Location = new System.Drawing.Point(180, 61);
-            this.cbclientes.Name = "cbclientes";
-            this.cbclientes.Size = new System.Drawing.Size(147, 21);
-            this.cbclientes.TabIndex = 17;
+            this.cboclientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboclientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboclientes.FormattingEnabled = true;
+            this.cboclientes.Location = new System.Drawing.Point(128, 61);
+            this.cboclientes.Name = "cboclientes";
+            this.cboclientes.Size = new System.Drawing.Size(199, 21);
+            this.cboclientes.TabIndex = 18;
             // 
             // txtvalor
             // 
-            this.txtvalor.Location = new System.Drawing.Point(180, 274);
+            this.txtvalor.Location = new System.Drawing.Point(180, 241);
             this.txtvalor.Name = "txtvalor";
             this.txtvalor.Size = new System.Drawing.Size(100, 20);
             this.txtvalor.TabIndex = 16;
@@ -198,7 +190,7 @@
             // 
             this.lblvalor.AutoSize = true;
             this.lblvalor.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvalor.Location = new System.Drawing.Point(23, 275);
+            this.lblvalor.Location = new System.Drawing.Point(23, 242);
             this.lblvalor.Name = "lblvalor";
             this.lblvalor.Size = new System.Drawing.Size(45, 19);
             this.lblvalor.TabIndex = 15;
@@ -221,22 +213,15 @@
             this.lbldevolucion.TabIndex = 12;
             this.lbldevolucion.Text = "Fecha de Devolucion";
             // 
-            // label5
+            // lbltitulo
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(241, 29);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Registro de Alquiler";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // txtduracion
-            // 
-            this.txtduracion.Location = new System.Drawing.Point(180, 232);
-            this.txtduracion.Name = "txtduracion";
-            this.txtduracion.Size = new System.Drawing.Size(100, 20);
-            this.txtduracion.TabIndex = 10;
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(3, 11);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(241, 29);
+            this.lbltitulo.TabIndex = 11;
+            this.lbltitulo.Text = "Registro de Alquiler";
+            this.lbltitulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // txtfprestamo
             // 
@@ -245,13 +230,13 @@
             this.txtfprestamo.Size = new System.Drawing.Size(100, 20);
             this.txtfprestamo.TabIndex = 9;
             // 
-            // lblida
+            // lblidalquiler
             // 
-            this.lblida.AutoSize = true;
-            this.lblida.Location = new System.Drawing.Point(244, 40);
-            this.lblida.Name = "lblida";
-            this.lblida.Size = new System.Drawing.Size(0, 13);
-            this.lblida.TabIndex = 6;
+            this.lblidalquiler.AutoSize = true;
+            this.lblidalquiler.Location = new System.Drawing.Point(287, 36);
+            this.lblidalquiler.Name = "lblidalquiler";
+            this.lblidalquiler.Size = new System.Drawing.Size(0, 13);
+            this.lblidalquiler.TabIndex = 6;
             // 
             // lblfprestamo
             // 
@@ -263,15 +248,15 @@
             this.lblfprestamo.TabIndex = 3;
             this.lblfprestamo.Text = "Fecha de Prestamo";
             // 
-            // lblidalquiler
+            // lblidcliente
             // 
-            this.lblidalquiler.AutoSize = true;
-            this.lblidalquiler.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidalquiler.Location = new System.Drawing.Point(23, 60);
-            this.lblidalquiler.Name = "lblidalquiler";
-            this.lblidalquiler.Size = new System.Drawing.Size(73, 19);
-            this.lblidalquiler.TabIndex = 1;
-            this.lblidalquiler.Text = "ID Cliente";
+            this.lblidcliente.AutoSize = true;
+            this.lblidcliente.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidcliente.Location = new System.Drawing.Point(23, 60);
+            this.lblidcliente.Name = "lblidcliente";
+            this.lblidcliente.Size = new System.Drawing.Size(55, 19);
+            this.lblidcliente.TabIndex = 1;
+            this.lblidcliente.Text = "Cliente";
             // 
             // lblidpelicula
             // 
@@ -279,40 +264,150 @@
             this.lblidpelicula.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblidpelicula.Location = new System.Drawing.Point(23, 105);
             this.lblidpelicula.Name = "lblidpelicula";
-            this.lblidpelicula.Size = new System.Drawing.Size(79, 19);
+            this.lblidpelicula.Size = new System.Drawing.Size(61, 19);
             this.lblidpelicula.TabIndex = 4;
-            this.lblidpelicula.Text = "ID Pelicula";
+            this.lblidpelicula.Text = "Pelicula";
             // 
-            // lblduracion
+            // pfunciones
             // 
-            this.lblduracion.AutoSize = true;
-            this.lblduracion.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblduracion.Location = new System.Drawing.Point(23, 234);
-            this.lblduracion.Name = "lblduracion";
-            this.lblduracion.Size = new System.Drawing.Size(69, 19);
-            this.lblduracion.TabIndex = 2;
-            this.lblduracion.Text = "Duracion";
+            this.pfunciones.Controls.Add(this.btneliminar);
+            this.pfunciones.Controls.Add(this.btnmodificar);
+            this.pfunciones.Controls.Add(this.btnagregar);
+            this.pfunciones.Location = new System.Drawing.Point(359, 3);
+            this.pfunciones.Name = "pfunciones";
+            this.pfunciones.Size = new System.Drawing.Size(146, 319);
+            this.pfunciones.TabIndex = 18;
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Location = new System.Drawing.Point(29, 241);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(95, 32);
+            this.btneliminar.TabIndex = 4;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnmodificar
+            // 
+            this.btnmodificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar.Location = new System.Drawing.Point(29, 132);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(95, 32);
+            this.btnmodificar.TabIndex = 3;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Location = new System.Drawing.Point(29, 25);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(95, 32);
+            this.btnagregar.TabIndex = 2;
+            this.btnagregar.Text = "Nuevo";
+            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            // 
+            // popciones
+            // 
+            this.popciones.Controls.Add(this.btnbuscar);
+            this.popciones.Controls.Add(this.btncerrar);
+            this.popciones.Controls.Add(this.btnmenu);
+            this.popciones.Location = new System.Drawing.Point(12, 328);
+            this.popciones.Name = "popciones";
+            this.popciones.Size = new System.Drawing.Size(493, 85);
+            this.popciones.TabIndex = 17;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.Location = new System.Drawing.Point(383, 32);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(95, 43);
+            this.btnbuscar.TabIndex = 2;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click_1);
+            // 
+            // btncerrar
+            // 
+            this.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncerrar.Location = new System.Drawing.Point(15, 32);
+            this.btncerrar.Name = "btncerrar";
+            this.btncerrar.Size = new System.Drawing.Size(95, 43);
+            this.btncerrar.TabIndex = 1;
+            this.btncerrar.Text = "Cerrar";
+            this.btncerrar.UseVisualStyleBackColor = true;
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
+            // 
+            // btnmenu
+            // 
+            this.btnmenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
+            this.btnmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenu.Location = new System.Drawing.Point(199, 32);
+            this.btnmenu.Name = "btnmenu";
+            this.btnmenu.Size = new System.Drawing.Size(95, 43);
+            this.btnmenu.TabIndex = 0;
+            this.btnmenu.Text = "Menu";
+            this.btnmenu.UseVisualStyleBackColor = true;
+            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click_1);
             // 
             // FAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 450);
+            this.ClientSize = new System.Drawing.Size(525, 506);
+            this.Controls.Add(this.grbnavegacion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pfunciones);
             this.Controls.Add(this.popciones);
             this.Name = "FAlquiler";
             this.Text = "FAlquiler";
-            this.pfunciones.ResumeLayout(false);
-            this.popciones.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FAlquiler_Load);
+            this.grbnavegacion.ResumeLayout(false);
+            this.grbnavegacion.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pfunciones.ResumeLayout(false);
+            this.popciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel grbnavegacion;
+        private System.Windows.Forms.Label lblregistro;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cboclientes;
+        private System.Windows.Forms.TextBox txtvalor;
+        private System.Windows.Forms.Label lblvalor;
+        private System.Windows.Forms.TextBox txtfdevolucion;
+        private System.Windows.Forms.Label lbldevolucion;
+        private System.Windows.Forms.Label lbltitulo;
+        private System.Windows.Forms.TextBox txtfprestamo;
+        private System.Windows.Forms.Label lblidalquiler;
+        private System.Windows.Forms.Label lblfprestamo;
+        private System.Windows.Forms.Label lblidcliente;
+        private System.Windows.Forms.Label lblidpelicula;
         private System.Windows.Forms.Panel pfunciones;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
@@ -321,20 +416,6 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btncerrar;
         private System.Windows.Forms.Button btnmenu;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbpeliculas;
-        private System.Windows.Forms.ComboBox cbclientes;
-        private System.Windows.Forms.TextBox txtvalor;
-        private System.Windows.Forms.Label lblvalor;
-        private System.Windows.Forms.TextBox txtfdevolucion;
-        private System.Windows.Forms.Label lbldevolucion;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtduracion;
-        private System.Windows.Forms.TextBox txtfprestamo;
-        private System.Windows.Forms.Label lblida;
-        private System.Windows.Forms.Label lblfprestamo;
-        private System.Windows.Forms.Label lblidalquiler;
-        private System.Windows.Forms.Label lblidpelicula;
-        private System.Windows.Forms.Label lblduracion;
+        private System.Windows.Forms.ComboBox cbopeliculas;
     }
 }

@@ -17,6 +17,8 @@ namespace Torres_Anibal_Parcial
         public FBusquedapeliculas()
         {
             InitializeComponent();
+            dgvpeliculas.DataSource = objConexion.Obtener_datos().Tables["peliculas"].DefaultView;
+
         }
 
         private void btncancelar_Click(object sender, EventArgs e)

@@ -12,14 +12,52 @@ namespace Torres_Anibal_Parcial
 {
     public partial class FBusquedaregistroalquiler : Form
     {
+        ConexionDB objConexion = new ConexionDB();
+        public int _idalquiler;
+
         public FBusquedaregistroalquiler()
         {
             InitializeComponent();
+         
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            FAlquiler cambio = new FAlquiler();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+
+        private void btnseleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvregistroalquiler.RowCount > 0)
+            {
+                _idalquiler = int.Parse(dgvregistroalquiler.CurrentRow.Cells["idalquiler"].Value.ToString());
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de alquiler",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarDatos(txtfiltrar.Text);
+        }
+        void FiltrarDatos(string valor)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource =dgvregistroalquiler.DataSource;
+            bs.Filter = "descripcion like '%" + valor + "%' or genero like '%" + valor + "%' or sinopsis like '%" + valor + "%'";
+            dgvregistroalquiler.DataSource = bs;
+        }
+
+        private void FBusquedaregistroalquiler_Load(object sender, EventArgs e)
+        {
+            dgvregistroalquiler.DataSource = objConexion.Obtener_datos().Tables["alquiler_clientes"].DefaultView;
         }
     }
 }

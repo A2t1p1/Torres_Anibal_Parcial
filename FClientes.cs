@@ -26,7 +26,7 @@ namespace Torres_Anibal_Parcial
         {
             tbl = objConexion.Obtener_datos().Tables["clientes"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idcliente"] };
-            MostrarDatos();
+           
         }
         void MostrarDatos()
         {
@@ -79,7 +79,7 @@ namespace Torres_Anibal_Parcial
                     txtnombre.Text,
                     txtdireccion.Text,
                     txttelefono.Text,
-                    txtdui.Text,
+                    txtdui.Text
                 };
                 objConexion.movimiento_clientes(valores, accion);
                 ActualizarDs();
@@ -192,6 +192,17 @@ namespace Torres_Anibal_Parcial
         private void btncerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FClientes_Load(object sender, EventArgs e)
+        {
+            ActualizarDs();
+            MostrarDatos();
         }
     }
 }

@@ -30,14 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvregistroalquiler = new System.Windows.Forms.DataGridView();
-            this.idalquiler = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idpelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaprestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechadevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtfiltrar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnseleccionar = new System.Windows.Forms.Button();
@@ -57,51 +51,14 @@
             // dgvregistroalquiler
             // 
             this.dgvregistroalquiler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvregistroalquiler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idalquiler,
-            this.idcliente,
-            this.idpelicula,
-            this.fechaprestamo,
-            this.fechadevolucion,
-            this.valor});
             this.dgvregistroalquiler.Location = new System.Drawing.Point(7, 3);
             this.dgvregistroalquiler.Name = "dgvregistroalquiler";
             this.dgvregistroalquiler.Size = new System.Drawing.Size(642, 249);
             this.dgvregistroalquiler.TabIndex = 1;
             // 
-            // idalquiler
-            // 
-            this.idalquiler.HeaderText = "ID Registro";
-            this.idalquiler.Name = "idalquiler";
-            // 
-            // idcliente
-            // 
-            this.idcliente.HeaderText = "ID Cliente";
-            this.idcliente.Name = "idcliente";
-            // 
-            // idpelicula
-            // 
-            this.idpelicula.HeaderText = "ID Pelicula";
-            this.idpelicula.Name = "idpelicula";
-            // 
-            // fechaprestamo
-            // 
-            this.fechaprestamo.HeaderText = "Fecha de Prestamo";
-            this.fechaprestamo.Name = "fechaprestamo";
-            // 
-            // fechadevolucion
-            // 
-            this.fechadevolucion.HeaderText = "Fecha de Devolucion";
-            this.fechadevolucion.Name = "fechadevolucion";
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtfiltrar);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btncancelar);
             this.panel2.Controls.Add(this.btnseleccionar);
@@ -111,12 +68,13 @@
             this.panel2.Size = new System.Drawing.Size(653, 61);
             this.panel2.TabIndex = 6;
             // 
-            // textBox1
+            // txtfiltrar
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtfiltrar.Location = new System.Drawing.Point(75, 21);
+            this.txtfiltrar.Name = "txtfiltrar";
+            this.txtfiltrar.Size = new System.Drawing.Size(230, 20);
+            this.txtfiltrar.TabIndex = 8;
+            this.txtfiltrar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -124,7 +82,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Buscar";
             // 
@@ -148,6 +106,7 @@
             this.btnseleccionar.TabIndex = 5;
             this.btnseleccionar.Text = "Seleccionar";
             this.btnseleccionar.UseVisualStyleBackColor = true;
+            this.btnseleccionar.Click += new System.EventHandler(this.btnseleccionar_Click);
             // 
             // FBusquedaregistroalquiler
             // 
@@ -158,6 +117,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FBusquedaregistroalquiler";
             this.Text = "FBusquedaregistroalquiler";
+            this.Load += new System.EventHandler(this.FBusquedaregistroalquiler_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvregistroalquiler)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -170,14 +130,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvregistroalquiler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idalquiler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpelicula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaprestamo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechadevolucion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtfiltrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnseleccionar;

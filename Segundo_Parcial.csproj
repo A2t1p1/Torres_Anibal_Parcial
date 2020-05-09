@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Torres_Anibal_Parcial</RootNamespace>
     <AssemblyName>Torres_Anibal_Parcial</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,6 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDB.cs" />
+    <Compile Include="db_sistema_peliculasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_sistema_peliculasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,7 +142,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="db_sistema_peliculasDataSet.xsc">
+      <DependentUpon>db_sistema_peliculasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_sistema_peliculasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_sistema_peliculasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_sistema_peliculasDataSet.xss">
+      <DependentUpon>db_sistema_peliculasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

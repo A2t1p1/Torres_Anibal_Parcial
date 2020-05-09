@@ -49,11 +49,11 @@
             this.lblsinopsis = new System.Windows.Forms.Label();
             this.lblduracion = new System.Windows.Forms.Label();
             this.pnavegacion = new System.Windows.Forms.Panel();
+            this.lblregistro = new System.Windows.Forms.Label();
             this.btnultimo = new System.Windows.Forms.Button();
             this.btnsiguiente = new System.Windows.Forms.Button();
             this.btnatras = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
-            this.lblregistro = new System.Windows.Forms.Label();
             this.pfunciones.SuspendLayout();
             this.popciones.SuspendLayout();
             this.pdatos.SuspendLayout();
@@ -293,6 +293,14 @@
             this.pnavegacion.Size = new System.Drawing.Size(271, 101);
             this.pnavegacion.TabIndex = 11;
             // 
+            // lblregistro
+            // 
+            this.lblregistro.AutoSize = true;
+            this.lblregistro.Location = new System.Drawing.Point(123, 55);
+            this.lblregistro.Name = "lblregistro";
+            this.lblregistro.Size = new System.Drawing.Size(0, 13);
+            this.lblregistro.TabIndex = 12;
+            // 
             // btnultimo
             // 
             this.btnultimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnultimo.BackgroundImage")));
@@ -349,20 +357,12 @@
             this.btnprimero.UseVisualStyleBackColor = true;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
-            // lblregistro
-            // 
-            this.lblregistro.AutoSize = true;
-            this.lblregistro.Location = new System.Drawing.Point(123, 55);
-            this.lblregistro.Name = "lblregistro";
-            this.lblregistro.Size = new System.Drawing.Size(0, 13);
-            this.lblregistro.TabIndex = 12;
-            // 
             // FPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(137)))), ((int)(((byte)(147)))));
-            this.ClientSize = new System.Drawing.Size(516, 450);
+            this.ClientSize = new System.Drawing.Size(518, 457);
             this.Controls.Add(this.pnavegacion);
             this.Controls.Add(this.pdatos);
             this.Controls.Add(this.pfunciones);
@@ -370,6 +370,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FPeliculas";
             this.Text = "Peliculas";
+            this.Load += new System.EventHandler(this.FPeliculas_Load);
             this.pfunciones.ResumeLayout(false);
             this.popciones.ResumeLayout(false);
             this.pdatos.ResumeLayout(false);

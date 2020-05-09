@@ -35,11 +35,6 @@
             this.btnseleccionar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvpeliculas = new System.Windows.Forms.DataGridView();
-            this.idpelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sinopsis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpeliculas)).BeginInit();
@@ -71,7 +66,7 @@
             this.lblbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbuscar.Location = new System.Drawing.Point(12, 22);
             this.lblbuscar.Name = "lblbuscar";
-            this.lblbuscar.Size = new System.Drawing.Size(56, 16);
+            this.lblbuscar.Size = new System.Drawing.Size(57, 16);
             this.lblbuscar.TabIndex = 7;
             this.lblbuscar.Text = "Buscar";
             // 
@@ -108,41 +103,10 @@
             // dgvpeliculas
             // 
             this.dgvpeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpeliculas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idpelicula,
-            this.descripcion,
-            this.sinopsis,
-            this.genero,
-            this.duracion});
             this.dgvpeliculas.Location = new System.Drawing.Point(6, 19);
             this.dgvpeliculas.Name = "dgvpeliculas";
             this.dgvpeliculas.Size = new System.Drawing.Size(543, 252);
             this.dgvpeliculas.TabIndex = 1;
-            // 
-            // idpelicula
-            // 
-            this.idpelicula.HeaderText = "ID Pelicula";
-            this.idpelicula.Name = "idpelicula";
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            // 
-            // sinopsis
-            // 
-            this.sinopsis.HeaderText = "Sinopsis";
-            this.sinopsis.Name = "sinopsis";
-            // 
-            // genero
-            // 
-            this.genero.HeaderText = "Genero";
-            this.genero.Name = "genero";
-            // 
-            // duracion
-            // 
-            this.duracion.HeaderText = "Duracion";
-            this.duracion.Name = "duracion";
             // 
             // FBusquedapeliculas
             // 
@@ -170,10 +134,5 @@
         private System.Windows.Forms.Button btnseleccionar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvpeliculas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpelicula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sinopsis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duracion;
     }
 }

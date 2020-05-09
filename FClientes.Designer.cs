@@ -85,10 +85,11 @@
             this.panel1.Controls.Add(this.pfunciones);
             this.panel1.Controls.Add(this.panelopciones);
             this.panel1.Controls.Add(this.paneldatos);
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 452);
+            this.panel1.Size = new System.Drawing.Size(519, 454);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panelcontrol
             // 
@@ -269,7 +270,7 @@
             this.paneldatos.Controls.Add(this.lbltitulo);
             this.paneldatos.Location = new System.Drawing.Point(10, 9);
             this.paneldatos.Name = "paneldatos";
-            this.paneldatos.Size = new System.Drawing.Size(341, 319);
+            this.paneldatos.Size = new System.Drawing.Size(341, 300);
             this.paneldatos.TabIndex = 6;
             // 
             // grdatos
@@ -288,7 +289,7 @@
             this.grdatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdatos.Location = new System.Drawing.Point(8, 43);
             this.grdatos.Name = "grdatos";
-            this.grdatos.Size = new System.Drawing.Size(316, 260);
+            this.grdatos.Size = new System.Drawing.Size(316, 257);
             this.grdatos.TabIndex = 14;
             this.grdatos.TabStop = false;
             this.grdatos.Text = "Datos";
@@ -397,6 +398,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FClientes";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.FClientes_Load);
             this.panel1.ResumeLayout(false);
             this.panelcontrol.ResumeLayout(false);
             this.panelcontrol.PerformLayout();

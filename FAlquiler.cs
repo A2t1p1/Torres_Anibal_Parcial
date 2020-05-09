@@ -31,7 +31,7 @@ namespace Torres_Anibal_Parcial
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["Idalquiler"] };
 
 
-            cboclientes.DataSource = objConexion.Obtener_datos().Tables["clientes"];
+                cboclientes.DataSource = objConexion.Obtener_datos().Tables["clientes"];
                 cboclientes.DisplayMember = "nombre";
                 cboclientes.ValueMember = "clientes.idcliente";
 

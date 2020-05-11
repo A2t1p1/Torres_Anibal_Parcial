@@ -67,7 +67,7 @@
             this.grbClientes.Controls.Add(this.btneliminar);
             this.grbClientes.Controls.Add(this.btnModificar);
             this.grbClientes.Controls.Add(this.btnNuevo);
-            this.grbClientes.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbClientes.Location = new System.Drawing.Point(394, 30);
             this.grbClientes.Margin = new System.Windows.Forms.Padding(1);
             this.grbClientes.Name = "grbClientes";
@@ -132,7 +132,7 @@
             this.grbNavegacion.Controls.Add(this.btnsiguiente);
             this.grbNavegacion.Controls.Add(this.btnanterior);
             this.grbNavegacion.Controls.Add(this.btnprimero);
-            this.grbNavegacion.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbNavegacion.Location = new System.Drawing.Point(23, 362);
             this.grbNavegacion.Margin = new System.Windows.Forms.Padding(1);
             this.grbNavegacion.Name = "grbNavegacion";
@@ -148,7 +148,7 @@
             this.lblnregistros.Location = new System.Drawing.Point(95, 6);
             this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnregistros.Name = "lblnregistros";
-            this.lblnregistros.Size = new System.Drawing.Size(0, 16);
+            this.lblnregistros.Size = new System.Drawing.Size(0, 15);
             this.lblnregistros.TabIndex = 13;
             // 
             // btnultimo
@@ -217,7 +217,7 @@
             this.grbDatosUsuarios.Controls.Add(this.txtcodigo);
             this.grbDatosUsuarios.Controls.Add(this.lblcodigo);
             this.grbDatosUsuarios.Enabled = false;
-            this.grbDatosUsuarios.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDatosUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDatosUsuarios.Location = new System.Drawing.Point(23, 30);
             this.grbDatosUsuarios.Margin = new System.Windows.Forms.Padding(1);
             this.grbDatosUsuarios.Name = "grbDatosUsuarios";
@@ -225,7 +225,8 @@
             this.grbDatosUsuarios.Size = new System.Drawing.Size(354, 330);
             this.grbDatosUsuarios.TabIndex = 11;
             this.grbDatosUsuarios.TabStop = false;
-            this.grbDatosUsuarios.Text = "Datos de Usuarios";
+            this.grbDatosUsuarios.Text = "Datos de Usuario";
+            this.grbDatosUsuarios.Enter += new System.EventHandler(this.grbDatosUsuarios_Enter);
             // 
             // txtapellido
             // 
@@ -241,18 +242,21 @@
             this.lblapellido.Location = new System.Drawing.Point(15, 85);
             this.lblapellido.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(65, 16);
+            this.lblapellido.Size = new System.Drawing.Size(68, 15);
             this.lblapellido.TabIndex = 13;
             this.lblapellido.Text = "APELLIDO:";
             // 
             // lblidusuario
             // 
             this.lblidusuario.AutoSize = true;
+            this.lblidusuario.BackColor = System.Drawing.Color.BurlyWood;
+            this.lblidusuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblidusuario.Location = new System.Drawing.Point(199, 35);
             this.lblidusuario.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblidusuario.Name = "lblidusuario";
-            this.lblidusuario.Size = new System.Drawing.Size(0, 16);
+            this.lblidusuario.Size = new System.Drawing.Size(2, 17);
             this.lblidusuario.TabIndex = 12;
+            this.lblidusuario.Click += new System.EventHandler(this.lblidusuario_Click);
             // 
             // textBox6
             // 
@@ -268,13 +272,14 @@
             this.lbl6.Location = new System.Drawing.Point(45, 568);
             this.lbl6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(0, 16);
+            this.lbl6.Size = new System.Drawing.Size(0, 15);
             this.lbl6.TabIndex = 8;
             // 
             // txtdui
             // 
             this.txtdui.Location = new System.Drawing.Point(82, 208);
             this.txtdui.Margin = new System.Windows.Forms.Padding(1);
+            this.txtdui.MaxLength = 10;
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(137, 21);
             this.txtdui.TabIndex = 7;
@@ -285,7 +290,7 @@
             this.lbldui.Location = new System.Drawing.Point(18, 210);
             this.lbldui.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldui.Name = "lbldui";
-            this.lbldui.Size = new System.Drawing.Size(31, 16);
+            this.lbldui.Size = new System.Drawing.Size(31, 15);
             this.lbldui.TabIndex = 6;
             this.lbldui.Text = "DUI:";
             // 
@@ -293,6 +298,7 @@
             // 
             this.txttelefono.Location = new System.Drawing.Point(82, 247);
             this.txttelefono.Margin = new System.Windows.Forms.Padding(1);
+            this.txttelefono.MaxLength = 8;
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(81, 21);
             this.txttelefono.TabIndex = 5;
@@ -303,7 +309,7 @@
             this.lbltelefono.Location = new System.Drawing.Point(18, 247);
             this.lbltelefono.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbltelefono.Name = "lbltelefono";
-            this.lbltelefono.Size = new System.Drawing.Size(31, 16);
+            this.lbltelefono.Size = new System.Drawing.Size(32, 15);
             this.lbltelefono.TabIndex = 4;
             this.lbltelefono.Text = "TEL:";
             // 
@@ -322,7 +328,7 @@
             this.lbldireccion.Location = new System.Drawing.Point(11, 120);
             this.lbldireccion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldireccion.Name = "lbldireccion";
-            this.lbldireccion.Size = new System.Drawing.Size(75, 16);
+            this.lbldireccion.Size = new System.Drawing.Size(76, 15);
             this.lbldireccion.TabIndex = 2;
             this.lbldireccion.Text = "DIRECCION:";
             // 
@@ -340,7 +346,7 @@
             this.lblnombre.Location = new System.Drawing.Point(15, 63);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(63, 16);
+            this.lblnombre.Size = new System.Drawing.Size(64, 15);
             this.lblnombre.TabIndex = 2;
             this.lblnombre.Text = "NOMBRE:";
             // 
@@ -358,14 +364,14 @@
             this.lblcodigo.Location = new System.Drawing.Point(15, 35);
             this.lblcodigo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblcodigo.Name = "lblcodigo";
-            this.lblcodigo.Size = new System.Drawing.Size(57, 16);
+            this.lblcodigo.Size = new System.Drawing.Size(57, 15);
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "CODIGO:";
             // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Red;
-            this.btnVolver.Font = new System.Drawing.Font("Ubuntu", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(486, 398);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(77, 32);

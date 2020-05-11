@@ -30,14 +30,16 @@ namespace Torres_Anibal_Parcial
         {
             tbl = objConexion.Obtener_datos().Tables["pagos"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idpago"] };
+
+            cboEmpleados.DataSource = objConexion.Obtener_datos().Tables["empleados"];
+            cboEmpleados.DisplayMember = "nombre";
+            cboEmpleados.ValueMember = "empleados.idempleado";
         }
         void MostrarDatos()
         {
             try
             {
-                cboEmpleados.DataSource = objConexion.Obtener_datos().Tables["empleados"];
-                cboEmpleados.DisplayMember = "nombre";
-                cboEmpleados.ValueMember = "empleados.idempleado";
+                
                 cboEmpleados.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 
                 lblidpago.Text = tbl.Rows[posicion].ItemArray[0].ToString();

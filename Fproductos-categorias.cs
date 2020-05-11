@@ -29,6 +29,8 @@ namespace Torres_Anibal_Parcial
         {
             tbl = objConexion.Obtener_datos().Tables["productos"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idproducto"] };
+
+            
         }
         void MostrarDatos()
         {
@@ -37,6 +39,7 @@ namespace Torres_Anibal_Parcial
                 cboCategoriaProductos.DataSource = objConexion.Obtener_datos().Tables["categorias"];
                 cboCategoriaProductos.DisplayMember = "categoria";
                 cboCategoriaProductos.ValueMember = "categorias.idcategoria";
+            
                 cboCategoriaProductos.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 
                 lblidproducto.Text = tbl.Rows[posicion].ItemArray[0].ToString();

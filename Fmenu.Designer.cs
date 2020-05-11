@@ -39,7 +39,7 @@
             // btnMateriales
             // 
             this.btnMateriales.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnMateriales.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMateriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMateriales.Location = new System.Drawing.Point(481, 50);
             this.btnMateriales.Name = "btnMateriales";
             this.btnMateriales.Size = new System.Drawing.Size(145, 67);
@@ -51,7 +51,7 @@
             // btnPanes
             // 
             this.btnPanes.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnPanes.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPanes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPanes.Location = new System.Drawing.Point(481, 203);
             this.btnPanes.Name = "btnPanes";
             this.btnPanes.Size = new System.Drawing.Size(145, 67);
@@ -63,19 +63,19 @@
             // btnCliente
             // 
             this.btnCliente.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnCliente.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.Location = new System.Drawing.Point(71, 50);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(145, 67);
             this.btnCliente.TabIndex = 9;
-            this.btnCliente.Text = "Clientes";
+            this.btnCliente.Text = "Usuarios";
             this.btnCliente.UseVisualStyleBackColor = false;
             this.btnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
             // 
             // Btnsalir
             // 
             this.Btnsalir.BackColor = System.Drawing.Color.Red;
-            this.Btnsalir.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnsalir.Location = new System.Drawing.Point(12, 408);
             this.Btnsalir.Name = "Btnsalir";
             this.Btnsalir.Size = new System.Drawing.Size(91, 33);
@@ -87,7 +87,7 @@
             // btnEmpleado
             // 
             this.btnEmpleado.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnEmpleado.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleado.Location = new System.Drawing.Point(71, 203);
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(145, 67);
@@ -99,7 +99,7 @@
             // btnpagos
             // 
             this.btnpagos.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnpagos.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpagos.Location = new System.Drawing.Point(279, 340);
             this.btnpagos.Name = "btnpagos";
             this.btnpagos.Size = new System.Drawing.Size(145, 67);

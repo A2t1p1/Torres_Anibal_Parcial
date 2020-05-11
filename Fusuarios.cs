@@ -13,8 +13,7 @@ namespace Torres_Anibal_Parcial
     public partial class Fusuarios : Form
     {
         ConexionDB objConexion = new ConexionDB();
-        int posicion = 0;
-
+        int posicion=0;
         public string accion = "Nuevo";
         DataTable tbl = new DataTable();
         public Fusuarios()
@@ -29,6 +28,8 @@ namespace Torres_Anibal_Parcial
         }
         void MostrarDatos()
         {
+
+            
             try
             {
                 lblidusuario.Text = tbl.Rows[posicion].ItemArray[0].ToString();
@@ -78,15 +79,16 @@ namespace Torres_Anibal_Parcial
             }
             else
             {
-                String[] valores = {
-                    lblidusuario.Text,
-                    txtcodigo.Text,
-                    txtnombre.Text,
-                    txtapellido.Text,
-                    txtdireccion.Text,
-                    txtdui.Text,
-                    txttelefono.Text,
-                };
+                String[] valores = 
+                    {
+                        lblidusuario.Text,
+                        txtcodigo.Text,
+                        txtnombre.Text,
+                        txtapellido.Text,
+                        txtdireccion.Text,
+                        txtdui.Text,
+                        txttelefono.Text,
+                    };
                 objConexion.Mantenimiento_usuarios(valores, accion);
                 ActualizarDs();
                 posicion = tbl.Rows.Count - 1;
@@ -122,7 +124,7 @@ namespace Torres_Anibal_Parcial
         }
         private void Btneliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de Clientes",
+            if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de usuario",
                MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblidusuario.Text };
@@ -174,7 +176,7 @@ namespace Torres_Anibal_Parcial
             }
             else
             {
-                MessageBox.Show("Primer Registro...", "Registros de Cliente",
+                MessageBox.Show("Primer Registro...", "Registros de usuario",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -188,9 +190,19 @@ namespace Torres_Anibal_Parcial
             }
             else
             {
-                MessageBox.Show("Ultimo Registro...", "Registros de Cliente",
+                MessageBox.Show("Ultimo Registro...", "Registros de usuario",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void lblidusuario_Click(object sender, EventArgs e)
+        {
+            lblidusuario.Text= posicion.ToString();
+        }
+
+        private void grbDatosUsuarios_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

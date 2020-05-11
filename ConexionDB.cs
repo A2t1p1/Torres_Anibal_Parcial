@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Torres_Anibal_Parcial
 {
@@ -15,12 +16,38 @@ namespace Torres_Anibal_Parcial
         SqlDataAdapter miAdaptadorDatos = new SqlDataAdapter();
 
         DataSet ds = new DataSet();
-
         public ConexionDB()
         {
-            String cadena = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SistemaDB.mdf;Integrated Security=True";
+            string cadena = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DB.mdf;Integrated Security=True";
             miConexion.ConnectionString = cadena;
             miConexion.Open();
+
+           parametrizacion();
+        }
+        
+        private void parametrizacion()
+        {
+            comandosSQL.Parameters.Add("@idu", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@ide", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@idp", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@idprov", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@idca", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@idpa", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@cod", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@nom", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@ape", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@dir", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@dui", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@tel", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@sa", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@car", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@em", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@nomPro", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@nomCont", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@des", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@pre", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@tipPago", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@fechapago", SqlDbType.Char).Value = "";
         }
         public DataSet Obtener_datos()
         {
@@ -44,44 +71,65 @@ namespace Torres_Anibal_Parcial
             miAdaptadorDatos.Fill(ds, "productos");
 
             comandosSQL.CommandText = "select * from categorias";
+                //"productos.nombre,productos.codigo,categorias.categoria,productos.descripcion,productos.precio from categorias inner join productos on  (productos.idproducto=categorias.idcategoria)";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "categorias");
 
-            comandosSQL.CommandText = "select * from pagos";
+            comandosSQL.CommandText = "select  * from pagos";
+                //"empleados.codigo,empleados.nombre,empleados.apellido,pagos.cargo,empleados.direccion,empleados.dui,empleados.telefono,empleados.salario,pagos.tipopago,pagos.fechap from empleados inner join pagos on (pagos.idpago=empleados.idempleado)";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "pagos");
 
             return ds;
         }
+       
         public void Mantenimiento_usuarios(String[] datos, String accion)
         {
+            
             String sql = "";
             if (accion == "Nuevo")
             {
-                sql = "INSERT INTO usuarios (codigo,nombre,apellido,direccion,dui,telefono) VALUES(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'"  +
-                    ")";
+                sql = "INSERT INTO usuarios (codigo,nombre,apellido,direccion,dui,telefono) VALUES(@cod, @nom, @ape, @dir, @dui, @tel)";
             }
             else if (accion == "Modificar")
             {
-                sql = "UPDATE usuarios SET " +
-                    "codigo          = '" + datos[1] + "'," +
-                    "nombre          = '" + datos[2] + "'," +
-                    "apellido        = '" + datos[3] + "'," +
-                    "direccion       = '" + datos[4] + "'," +
-                    "dui             = '" + datos[5] + "'," +
-                    "telefono        = '" + datos[6] + "' " +
-                    "WHERE idusuario = '" + datos[0] + "'";
+                sql = "UPDATE usuarios SET  " +
+                        "codigo          = @cod," +
+                        "nombre          = @nom," +
+                        "apellido        = @ape," +
+                        "direccion       = @dir," +
+                        "dui             = @dui," +
+                        "telefono        = @tel" +
+                        "WHERE idusuario = @idu";
             }
             else if (accion == "Eliminar")
             {
-                sql = "DELETE usuarios FROM usuarios WHERE idusuario='" + datos[0] + "'";
+                sql = "DELETE usuarios FROM usuarios WHERE idusuario=@idu";
             }
+            if (datos[0] == "")
+            {
+                comandosSQL.Parameters["@idu"].Value = 0;
+                comandosSQL.Parameters["@cod"].Value = datos[1];  //borrar posiblemente 
+                comandosSQL.Parameters["@nom"].Value = datos[2];
+                comandosSQL.Parameters["@ape"].Value = datos[3];
+                comandosSQL.Parameters["@dir"].Value = datos[4];
+                comandosSQL.Parameters["@dui"].Value = datos[5];
+                comandosSQL.Parameters["@tel"].Value = datos[6];
+            }
+            else
+            {
+                comandosSQL.Parameters["@idu"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@cod"].Value = datos[1];
+                    comandosSQL.Parameters["@nom"].Value = datos[2];
+                    comandosSQL.Parameters["@ape"].Value = datos[3];
+                    comandosSQL.Parameters["@dir"].Value = datos[4];
+                    comandosSQL.Parameters["@dui"].Value = datos[5];
+                    comandosSQL.Parameters["@tel"].Value = datos[6];
+                }
+            }
+
             ProcesarSQL(sql);
         }
         public void Mantenimiento_empleados(String[] datos, String accion)
@@ -89,129 +137,199 @@ namespace Torres_Anibal_Parcial
             String sql = "";
             if (accion == "Nuevo")
             {
-                sql = "INSERT INTO empleados (codigo,nombre,apellido,direccion,dui,telefono,salario) VALUES(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'," +
-                    "'" + datos[7] + "'" +
-                    ")";
+                sql = "INSERT INTO empleados (codigo,nombre,apellido,direccion,dui,telefono,salario) VALUES(@cod, @nom, @ape, @dir, @dui, @tel, @sa)";  
             }
             else if (accion == "Modificar")
             {
                 sql = "UPDATE empleados SET " +
-                    "codigo          = '" + datos[1] + "'," +
-                    "nombre          = '" + datos[2] + "'," +
-                    "apellido        = '" + datos[3] + "'," +
-                    "direccion       = '" + datos[4] + "'," +
-                    "dui             = '" + datos[5] + "'," +
-                    "telefono        = '" + datos[6] + "'," +
-                    "salario         = '" + datos[7] + "' " +
-                    "WHERE idempleado='"  + datos[0] + "'";
+                    "codigo          = @cod," +
+                    "nombre          = @nom," +
+                    "apellido        = @ape," +
+                    "direccion       = @dir," +
+                    "dui             = @dui," +
+                    "telefono        = @tel," +
+                    "salario         = @sa " +
+                    "WHERE idempleado= @ide";
             }
             else if (accion == "Eliminar")
             {
-                sql = "DELETE empleados FROM empleados WHERE idempleado='" + datos[0] + "'";
+                sql = "DELETE empleados FROM empleados WHERE idempleado=@ide";
+            }
+            if (datos[0] == "")
+            {
+                comandosSQL.Parameters["@ide"].Value = 0;
+                comandosSQL.Parameters["@cod"].Value = datos[1];  // supuesta solucion 
+                comandosSQL.Parameters["@nom"].Value = datos[2];
+                comandosSQL.Parameters["@ape"].Value = datos[3];
+                comandosSQL.Parameters["@dir"].Value = datos[4];
+                comandosSQL.Parameters["@dui"].Value = datos[5];
+                comandosSQL.Parameters["@tel"].Value = datos[6];
+                comandosSQL.Parameters["@sa"].Value = datos[7];
+            }
+            // llega hasta aqui
+            else    // este es necesario 
+            {
+                comandosSQL.Parameters["@ide"].Value = datos[0];
+                if (accion != "eliminar")
+
+                {
+                    comandosSQL.Parameters["@cod"].Value = datos[1];
+                    comandosSQL.Parameters["@nom"].Value = datos[2];
+                    comandosSQL.Parameters["@ape"].Value = datos[3];
+                    comandosSQL.Parameters["@dir"].Value = datos[4];
+                    comandosSQL.Parameters["@dui"].Value = datos[5];
+                    comandosSQL.Parameters["@tel"].Value = datos[6];
+                    comandosSQL.Parameters["@sa"].Value = datos[7];
+                }
             }
             ProcesarSQL(sql);
         }
-        public void Mantenimiento_proveedores(string[] datos, string accion)
+    public void Mantenimiento_proveedores(string[] datos, string accion)
         {
             string sql = "";
             if (accion == "Nuevo")
             {
-                sql = "insert into proveedores(codigo,nombrep,nombrec,cargoc,direccion,telefono,email) values(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'," +
-                    "'" + datos[7] + "'"  +
-                    ")";
+                sql = "insert into proveedores(codigo,nombrep,nombrec,cargoc,direccion,telefono,email) values( @cod, @nomPro, @nomCont, @car, @dir, @tel, @em) ";
             }
             else if (accion == "Modificar")
             {
                 sql = "update proveedores set  " +
-                    "codigo =                   '" + datos[1] + "'," +
-                    "nombrep =                  '" + datos[2] + "'," +
-                    "nombrec =                  '" + datos[3] + "'," +
-                    "cargoc=                    '" + datos[4] + "'," +
-                    "direccion=                 '" + datos[5] + "'," +
-                    "telefono=                  '" + datos[6] + "'," +
-                    "email=                     '" + datos[7] + "'" +
-                    "where idproveedor =        '" + datos[0] + "'";
+                  "codigo         = @cod, " +
+                    "nombrep        = @nomPro, " +
+                    "nombrec        = @nomCont, " +
+                    "cargoc         = @car, " +
+                    "direccion      = @dir, " +
+                    "telefono       = @tel, " +
+                    "email          = @em  " +
+                    "where idproveedor = @idprov";
             }
             else if (accion == "Eliminar")
             {
-                sql = "delete proveedores from proveedores where idproveedor='" + datos[0] + "'";
+                sql = "delete proveedores from proveedores where idproveedor=@idprov";
+            }
+            if (datos[0] == "")   //comienza aqui 
+            {
+                comandosSQL.Parameters["@idprov"].Value = 0; // este 
+                comandosSQL.Parameters["@cod"].Value = datos[1];
+                comandosSQL.Parameters["@nomPro"].Value = datos[2];
+                comandosSQL.Parameters["@nomCont"].Value = datos[3];
+                comandosSQL.Parameters["@car"].Value = datos[4];
+                comandosSQL.Parameters["@dir"].Value = datos[5];
+                comandosSQL.Parameters["@tel"].Value = datos[6];
+                comandosSQL.Parameters["@em"].Value = datos[7];
+
+            }
+            else    //este 
+            {
+                comandosSQL.Parameters["@idprov"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@cod"].Value = datos[1];
+                    comandosSQL.Parameters["@nomPro"].Value = datos[2];
+                    comandosSQL.Parameters["@nomCont"].Value = datos[3];
+                    comandosSQL.Parameters["@car"].Value = datos[4];
+                    comandosSQL.Parameters["@dir"].Value = datos[5];
+                    comandosSQL.Parameters["@tel"].Value = datos[6];
+                    comandosSQL.Parameters["@em"].Value = datos[7];
+                }
             }
             ProcesarSQL(sql);
         }
         public void Mantenimiento_productos_categorias(string[] datos, string accion)
         {
             string sql = "";
-            if (accion=="Nuevo")
+            if (accion == "Nuevo")
             {
-                sql = "insert into productos(idcategoria,codigo,nombre,descripcion,precio) values(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'" +
-                    ")";
+                sql = "insert into productos(idcategoria,codigo,nombre,descripcion,precio) values(@idca,@cod,@nom,@des,@pre) ";
             }
-            else if (accion=="Modificar")
+            else if (accion == "Modificar")
             {
                 sql = "update productos set  " +
-                   "idcategoria =        '" + datos[1] + "'," +
-                   "codigo =             '" + datos[2] + "'," +
-                   "nombre=             '" + datos[3] + "'," +
-                   "descripcion=         '" + datos[4] + "'," +
-                   "precio=              '" + datos[5] + "'"  +
-                   "where idproducto =   '" + datos[0] + "'";
+                     "idcategoria            = @idca," +
+                   "codigo                 = @cod," +
+                   "nombre                 = @nom," +
+                   "descripcion            = @des," +
+                   "precio                 = @pre " +
+                   "where idproducto =  @idp";
             }
             else
             {
-                sql = "delete productos from productos where idproducto='" + datos[0] + "'";
+                sql = "delete productos from productos where idproducto=@idp";
 
-            }ProcesarSQL(sql);
+            }
+            if (datos[0] == "") // comienza aqui 
+            {
+                comandosSQL.Parameters["@idp"].Value = 0;   //sigue aqui 
+                comandosSQL.Parameters["@idca"].Value = datos[1];
+                comandosSQL.Parameters["@cod"].Value = datos[2];
+                comandosSQL.Parameters["@nom"].Value = datos[3];
+                comandosSQL.Parameters["@des"].Value = datos[4];
+                comandosSQL.Parameters["@pre"].Value = datos[5];
+            }
+            else  // este tambien 
+
+            {
+                comandosSQL.Parameters["@idp"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@idca"].Value = datos[1];
+                    comandosSQL.Parameters["@cod"].Value = datos[2];
+                    comandosSQL.Parameters["@nom"].Value = datos[3];
+                    comandosSQL.Parameters["@des"].Value = datos[4];
+                    comandosSQL.Parameters["@pre"].Value = datos[5];
+                }
+            }
+            ProcesarSQL(sql);
         }
         public void Mantenimiento_pagos(string[] datos, string accion)
         {
             string sql = "";
             if (accion == "Nuevo")
             {
-                sql = "insert into pagos(idempleado,cargo,tipopago,fechap) values(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'" +  
-                    ")";
+                sql = "insert into pagos(idempleado,cargo,tipopago,fechap) values(@ide,@car,@tipPago,@fechapago)";
             }
             else if (accion == "Modificar")
             {
                 sql = "update pagos set  " +
-                   "idempleado =        '" + datos[1] + "'," +
-                   "cargo =             '" + datos[2] + "'," +
-                   "tipopago=             '" + datos[3] + "'," +
-                   "fechap=         '" + datos[4] + "'" +
-                   "where idpago =   '" + datos[0] + "'";
+                   "idempleado =   @ide," +
+                   "cargo =        @car," +
+                   "tipopago=      @tipPago," +
+                   "fechap=        @fehapago" +
+                   "where idpago = @idpa";
             }
             else
             {
-                sql = "delete pagos from pagos where idpago='" + datos[0] + "'";
+                sql = "delete pagos from pagos where idpago=@idpa";
+            }
+            if (datos[0] == "")   //comienza aqui 
+            {
+                comandosSQL.Parameters["@idpa"].Value = 0; // este 
+                comandosSQL.Parameters["@ide"].Value = datos[1];
+                comandosSQL.Parameters["@car"].Value = datos[2];
+                comandosSQL.Parameters["@tipPago"].Value = datos[3];
+                comandosSQL.Parameters["@fechapago"].Value = datos[4];
+            }
+            else    //este 
+            {
 
+                comandosSQL.Parameters["@idpa"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@ide"].Value = datos[1];
+                    comandosSQL.Parameters["@car"].Value = datos[2];
+                    comandosSQL.Parameters["@tipPago"].Value = datos[3];
+                    comandosSQL.Parameters["@fechapago"].Value = datos[4];
+                }
             }
             ProcesarSQL(sql);
         }
         void ProcesarSQL(String sql)
         {
+            
             comandosSQL.Connection = miConexion;
             comandosSQL.CommandText = sql;
             comandosSQL.ExecuteNonQuery();
+
         }
     }
-}       
+}        

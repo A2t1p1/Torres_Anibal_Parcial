@@ -28,43 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMateriales = new System.Windows.Forms.Button();
-            this.btnPanes = new System.Windows.Forms.Button();
+            this.btnProveedores = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.Btnsalir = new System.Windows.Forms.Button();
             this.btnEmpleado = new System.Windows.Forms.Button();
-            this.btnpagos = new System.Windows.Forms.Button();
+            this.btnPagos = new System.Windows.Forms.Button();
+            this.btnCategorias = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnMateriales
+            // btnProveedores
             // 
-            this.btnMateriales.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnMateriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMateriales.Location = new System.Drawing.Point(481, 50);
-            this.btnMateriales.Name = "btnMateriales";
-            this.btnMateriales.Size = new System.Drawing.Size(145, 67);
-            this.btnMateriales.TabIndex = 11;
-            this.btnMateriales.Text = "Proveedores";
-            this.btnMateriales.UseVisualStyleBackColor = false;
-            this.btnMateriales.Click += new System.EventHandler(this.btnMateriales_Click);
+            this.btnProveedores.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.Location = new System.Drawing.Point(481, 50);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(145, 67);
+            this.btnProveedores.TabIndex = 11;
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.UseVisualStyleBackColor = false;
+            this.btnProveedores.Click += new System.EventHandler(this.btnMateriales_Click);
             // 
-            // btnPanes
+            // btnProductos
             // 
-            this.btnPanes.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnPanes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPanes.Location = new System.Drawing.Point(481, 203);
-            this.btnPanes.Name = "btnPanes";
-            this.btnPanes.Size = new System.Drawing.Size(145, 67);
-            this.btnPanes.TabIndex = 10;
-            this.btnPanes.Text = "Productos";
-            this.btnPanes.UseVisualStyleBackColor = false;
-            this.btnPanes.Click += new System.EventHandler(this.BtnProducto_Click);
+            this.btnProductos.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Location = new System.Drawing.Point(71, 191);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(145, 67);
+            this.btnProductos.TabIndex = 10;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.BtnProducto_Click);
             // 
             // btnCliente
             // 
             this.btnCliente.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.Location = new System.Drawing.Point(71, 50);
+            this.btnCliente.Location = new System.Drawing.Point(481, 191);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(145, 67);
             this.btnCliente.TabIndex = 9;
@@ -88,7 +89,7 @@
             // 
             this.btnEmpleado.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleado.Location = new System.Drawing.Point(71, 203);
+            this.btnEmpleado.Location = new System.Drawing.Point(481, 327);
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(145, 67);
             this.btnEmpleado.TabIndex = 12;
@@ -96,17 +97,29 @@
             this.btnEmpleado.UseVisualStyleBackColor = false;
             this.btnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
             // 
-            // btnpagos
+            // btnPagos
             // 
-            this.btnpagos.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnpagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpagos.Location = new System.Drawing.Point(279, 340);
-            this.btnpagos.Name = "btnpagos";
-            this.btnpagos.Size = new System.Drawing.Size(145, 67);
-            this.btnpagos.TabIndex = 13;
-            this.btnpagos.Text = "Pagos";
-            this.btnpagos.UseVisualStyleBackColor = false;
-            this.btnpagos.Click += new System.EventHandler(this.btnpagos_Click_1);
+            this.btnPagos.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.Location = new System.Drawing.Point(71, 327);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(145, 67);
+            this.btnPagos.TabIndex = 13;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.UseVisualStyleBackColor = false;
+            this.btnPagos.Click += new System.EventHandler(this.btnpagos_Click_1);
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.Location = new System.Drawing.Point(71, 50);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(145, 67);
+            this.btnCategorias.TabIndex = 14;
+            this.btnCategorias.Text = "Categorias";
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // Fmenu
             // 
@@ -114,10 +127,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(718, 453);
-            this.Controls.Add(this.btnpagos);
+            this.Controls.Add(this.btnCategorias);
+            this.Controls.Add(this.btnPagos);
             this.Controls.Add(this.btnEmpleado);
-            this.Controls.Add(this.btnMateriales);
-            this.Controls.Add(this.btnPanes);
+            this.Controls.Add(this.btnProveedores);
+            this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.Btnsalir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -128,11 +142,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnMateriales;
-        private System.Windows.Forms.Button btnPanes;
+        private System.Windows.Forms.Button btnProveedores;
+        private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button Btnsalir;
         private System.Windows.Forms.Button btnEmpleado;
-        private System.Windows.Forms.Button btnpagos;
+        private System.Windows.Forms.Button btnPagos;
+        private System.Windows.Forms.Button btnCategorias;
     }
 }

@@ -63,5 +63,13 @@ namespace Torres_Anibal_Parcial
             cambio.ShowDialog();
             this.Close();
         }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            Fcategoria cambio = new Fcategoria();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
     }
 }

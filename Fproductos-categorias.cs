@@ -28,9 +28,7 @@ namespace Torres_Anibal_Parcial
         void ActualizarDs()
         {
             tbl = objConexion.Obtener_datos().Tables["productos"];
-            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idproducto"] };
-
-            
+            tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idproducto"] };  
         }
         void MostrarDatos()
         {
@@ -134,7 +132,7 @@ namespace Torres_Anibal_Parcial
               MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblidproducto.Text };
-                objConexion.Mantenimiento_usuarios(valores, "Eliminar");
+                objConexion.Mantenimiento_productos_categorias(valores, "Eliminar");
 
                 ActualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;

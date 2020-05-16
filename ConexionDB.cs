@@ -30,24 +30,26 @@ namespace Torres_Anibal_Parcial
             comandosSQL.Parameters.Add("@idu", SqlDbType.Int).Value = 0;
             comandosSQL.Parameters.Add("@ide", SqlDbType.Int).Value = 0;
             comandosSQL.Parameters.Add("@idp", SqlDbType.Int).Value = 0;
-            comandosSQL.Parameters.Add("@idprov", SqlDbType.Int).Value = 0;
-            comandosSQL.Parameters.Add("@idca", SqlDbType.Int).Value = 0;
-            comandosSQL.Parameters.Add("@idpa", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@idprov",SqlDbType.Int).Value=0;
+            comandosSQL.Parameters.Add("@idca", SqlDbType.Int).Value =0;
+            comandosSQL.Parameters.Add("@idpa", SqlDbType.Int).Value =0;
             comandosSQL.Parameters.Add("@cod", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@nom", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@ape", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@dir", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@dui", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@tel", SqlDbType.Char).Value = "";
-            comandosSQL.Parameters.Add("@sa", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@tele", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@sa", SqlDbType.Char).Value =  "";
             comandosSQL.Parameters.Add("@car", SqlDbType.Char).Value = "";
-            comandosSQL.Parameters.Add("@em", SqlDbType.Char).Value = "";
-            comandosSQL.Parameters.Add("@nomPro", SqlDbType.Char).Value = "";
-            comandosSQL.Parameters.Add("@nomCont", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@em", SqlDbType.Char).Value =  "";
+            comandosSQL.Parameters.Add("@nomPro",SqlDbType.Char).Value =  "";
+            comandosSQL.Parameters.Add("@nomCont", SqlDbType.Char).Value ="";
             comandosSQL.Parameters.Add("@des", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@pre", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@tipPago", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@fechapago", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@cate", SqlDbType.Char).Value = "";
         }
         public DataSet Obtener_datos()
         {
@@ -89,18 +91,18 @@ namespace Torres_Anibal_Parcial
             String sql = "";
             if (accion == "Nuevo")
             {
-                sql = "INSERT INTO usuarios (codigo,nombre,apellido,direccion,dui,telefono) VALUES(@cod, @nom, @ape, @dir, @dui, @tel)";
+                sql = "INSERT INTO usuarios (codigo,nombre,apellido,direccion,dui,telefono) VALUES(@cod, @nom, @ape, @dir, @dui, @tele)";
             }
             else if (accion == "Modificar")
             {
-                sql = "UPDATE usuarios SET  " +
+                sql = "UPDATE usuarios SET "      +
                         "codigo          = @cod," +
                         "nombre          = @nom," +
                         "apellido        = @ape," +
                         "direccion       = @dir," +
-                        "dui             = @dui," +
-                        "telefono        = @tel" +
-                        "WHERE idusuario = @idu";
+                        "dui             = @tel," +
+                        "telefono        = @dui "  +
+                        "where idusuario = @idu";
             }
             else if (accion == "Eliminar")
             {
@@ -113,27 +115,27 @@ namespace Torres_Anibal_Parcial
                 comandosSQL.Parameters["@nom"].Value = datos[2];
                 comandosSQL.Parameters["@ape"].Value = datos[3];
                 comandosSQL.Parameters["@dir"].Value = datos[4];
-                comandosSQL.Parameters["@dui"].Value = datos[5];
-                comandosSQL.Parameters["@tel"].Value = datos[6];
+                comandosSQL.Parameters["@tel"].Value = datos[5];
+                comandosSQL.Parameters["@dui"].Value = datos[6];
             }
             else
             {
                 comandosSQL.Parameters["@idu"].Value = datos[0];
-                if (accion != "eliminar")
+                if (accion != "Eliminar")
                 {
                     comandosSQL.Parameters["@cod"].Value = datos[1];
                     comandosSQL.Parameters["@nom"].Value = datos[2];
                     comandosSQL.Parameters["@ape"].Value = datos[3];
                     comandosSQL.Parameters["@dir"].Value = datos[4];
-                    comandosSQL.Parameters["@dui"].Value = datos[5];
-                    comandosSQL.Parameters["@tel"].Value = datos[6];
+                    comandosSQL.Parameters["@tel"].Value = datos[5];
+                    comandosSQL.Parameters["@dui"].Value = datos[6];
                 }
             }
 
             ProcesarSQL(sql);
         }
         public void Mantenimiento_empleados(String[] datos, String accion)
-        {
+        { 
             String sql = "";
             if (accion == "Nuevo")
             {
@@ -170,7 +172,7 @@ namespace Torres_Anibal_Parcial
             else    // este es necesario 
             {
                 comandosSQL.Parameters["@ide"].Value = datos[0];
-                if (accion != "eliminar")
+                if (accion != "Eliminar")
 
                 {
                     comandosSQL.Parameters["@cod"].Value = datos[1];
@@ -222,7 +224,7 @@ namespace Torres_Anibal_Parcial
             else    //este 
             {
                 comandosSQL.Parameters["@idprov"].Value = datos[0];
-                if (accion != "eliminar")
+                if (accion != "Eliminar")
                 {
                     comandosSQL.Parameters["@cod"].Value = datos[1];
                     comandosSQL.Parameters["@nomPro"].Value = datos[2];
@@ -270,7 +272,7 @@ namespace Torres_Anibal_Parcial
 
             {
                 comandosSQL.Parameters["@idp"].Value = datos[0];
-                if (accion != "eliminar")
+                if (accion != "Eliminar")
                 {
                     comandosSQL.Parameters["@idca"].Value = datos[1];
                     comandosSQL.Parameters["@cod"].Value = datos[2];
@@ -313,7 +315,7 @@ namespace Torres_Anibal_Parcial
             {
 
                 comandosSQL.Parameters["@idpa"].Value = datos[0];
-                if (accion != "eliminar")
+                if (accion != "Eliminar")
                 {
                     comandosSQL.Parameters["@ide"].Value = datos[1];
                     comandosSQL.Parameters["@car"].Value = datos[2];
@@ -323,13 +325,43 @@ namespace Torres_Anibal_Parcial
             }
             ProcesarSQL(sql);
         }
+        public void Mantenimiento_categoria(string[] datos, string accion)
+        {
+            string sql = "";
+            if (accion == "Nuevo")
+            {
+                sql = "insert into categorias(categoria) values(@cate)";
+            }
+            else if (accion == "Modificar")
+            {
+                sql = "update categorias set  " + 
+                   "categoria=        @cate" +
+                   "where idpago = @idca";
+            }
+            else
+            {
+                sql = "delete categorias from categorias where idcategoria=@idca";
+            }
+            if (datos[0] == "")   //comienza aqui 
+            {
+                comandosSQL.Parameters["@idca"].Value = 0; // este 
+                comandosSQL.Parameters["@cate"].Value = datos[1];
+            }
+            else    //este 
+            {
+                comandosSQL.Parameters["@idca"].Value = datos[0];
+                if (accion != "Eliminar")
+                {
+                    comandosSQL.Parameters["@cate"].Value = datos[1];
+                }
+            }
+            ProcesarSQL(sql);
+        }
         void ProcesarSQL(String sql)
         {
-            
             comandosSQL.Connection = miConexion;
             comandosSQL.CommandText = sql;
             comandosSQL.ExecuteNonQuery();
-
         }
     }
 }        

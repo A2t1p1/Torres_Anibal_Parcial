@@ -94,6 +94,12 @@
     <Compile Include="Fbusquedaproveedores.Designer.cs">
       <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fcategoria.Designer.cs">
+      <DependentUpon>Fcategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPagos-Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fbusquedaproveedores.resx">
       <DependentUpon>Fbusquedaproveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fcategoria.resx">
+      <DependentUpon>Fcategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPagos-Empleados.resx">
       <DependentUpon>FPagos-Empleados.cs</DependentUpon>

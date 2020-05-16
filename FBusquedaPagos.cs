@@ -28,7 +28,7 @@ namespace Torres_Anibal_Parcial
         {
             BindingSource ds = new BindingSource();
             ds.DataSource = grdBusquedaproductos.DataSource;
-            ds.Filter = "cargo like '%" + valor + "%' or fecha like '%" + valor + "%' or tipopago like '%" + valor + "%'";
+            ds.Filter = "cargo like '%" + valor + "%' or tipopago like '%" + valor + "%'";
             grdBusquedaproductos.DataSource = ds;
         }
 

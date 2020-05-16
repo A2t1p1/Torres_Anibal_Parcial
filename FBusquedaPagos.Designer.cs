@@ -31,12 +31,6 @@
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnseleccionar = new System.Windows.Forms.Button();
             this.grdBusquedaproductos = new System.Windows.Forms.DataGridView();
-            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.lblbuscar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdBusquedaproductos)).BeginInit();
@@ -71,13 +65,6 @@
             this.grdBusquedaproductos.AllowUserToAddRows = false;
             this.grdBusquedaproductos.AllowUserToDeleteRows = false;
             this.grdBusquedaproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdBusquedaproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idproducto,
-            this.idcategoria,
-            this.codigo,
-            this.nombre,
-            this.descripccion,
-            this.precio});
             this.grdBusquedaproductos.Location = new System.Drawing.Point(13, 33);
             this.grdBusquedaproductos.Margin = new System.Windows.Forms.Padding(1);
             this.grdBusquedaproductos.Name = "grdBusquedaproductos";
@@ -86,59 +73,6 @@
             this.grdBusquedaproductos.RowTemplate.Height = 40;
             this.grdBusquedaproductos.Size = new System.Drawing.Size(616, 311);
             this.grdBusquedaproductos.TabIndex = 35;
-            // 
-            // idproducto
-            // 
-            this.idproducto.DataPropertyName = "idproducto";
-            this.idproducto.HeaderText = "ID";
-            this.idproducto.MinimumWidth = 12;
-            this.idproducto.Name = "idproducto";
-            this.idproducto.ReadOnly = true;
-            this.idproducto.Visible = false;
-            // 
-            // idcategoria
-            // 
-            this.idcategoria.DataPropertyName = "idcategoria";
-            this.idcategoria.HeaderText = "ID_CATEGORIA";
-            this.idcategoria.Name = "idcategoria";
-            this.idcategoria.ReadOnly = true;
-            this.idcategoria.Width = 70;
-            // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "CODIGO";
-            this.codigo.MinimumWidth = 12;
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 70;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "NOMBRE";
-            this.nombre.MinimumWidth = 12;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 150;
-            // 
-            // descripccion
-            // 
-            this.descripccion.DataPropertyName = "descripcion";
-            this.descripccion.HeaderText = "DESCRIPCION";
-            this.descripccion.MinimumWidth = 12;
-            this.descripccion.Name = "descripccion";
-            this.descripccion.ReadOnly = true;
-            this.descripccion.Width = 150;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "precio";
-            this.precio.HeaderText = "PRECIO";
-            this.precio.MinimumWidth = 12;
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 70;
             // 
             // txtbuscar
             // 
@@ -182,12 +116,6 @@
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnseleccionar;
         private System.Windows.Forms.DataGridView grdBusquedaproductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label lblbuscar;
     }

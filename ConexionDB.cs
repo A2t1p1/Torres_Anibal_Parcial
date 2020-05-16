@@ -47,8 +47,8 @@ namespace Torres_Anibal_Parcial
             comandosSQL.Parameters.Add("@nomCont", SqlDbType.Char).Value ="";
             comandosSQL.Parameters.Add("@des", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@pre", SqlDbType.Char).Value = "";
-            comandosSQL.Parameters.Add("@tipPago", SqlDbType.Char).Value = "";
-            comandosSQL.Parameters.Add("@fechapago", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@tipa", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@fch", SqlDbType.Char).Value="";
             comandosSQL.Parameters.Add("@cate", SqlDbType.Char).Value = "";
         }
         public DataSet Obtener_datos()
@@ -288,15 +288,15 @@ namespace Torres_Anibal_Parcial
             string sql = "";
             if (accion == "Nuevo")
             {
-                sql = "insert into pagos(idempleado,cargo,tipopago,fechap) values(@ide,@car,@tipPago,@fechapago)";
+                sql = "insert into pagos(idempleado,cargo,tipopago,fechap) values(@ide,@car,@tipa,@fch)";
             }
             else if (accion == "Modificar")
             {
                 sql = "update pagos set  " +
                    "idempleado =   @ide," +
                    "cargo =        @car," +
-                   "tipopago=      @tipPago," +
-                   "fechap=        @fehapago" +
+                   "tipopago=      @tipa," +
+                   "fechap=        @fch " +
                    "where idpago = @idpa";
             }
             else
@@ -308,8 +308,8 @@ namespace Torres_Anibal_Parcial
                 comandosSQL.Parameters["@idpa"].Value = 0; // este 
                 comandosSQL.Parameters["@ide"].Value = datos[1];
                 comandosSQL.Parameters["@car"].Value = datos[2];
-                comandosSQL.Parameters["@tipPago"].Value = datos[3];
-                comandosSQL.Parameters["@fechapago"].Value = datos[4];
+                comandosSQL.Parameters["@tipa"].Value = datos[3];
+                comandosSQL.Parameters["@fch"].Value = datos[4];
             }
             else    //este 
             {
@@ -319,8 +319,8 @@ namespace Torres_Anibal_Parcial
                 {
                     comandosSQL.Parameters["@ide"].Value = datos[1];
                     comandosSQL.Parameters["@car"].Value = datos[2];
-                    comandosSQL.Parameters["@tipPago"].Value = datos[3];
-                    comandosSQL.Parameters["@fechapago"].Value = datos[4];
+                    comandosSQL.Parameters["@tipa"].Value = datos[3];
+                    comandosSQL.Parameters["@fch"].Value = datos[4];
                 }
             }
             ProcesarSQL(sql);
@@ -336,7 +336,7 @@ namespace Torres_Anibal_Parcial
             {
                 sql = "update categorias set  " + 
                    "categoria=        @cate" +
-                   "where idpago = @idca";
+                   "where idcategoria = @idca";
             }
             else
             {

@@ -44,8 +44,8 @@ namespace Torres_Anibal_Parcial
 
                 lblidpago.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 txtcargo.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-                txtfechapago.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txttipopago.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txttipopago.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+               Convert.ToDateTime (txtfechapago.Text = tbl.Rows[posicion].ItemArray[4].ToString());
 
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }

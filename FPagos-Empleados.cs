@@ -133,7 +133,7 @@ namespace Torres_Anibal_Parcial
               MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblidpago.Text };
-                objConexion.Mantenimiento_usuarios(valores, "Eliminar");
+                objConexion.Mantenimiento_pagos(valores, "Eliminar");
 
                 ActualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;

@@ -16,7 +16,7 @@ namespace Torres_Anibal_Parcial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Proyecto());
+            Application.Run(new FormVentas());
         }
     }
 }

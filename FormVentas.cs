@@ -85,7 +85,7 @@ namespace Torres_Anibal_Parcial
              lblSumaVenta.Text = "$" + Math.Round(suma, 2);
              lblIvaVenta.Text = "$" + Math.Round(iva, 2);
              lblTotalVenta.Text = "$" + Math.Round(total, 2);*/
-            lbltotal.Text = "$" + Math.Round(total);
+            txttotal.Text = "$" + Math.Round(total);
             lblregistroxden.Text = ventasBindingSource.Position + 1 + " de " + ventasBindingSource.Count;
         }
 

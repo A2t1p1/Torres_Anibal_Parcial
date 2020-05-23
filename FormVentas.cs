@@ -66,19 +66,19 @@ namespace Torres_Anibal_Parcial
         }
         private void totalizar()
         {
-            int desc = 0, nfilas = 0;
+            int nfilas = 0;
             double cantidad = 0, precio = 0, suma = 0, /*iva = 0,*/ total = 0;
             nfilas = detalleventasDataGridView.RowCount;
             DataGridViewRow fila = new DataGridViewRow();
-            for (int i = 0; i < nfilas; i++)
-            {
-                fila = detalleventasDataGridView.Rows[i];
-                cantidad = double.Parse(fila.Cells["cantidad"].Value.ToString());
+           // for (int i = 0; i < nfilas; i++)
+           // {
+                //fila = detalleventasDataGridView.Rows[i];
+                //cantidad = double.Parse(fila.Cells["cantidad"].Value.ToString());//
                 //desc = int.Parse(fila.Cells["descuento"].Value.ToString());
-                precio = double.Parse(fila.Cells["precio"].Value.ToString());
+              //  precio = double.Parse(fila.Cells["precio"].Value.ToString());
 
                 suma += cantidad * precio ;
-            }
+            //}//
             total = suma;
             /* iva = int.Parse(tipodocumentoComboBox.SelectedValue.ToString()) == 2 ? suma * 13 / 100 : 0;
              total = suma + iva;

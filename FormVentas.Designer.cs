@@ -37,25 +37,11 @@
             System.Windows.Forms.Label subtotalLabel;
             System.Windows.Forms.Label fechapagoLabel;
             System.Windows.Forms.Label idtipopagoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentas));
             System.Windows.Forms.Label nfvLabel;
             System.Windows.Forms.Label idventaLabel;
             System.Windows.Forms.Label totalLabel;
-            this.ventasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBDataSet = new Torres_Anibal_Parcial.DBDataSet();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.ventasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.facturavventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturavBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -105,8 +91,6 @@
             nfvLabel = new System.Windows.Forms.Label();
             idventaLabel = new System.Windows.Forms.Label();
             totalLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingNavigator)).BeginInit();
-            this.ventasBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturavventasBindingSource)).BeginInit();
@@ -193,45 +177,32 @@
             idtipopagoLabel.TabIndex = 42;
             idtipopagoLabel.Text = "idtipopago:";
             // 
-            // ventasBindingNavigator
+            // nfvLabel
             // 
-            this.ventasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.ventasBindingNavigator.BindingSource = this.ventasBindingSource;
-            this.ventasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.ventasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.ventasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.ventasBindingNavigatorSaveItem});
-            this.ventasBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.ventasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.ventasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.ventasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.ventasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.ventasBindingNavigator.Name = "ventasBindingNavigator";
-            this.ventasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ventasBindingNavigator.Size = new System.Drawing.Size(720, 25);
-            this.ventasBindingNavigator.TabIndex = 0;
-            this.ventasBindingNavigator.Text = "bindingNavigator1";
-            this.ventasBindingNavigator.RefreshItems += new System.EventHandler(this.ventasBindingNavigator_RefreshItems);
+            nfvLabel.AutoSize = true;
+            nfvLabel.Location = new System.Drawing.Point(476, 33);
+            nfvLabel.Name = "nfvLabel";
+            nfvLabel.Size = new System.Drawing.Size(25, 13);
+            nfvLabel.TabIndex = 44;
+            nfvLabel.Text = "nfv:";
             // 
-            // bindingNavigatorAddNewItem
+            // idventaLabel
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            idventaLabel.AutoSize = true;
+            idventaLabel.Location = new System.Drawing.Point(42, 36);
+            idventaLabel.Name = "idventaLabel";
+            idventaLabel.Size = new System.Drawing.Size(45, 13);
+            idventaLabel.TabIndex = 45;
+            idventaLabel.Text = "idventa:";
+            // 
+            // totalLabel
+            // 
+            totalLabel.AutoSize = true;
+            totalLabel.Location = new System.Drawing.Point(564, 315);
+            totalLabel.Name = "totalLabel";
+            totalLabel.Size = new System.Drawing.Size(30, 13);
+            totalLabel.TabIndex = 46;
+            totalLabel.Text = "total:";
             // 
             // ventasBindingSource
             // 
@@ -242,92 +213,6 @@
             // 
             this.dBDataSet.DataSetName = "DBDataSet";
             this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // ventasBindingNavigatorSaveItem
-            // 
-            this.ventasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ventasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ventasBindingNavigatorSaveItem.Image")));
-            this.ventasBindingNavigatorSaveItem.Name = "ventasBindingNavigatorSaveItem";
-            this.ventasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.ventasBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.ventasBindingNavigatorSaveItem.Click += new System.EventHandler(this.ventasBindingNavigatorSaveItem_Click_1);
             // 
             // facturavventasBindingSource
             // 
@@ -504,7 +389,7 @@
             // 
             // cantidadTextBox
             // 
-            this.cantidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "cantidad", true));
+            this.cantidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.detalleventasBindingSource1, "cantidad", true));
             this.cantidadTextBox.Location = new System.Drawing.Point(520, 68);
             this.cantidadTextBox.Name = "cantidadTextBox";
             this.cantidadTextBox.Size = new System.Drawing.Size(56, 20);
@@ -574,15 +459,6 @@
             // 
             this.tipospagosTableAdapter.ClearBeforeFill = true;
             // 
-            // nfvLabel
-            // 
-            nfvLabel.AutoSize = true;
-            nfvLabel.Location = new System.Drawing.Point(476, 33);
-            nfvLabel.Name = "nfvLabel";
-            nfvLabel.Size = new System.Drawing.Size(25, 13);
-            nfvLabel.TabIndex = 44;
-            nfvLabel.Text = "nfv:";
-            // 
             // nfvTextBox
             // 
             this.nfvTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturavventasBindingSource, "nfv", true));
@@ -599,15 +475,6 @@
             this.idventaTextBox.Size = new System.Drawing.Size(37, 20);
             this.idventaTextBox.TabIndex = 46;
             // 
-            // idventaLabel
-            // 
-            idventaLabel.AutoSize = true;
-            idventaLabel.Location = new System.Drawing.Point(42, 36);
-            idventaLabel.Name = "idventaLabel";
-            idventaLabel.Size = new System.Drawing.Size(45, 13);
-            idventaLabel.TabIndex = 45;
-            idventaLabel.Text = "idventa:";
-            // 
             // lblregistroxden
             // 
             this.lblregistroxden.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturavBindingSource, "total", true));
@@ -616,15 +483,6 @@
             this.lblregistroxden.Size = new System.Drawing.Size(58, 23);
             this.lblregistroxden.TabIndex = 44;
             this.lblregistroxden.Text = "label1";
-            // 
-            // totalLabel
-            // 
-            totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(564, 315);
-            totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(30, 13);
-            totalLabel.TabIndex = 46;
-            totalLabel.Text = "total:";
             // 
             // txttotal
             // 
@@ -663,12 +521,8 @@
             this.Controls.Add(subtotalLabel);
             this.Controls.Add(this.subtotalTextBox);
             this.Controls.Add(this.detalleventasDataGridView);
-            this.Controls.Add(this.ventasBindingNavigator);
             this.Name = "FormVentas";
             this.Load += new System.EventHandler(this.FormVentas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingNavigator)).EndInit();
-            this.ventasBindingNavigator.ResumeLayout(false);
-            this.ventasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturavventasBindingSource)).EndInit();
@@ -692,19 +546,6 @@
         private System.Windows.Forms.BindingSource ventasBindingSource;
         private DBDataSetTableAdapters.ventasTableAdapter ventasTableAdapter;
         private DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator ventasBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton ventasBindingNavigatorSaveItem;
         private DBDataSetTableAdapters.facturavTableAdapter facturavTableAdapter;
         private System.Windows.Forms.BindingSource facturavBindingSource;
         private System.Windows.Forms.BindingSource facturavventasBindingSource;

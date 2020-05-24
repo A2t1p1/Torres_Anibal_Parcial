@@ -40,8 +40,6 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbDatosUsuarios = new System.Windows.Forms.GroupBox();
-            this.txtapellido = new System.Windows.Forms.TextBox();
-            this.lblapellido = new System.Windows.Forms.Label();
             this.lblidusuario = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lbl6 = new System.Windows.Forms.Label();
@@ -201,8 +199,6 @@
             // 
             // grbDatosUsuarios
             // 
-            this.grbDatosUsuarios.Controls.Add(this.txtapellido);
-            this.grbDatosUsuarios.Controls.Add(this.lblapellido);
             this.grbDatosUsuarios.Controls.Add(this.lblidusuario);
             this.grbDatosUsuarios.Controls.Add(this.textBox6);
             this.grbDatosUsuarios.Controls.Add(this.lbl6);
@@ -227,24 +223,6 @@
             this.grbDatosUsuarios.TabStop = false;
             this.grbDatosUsuarios.Text = "Datos de Usuario";
             this.grbDatosUsuarios.Enter += new System.EventHandler(this.grbDatosUsuarios_Enter);
-            // 
-            // txtapellido
-            // 
-            this.txtapellido.Location = new System.Drawing.Point(82, 85);
-            this.txtapellido.Margin = new System.Windows.Forms.Padding(1);
-            this.txtapellido.Name = "txtapellido";
-            this.txtapellido.Size = new System.Drawing.Size(205, 21);
-            this.txtapellido.TabIndex = 14;
-            // 
-            // lblapellido
-            // 
-            this.lblapellido.AutoSize = true;
-            this.lblapellido.Location = new System.Drawing.Point(15, 85);
-            this.lblapellido.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(68, 15);
-            this.lblapellido.TabIndex = 13;
-            this.lblapellido.Text = "APELLIDO:";
             // 
             // lblidusuario
             // 
@@ -416,8 +394,6 @@
         private System.Windows.Forms.Button btnanterior;
         private System.Windows.Forms.Button btnprimero;
         private System.Windows.Forms.GroupBox grbDatosUsuarios;
-        private System.Windows.Forms.TextBox txtapellido;
-        private System.Windows.Forms.Label lblapellido;
         private System.Windows.Forms.Label lblidusuario;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label lbl6;

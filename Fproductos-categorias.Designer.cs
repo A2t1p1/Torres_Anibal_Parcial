@@ -45,8 +45,6 @@
             this.lblidproducto = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtprecio = new System.Windows.Forms.TextBox();
-            this.lblprecio = new System.Windows.Forms.Label();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.lbldescripcion = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -65,11 +63,11 @@
             this.grbEdicion.Controls.Add(this.btneliminar);
             this.grbEdicion.Controls.Add(this.btnModificar);
             this.grbEdicion.Controls.Add(this.btnNuevo);
-            this.grbEdicion.Location = new System.Drawing.Point(490, 10);
+            this.grbEdicion.Location = new System.Drawing.Point(10, 253);
             this.grbEdicion.Margin = new System.Windows.Forms.Padding(1);
             this.grbEdicion.Name = "grbEdicion";
             this.grbEdicion.Padding = new System.Windows.Forms.Padding(1);
-            this.grbEdicion.Size = new System.Drawing.Size(165, 331);
+            this.grbEdicion.Size = new System.Drawing.Size(500, 88);
             this.grbEdicion.TabIndex = 8;
             this.grbEdicion.TabStop = false;
             this.grbEdicion.Text = "Edicion de Productos";
@@ -77,7 +75,7 @@
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnBuscar.Location = new System.Drawing.Point(37, 248);
+            this.btnBuscar.Location = new System.Drawing.Point(374, 34);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(94, 33);
@@ -89,7 +87,7 @@
             // btneliminar
             // 
             this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btneliminar.Location = new System.Drawing.Point(37, 181);
+            this.btneliminar.Location = new System.Drawing.Point(263, 34);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(1);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(94, 33);
@@ -101,7 +99,7 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnModificar.Location = new System.Drawing.Point(37, 115);
+            this.btnModificar.Location = new System.Drawing.Point(148, 34);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(94, 33);
@@ -113,7 +111,7 @@
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnNuevo.Location = new System.Drawing.Point(37, 49);
+            this.btnNuevo.Location = new System.Drawing.Point(30, 34);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(94, 33);
@@ -129,11 +127,11 @@
             this.grbNavegacion.Controls.Add(this.btnsiguiente);
             this.grbNavegacion.Controls.Add(this.btnanterior);
             this.grbNavegacion.Controls.Add(this.btnprimero);
-            this.grbNavegacion.Location = new System.Drawing.Point(202, 353);
+            this.grbNavegacion.Location = new System.Drawing.Point(139, 351);
             this.grbNavegacion.Margin = new System.Windows.Forms.Padding(1);
             this.grbNavegacion.Name = "grbNavegacion";
             this.grbNavegacion.Padding = new System.Windows.Forms.Padding(1);
-            this.grbNavegacion.Size = new System.Drawing.Size(457, 57);
+            this.grbNavegacion.Size = new System.Drawing.Size(371, 57);
             this.grbNavegacion.TabIndex = 7;
             this.grbNavegacion.TabStop = false;
             this.grbNavegacion.Text = "Navegacion";
@@ -150,7 +148,7 @@
             // btnultimo
             // 
             this.btnultimo.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnultimo.Location = new System.Drawing.Point(372, 16);
+            this.btnultimo.Location = new System.Drawing.Point(261, 15);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(69, 33);
@@ -162,7 +160,7 @@
             // btnsiguiente
             // 
             this.btnsiguiente.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnsiguiente.Location = new System.Drawing.Point(298, 16);
+            this.btnsiguiente.Location = new System.Drawing.Point(187, 15);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(72, 32);
@@ -202,8 +200,6 @@
             this.grbDatosProductos.Controls.Add(this.lblidproducto);
             this.grbDatosProductos.Controls.Add(this.textBox6);
             this.grbDatosProductos.Controls.Add(this.label6);
-            this.grbDatosProductos.Controls.Add(this.txtprecio);
-            this.grbDatosProductos.Controls.Add(this.lblprecio);
             this.grbDatosProductos.Controls.Add(this.txtdescripcion);
             this.grbDatosProductos.Controls.Add(this.lbldescripcion);
             this.grbDatosProductos.Controls.Add(this.txtnombre);
@@ -215,7 +211,7 @@
             this.grbDatosProductos.Margin = new System.Windows.Forms.Padding(1);
             this.grbDatosProductos.Name = "grbDatosProductos";
             this.grbDatosProductos.Padding = new System.Windows.Forms.Padding(1);
-            this.grbDatosProductos.Size = new System.Drawing.Size(459, 331);
+            this.grbDatosProductos.Size = new System.Drawing.Size(500, 241);
             this.grbDatosProductos.TabIndex = 6;
             this.grbDatosProductos.TabStop = false;
             this.grbDatosProductos.Text = "Datos de Productos";
@@ -266,24 +262,6 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 8;
             this.label6.Text = "label6";
-            // 
-            // txtprecio
-            // 
-            this.txtprecio.Location = new System.Drawing.Point(129, 215);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(1);
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(81, 20);
-            this.txtprecio.TabIndex = 5;
-            // 
-            // lblprecio
-            // 
-            this.lblprecio.AutoSize = true;
-            this.lblprecio.Location = new System.Drawing.Point(14, 215);
-            this.lblprecio.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(50, 13);
-            this.lblprecio.TabIndex = 4;
-            this.lblprecio.Text = "PRECIO:";
             // 
             // txtdescripcion
             // 
@@ -356,7 +334,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ClientSize = new System.Drawing.Size(665, 418);
+            this.ClientSize = new System.Drawing.Size(530, 418);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.grbEdicion);
             this.Controls.Add(this.grbNavegacion);
@@ -393,8 +371,6 @@
         private System.Windows.Forms.Label lblidproducto;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtprecio;
-        private System.Windows.Forms.Label lblprecio;
         private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Label lbldescripcion;
         private System.Windows.Forms.TextBox txtnombre;

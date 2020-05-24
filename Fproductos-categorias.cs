@@ -44,7 +44,7 @@ namespace Torres_Anibal_Parcial
                 txtcodigo.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtnombre.Text = tbl.Rows[posicion].ItemArray[3].ToString();
                 txtdescripcion.Text = tbl.Rows[posicion].ItemArray[4].ToString();
-                txtprecio.Text = tbl.Rows[posicion].ItemArray[5].ToString();
+     
            
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
@@ -60,7 +60,7 @@ namespace Torres_Anibal_Parcial
             txtcodigo.Text = "";
             txtnombre.Text = "";
             txtdescripcion.Text = "";
-            txtprecio.Text = "";
+     
         }
         void Controles(Boolean valor)
         {
@@ -88,7 +88,7 @@ namespace Torres_Anibal_Parcial
                     txtcodigo.Text,
                     txtnombre.Text,
                     txtdescripcion.Text,
-                    txtprecio.Text,
+              
                 };
 
                 objConexion.Mantenimiento_productos_categorias(valores, accion);

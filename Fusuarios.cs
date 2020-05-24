@@ -35,10 +35,10 @@ namespace Torres_Anibal_Parcial
                 lblidusuario.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 txtcodigo.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtnombre.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-                txtapellido.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txtdireccion.Text = tbl.Rows[posicion].ItemArray[4].ToString();
-                txtdui.Text = tbl.Rows[posicion].ItemArray[5].ToString();
-                txttelefono.Text = tbl.Rows[posicion].ItemArray[6].ToString();
+                
+                txtdireccion.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+                txtdui.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txttelefono.Text = tbl.Rows[posicion].ItemArray[5].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
@@ -53,7 +53,7 @@ namespace Torres_Anibal_Parcial
         {
             txtcodigo.Text = "";
             txtnombre.Text = "";
-            txtapellido.Text = "";
+
             txtdireccion.Text = "";
             txtdui.Text = "";
             txttelefono.Text = "";
@@ -84,7 +84,7 @@ namespace Torres_Anibal_Parcial
                         lblidusuario.Text,
                         txtcodigo.Text,
                         txtnombre.Text,
-                        txtapellido.Text,
+                  
                         txtdireccion.Text,
                         txtdui.Text,
                         txttelefono.Text,

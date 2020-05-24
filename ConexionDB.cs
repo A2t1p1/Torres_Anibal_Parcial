@@ -91,14 +91,14 @@ namespace Torres_Anibal_Parcial
             String sql = "";
             if (accion == "Nuevo")
             {
-                sql = "INSERT INTO usuarios (codigo,nombre,apellido,direccion,dui,telefono) VALUES(@cod, @nom, @ape, @dir, @dui, @tele)";
+                sql = "INSERT INTO usuarios (codigo,nombre,direccion,dui,telefono) VALUES(@cod, @nom, @dir, @dui, @tele)";
             }
             else if (accion == "Modificar")
             {
                 sql = "UPDATE usuarios SET "      +
                         "codigo          = @cod," +
                         "nombre          = @nom," +
-                        "apellido        = @ape," +
+
                         "direccion       = @dir," +
                         "dui             = @tel," +
                         "telefono        = @dui "  +
@@ -113,10 +113,10 @@ namespace Torres_Anibal_Parcial
                 comandosSQL.Parameters["@idu"].Value = 0;
                 comandosSQL.Parameters["@cod"].Value = datos[1];  //borrar posiblemente 
                 comandosSQL.Parameters["@nom"].Value = datos[2];
-                comandosSQL.Parameters["@ape"].Value = datos[3];
-                comandosSQL.Parameters["@dir"].Value = datos[4];
-                comandosSQL.Parameters["@tel"].Value = datos[5];
-                comandosSQL.Parameters["@dui"].Value = datos[6];
+    
+                comandosSQL.Parameters["@dir"].Value = datos[3];
+                comandosSQL.Parameters["@tel"].Value = datos[4];
+                comandosSQL.Parameters["@dui"].Value = datos[5];
             }
             else
             {
@@ -125,10 +125,10 @@ namespace Torres_Anibal_Parcial
                 {
                     comandosSQL.Parameters["@cod"].Value = datos[1];
                     comandosSQL.Parameters["@nom"].Value = datos[2];
-                    comandosSQL.Parameters["@ape"].Value = datos[3];
-                    comandosSQL.Parameters["@dir"].Value = datos[4];
-                    comandosSQL.Parameters["@tel"].Value = datos[5];
-                    comandosSQL.Parameters["@dui"].Value = datos[6];
+            
+                    comandosSQL.Parameters["@dir"].Value = datos[3];
+                    comandosSQL.Parameters["@tel"].Value = datos[4];
+                    comandosSQL.Parameters["@dui"].Value = datos[5];
                 }
             }
 
@@ -242,7 +242,7 @@ namespace Torres_Anibal_Parcial
             string sql = "";
             if (accion == "Nuevo")
             {
-                sql = "insert into productos(idcategoria,codigo,nombre,descripcion,precio) values(@idca,@cod,@nom,@des,@pre) ";
+                sql = "insert into productos(idcategoria,codigo,nombre,descripcion) values(@idca,@cod,@nom,@des) ";
             }
             else if (accion == "Modificar")
             {
@@ -250,8 +250,7 @@ namespace Torres_Anibal_Parcial
                      "idcategoria            = @idca," +
                    "codigo                 = @cod," +
                    "nombre                 = @nom," +
-                   "descripcion            = @des," +
-                   "precio                 = @pre " +
+                   "descripcion            = @des" +
                    "where idproducto =  @idp";
             }
             else
@@ -266,7 +265,7 @@ namespace Torres_Anibal_Parcial
                 comandosSQL.Parameters["@cod"].Value = datos[2];
                 comandosSQL.Parameters["@nom"].Value = datos[3];
                 comandosSQL.Parameters["@des"].Value = datos[4];
-                comandosSQL.Parameters["@pre"].Value = datos[5];
+    
             }
             else  // este tambien 
 
@@ -278,7 +277,7 @@ namespace Torres_Anibal_Parcial
                     comandosSQL.Parameters["@cod"].Value = datos[2];
                     comandosSQL.Parameters["@nom"].Value = datos[3];
                     comandosSQL.Parameters["@des"].Value = datos[4];
-                    comandosSQL.Parameters["@pre"].Value = datos[5];
+
                 }
             }
             ProcesarSQL(sql);

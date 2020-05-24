@@ -52,6 +52,10 @@ namespace Torres_Anibal_Parcial {
         
         private global::System.Data.DataRelation relationFK_dventa_idventa1;
         
+        private global::System.Data.DataRelation relationdventa_detalledeventa;
+        
+        private global::System.Data.DataRelation relationventas_usuarios;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -359,6 +363,8 @@ namespace Torres_Anibal_Parcial {
             this.relationFK_ventas_idtipopago = this.Relations["FK_ventas_idtipopago"];
             this.relationFK_dventa_idproducto1 = this.Relations["FK_dventa_idproducto1"];
             this.relationFK_dventa_idventa1 = this.Relations["FK_dventa_idventa1"];
+            this.relationdventa_detalledeventa = this.Relations["dventa_detalledeventa"];
+            this.relationventas_usuarios = this.Relations["ventas_usuarios"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -411,6 +417,14 @@ namespace Torres_Anibal_Parcial {
                         this.tableventas.idventaColumn}, new global::System.Data.DataColumn[] {
                         this.tabledetalledeventa.idventaColumn}, false);
             this.Relations.Add(this.relationFK_dventa_idventa1);
+            this.relationdventa_detalledeventa = new global::System.Data.DataRelation("dventa_detalledeventa", new global::System.Data.DataColumn[] {
+                        this.tabledventa.iddetalleColumn}, new global::System.Data.DataColumn[] {
+                        this.tabledetalledeventa.iddetalleColumn}, false);
+            this.Relations.Add(this.relationdventa_detalledeventa);
+            this.relationventas_usuarios = new global::System.Data.DataRelation("ventas_usuarios", new global::System.Data.DataColumn[] {
+                        this.tableventas.idusuarioColumn}, new global::System.Data.DataColumn[] {
+                        this.tableusuarios.idusuarioColumn}, false);
+            this.Relations.Add(this.relationventas_usuarios);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2947,6 +2961,17 @@ namespace Torres_Anibal_Parcial {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_dventa_idventa"]);
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public detalledeventaRow[] GetdetalledeventaRows() {
+                if ((this.Table.ChildRelations["dventa_detalledeventa"] == null)) {
+                    return new detalledeventaRow[0];
+                }
+                else {
+                    return ((detalledeventaRow[])(base.GetChildRows(this.Table.ChildRelations["dventa_detalledeventa"])));
+                }
+            }
         }
         
         /// <summary>
@@ -3190,6 +3215,17 @@ namespace Torres_Anibal_Parcial {
                     this[this.tableusuarios.telefonoColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ventasRow ventasRow {
+                get {
+                    return ((ventasRow)(this.GetParentRow(this.Table.ParentRelations["ventas_usuarios"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["ventas_usuarios"]);
+                }
+            }
         }
         
         /// <summary>
@@ -3313,6 +3349,17 @@ namespace Torres_Anibal_Parcial {
                 }
                 else {
                     return ((detalledeventaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_dventa_idventa1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public usuariosRow[] GetusuariosRows() {
+                if ((this.Table.ChildRelations["ventas_usuarios"] == null)) {
+                    return new usuariosRow[0];
+                }
+                else {
+                    return ((usuariosRow[])(base.GetChildRows(this.Table.ChildRelations["ventas_usuarios"])));
                 }
             }
         }
@@ -3479,6 +3526,17 @@ namespace Torres_Anibal_Parcial {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_dventa_idventa1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dventaRow dventaRow {
+                get {
+                    return ((dventaRow)(this.GetParentRow(this.Table.ParentRelations["dventa_detalledeventa"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["dventa_detalledeventa"]);
                 }
             }
             

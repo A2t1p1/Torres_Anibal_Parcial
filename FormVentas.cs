@@ -71,7 +71,6 @@ namespace Torres_Anibal_Parcial
             }
             
             lblTotalVenta.Text = "$" + Math.Round(total, 2);
-
             lblregistroxden.Text = ventasBindingSource.Position + 1 + " de " + ventasBindingSource.Count;
         }
 

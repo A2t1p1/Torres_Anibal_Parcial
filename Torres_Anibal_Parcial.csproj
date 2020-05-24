@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBDataSetcompras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBDataSetcompras.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FBusquedaPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +109,12 @@
     </Compile>
     <Compile Include="Fcategoria.Designer.cs">
       <DependentUpon>Fcategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fcompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fcompras.Designer.cs">
+      <DependentUpon>Fcompras.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVentas.cs">
       <SubType>Form</SubType>
@@ -173,6 +184,9 @@
     <EmbeddedResource Include="Fcategoria.resx">
       <DependentUpon>Fcategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fcompras.resx">
+      <DependentUpon>Fcompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +230,17 @@
     </None>
     <None Include="DBDataSet.xss">
       <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSetcompras.xsc">
+      <DependentUpon>DBDataSetcompras.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSetcompras.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBDataSetcompras.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBDataSetcompras.xss">
+      <DependentUpon>DBDataSetcompras.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

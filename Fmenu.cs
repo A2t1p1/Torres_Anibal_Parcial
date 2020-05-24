@@ -71,5 +71,21 @@ namespace Torres_Anibal_Parcial
             cambio.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Fcompras cambio = new Fcompras();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormVentas cambio = new FormVentas();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
     }
 }

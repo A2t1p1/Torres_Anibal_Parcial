@@ -35,6 +35,8 @@
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnPagos = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProveedores
@@ -121,12 +123,38 @@
             this.btnCategorias.UseVisualStyleBackColor = false;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(287, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 67);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Compras";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(287, 300);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 67);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Ventas";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Fmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(718, 453);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCategorias);
             this.Controls.Add(this.btnPagos);
             this.Controls.Add(this.btnEmpleado);
@@ -149,5 +177,7 @@
         private System.Windows.Forms.Button btnEmpleado;
         private System.Windows.Forms.Button btnPagos;
         private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

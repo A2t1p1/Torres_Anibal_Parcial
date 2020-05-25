@@ -107,5 +107,12 @@ namespace Torres_Anibal_Parcial
             totalizar();
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Fmenu cambio = new Fmenu();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
     }
 }

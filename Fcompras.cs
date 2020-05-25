@@ -36,30 +36,32 @@ namespace Torres_Anibal_Parcial
             // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.detallecompras' Puede moverla o quitarla según sea necesario.
             this.detallecomprasTableAdapter.Filldetallecompras(this.dBDataSetcompras.detallecompras);
             // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.compras' Puede moverla o quitarla según sea necesario.
-            this.comprasTableAdapter.Fill(this.dBDataSetcompras.compras);
+            try
+            {
+                this.comprasTableAdapter.Fill(this.dBDataSetcompras.compras);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            totalizar();
+           
 
         }
         private void totalizar()
         {
-            int desc = 0, nfilas = 0;
-            double cantidad = 0, precio = 0, /*suma = 0, iva = 0, */ total = 0;
+            int  nfilas = 0;
+            double cantidad = 0, precio = 0, total = 0;
             nfilas = detallecomprasDataGridView.RowCount;
             DataGridViewRow fila = new DataGridViewRow();
             for (int i = 0; i < nfilas; i++)
             {
                 fila = detallecomprasDataGridView.Rows[i];
                 cantidad = double.Parse(fila.Cells["cantidad"].Value.ToString());
-              //  desc = int.Parse(fila.Cells["descuento"].Value.ToString());
                 precio = double.Parse(fila.Cells["precio"].Value.ToString());
-
-                /*suma +=*/total= cantidad * precio;
+                total = cantidad * precio;
             }
-           // iva = int.Parse(tipodocumentoComboBox.SelectedValue.ToString()) == 2 ? suma * 13 / 100 : 0;
-           // total = suma + iva;
-            //lblSumaVenta.Text = "$" + Math.Round(suma, 2);
-            //lblIvaVenta.Text = "$" + Math.Round(iva, 2);
             lblTotalVenta.Text = "$" + Math.Round(total, 2);
-
             lblregistroxden.Text = comprasBindingSource.Position + 1 + " de " + comprasBindingSource.Count;
         }
 
@@ -86,6 +88,14 @@ namespace Torres_Anibal_Parcial
         {
             comprasBindingSource.MoveLast();
             totalizar();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Fmenu cambio = new Fmenu();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
         }
     }
 }

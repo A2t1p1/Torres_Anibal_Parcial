@@ -82,7 +82,7 @@ namespace Torres_Anibal_Parcial
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormVentas cambio = new FormVentas();
+            Fventas cambio = new Fventas();
             this.Hide();
             cambio.ShowDialog();
             this.Close();

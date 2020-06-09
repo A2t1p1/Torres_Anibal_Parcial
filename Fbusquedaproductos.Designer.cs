@@ -35,6 +35,7 @@
             this.lblbuscar = new System.Windows.Forms.Label();
             this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idreceta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +75,7 @@
             this.grdBusquedaproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproducto,
             this.idcategoria,
+            this.idreceta,
             this.codigo,
             this.nombre,
             this.descripccion,
@@ -122,6 +124,12 @@
             this.idcategoria.Name = "idcategoria";
             this.idcategoria.ReadOnly = true;
             this.idcategoria.Width = 70;
+            // 
+            // idreceta
+            // 
+            this.idreceta.HeaderText = "IDRECETA";
+            this.idreceta.Name = "idreceta";
+            this.idreceta.ReadOnly = true;
             // 
             // codigo
             // 
@@ -188,6 +196,7 @@
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn idcategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idreceta;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripccion;

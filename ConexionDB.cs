@@ -33,6 +33,7 @@ namespace Torres_Anibal_Parcial
             comandosSQL.Parameters.Add("@idprov",SqlDbType.Int).Value=0;
             comandosSQL.Parameters.Add("@idca", SqlDbType.Int).Value =0;
             comandosSQL.Parameters.Add("@idpa", SqlDbType.Int).Value =0;
+            comandosSQL.Parameters.Add("@idre", SqlDbType.Int).Value = 0; 
             comandosSQL.Parameters.Add("@cod", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@nom", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@ape", SqlDbType.Char).Value = "";
@@ -242,12 +243,13 @@ namespace Torres_Anibal_Parcial
             string sql = "";
             if (accion == "Nuevo")
             {
-                sql = "insert into productos(idcategoria,codigo,nombre,descripcion) values(@idca,@cod,@nom,@des) ";
+                sql = "insert into productos(idcategoria,idreceta,codigo,nombre,descripcion) values(@idca,@idre,@cod,@nom,@des) ";
             }
             else if (accion == "Modificar")
             {
                 sql = "update productos set  " +
                      "idcategoria            = @idca," +
+                     "idreceta              =@idre,"+
                    "codigo                 = @cod," +
                    "nombre                 = @nom," +
                    "descripcion            = @des" +
@@ -262,9 +264,10 @@ namespace Torres_Anibal_Parcial
             {
                 comandosSQL.Parameters["@idp"].Value = 0;   //sigue aqui 
                 comandosSQL.Parameters["@idca"].Value = datos[1];
-                comandosSQL.Parameters["@cod"].Value = datos[2];
-                comandosSQL.Parameters["@nom"].Value = datos[3];
-                comandosSQL.Parameters["@des"].Value = datos[4];
+                comandosSQL.Parameters["@idre"].Value = datos[2];
+                comandosSQL.Parameters["@cod"].Value = datos[3];
+                comandosSQL.Parameters["@nom"].Value = datos[4];
+                comandosSQL.Parameters["@des"].Value = datos[5];
     
             }
             else  // este tambien 
@@ -274,9 +277,10 @@ namespace Torres_Anibal_Parcial
                 if (accion != "Eliminar")
                 {
                     comandosSQL.Parameters["@idca"].Value = datos[1];
-                    comandosSQL.Parameters["@cod"].Value = datos[2];
-                    comandosSQL.Parameters["@nom"].Value = datos[3];
-                    comandosSQL.Parameters["@des"].Value = datos[4];
+                    comandosSQL.Parameters["@idre"].Value = datos[2];
+                    comandosSQL.Parameters["@cod"].Value = datos[3];
+                    comandosSQL.Parameters["@nom"].Value = datos[4];
+                    comandosSQL.Parameters["@des"].Value = datos[5];
 
                 }
             }

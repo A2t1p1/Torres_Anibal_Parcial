@@ -50,6 +50,5 @@ namespace Torres_Anibal_Parcial
             ds.Filter = "nombre like '%" + valor + "%' or codigo like '%" + valor + "%' or descripcion like '%" + valor + "%'";
             grdBusquedaproductos.DataSource = ds;
         }
-        
     }
 }

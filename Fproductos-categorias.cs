@@ -37,15 +37,19 @@ namespace Torres_Anibal_Parcial
                 cboCategoriaProductos.DataSource = objConexion.Obtener_datos().Tables["categorias"];
                 cboCategoriaProductos.DisplayMember = "categoria";
                 cboCategoriaProductos.ValueMember = "categorias.idcategoria";
-            
+
+                CboReceta.DataSource = objConexion.Obtener_datos().Tables["recetas"];
+                CboReceta.DisplayMember = "recetas";
+                CboReceta.ValueMember = "recetas.idreceta";
+
                 cboCategoriaProductos.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
+                CboReceta.SelectedValue = tbl.Rows[posicion].ItemArray[2].ToString();
 
                 lblidproducto.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-                txtcodigo.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-                txtnombre.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txtdescripcion.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txtcodigo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+                txtnombre.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txtdescripcion.Text = tbl.Rows[posicion].ItemArray[5].ToString();
      
-           
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
             catch (Exception ex)
@@ -85,10 +89,10 @@ namespace Torres_Anibal_Parcial
                 String[] valores = {
                     lblidproducto.Text,
                     cboCategoriaProductos.SelectedValue.ToString(),
+                    CboReceta.SelectedValue.ToString(),
                     txtcodigo.Text,
                     txtnombre.Text,
                     txtdescripcion.Text,
-              
                 };
 
                 objConexion.Mantenimiento_productos_categorias(valores, accion);

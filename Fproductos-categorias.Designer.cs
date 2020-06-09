@@ -52,6 +52,8 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CboReceta = new System.Windows.Forms.ComboBox();
             this.grbEdicion.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
             this.grbDatosProductos.SuspendLayout();
@@ -139,7 +141,7 @@
             // lblnregistros
             // 
             this.lblnregistros.AutoSize = true;
-            this.lblnregistros.Location = new System.Drawing.Point(228, 35);
+            this.lblnregistros.Location = new System.Drawing.Point(179, 30);
             this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnregistros.Name = "lblnregistros";
             this.lblnregistros.Size = new System.Drawing.Size(0, 13);
@@ -148,7 +150,7 @@
             // btnultimo
             // 
             this.btnultimo.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnultimo.Location = new System.Drawing.Point(261, 15);
+            this.btnultimo.Location = new System.Drawing.Point(291, 15);
             this.btnultimo.Margin = new System.Windows.Forms.Padding(1);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(69, 33);
@@ -160,7 +162,7 @@
             // btnsiguiente
             // 
             this.btnsiguiente.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnsiguiente.Location = new System.Drawing.Point(187, 15);
+            this.btnsiguiente.Location = new System.Drawing.Point(217, 15);
             this.btnsiguiente.Margin = new System.Windows.Forms.Padding(1);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(72, 32);
@@ -195,6 +197,8 @@
             // 
             // grbDatosProductos
             // 
+            this.grbDatosProductos.Controls.Add(this.CboReceta);
+            this.grbDatosProductos.Controls.Add(this.label1);
             this.grbDatosProductos.Controls.Add(this.cboCategoriaProductos);
             this.grbDatosProductos.Controls.Add(this.lblCategoria);
             this.grbDatosProductos.Controls.Add(this.lblidproducto);
@@ -220,7 +224,7 @@
             // 
             this.cboCategoriaProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoriaProductos.FormattingEnabled = true;
-            this.cboCategoriaProductos.Location = new System.Drawing.Point(104, 31);
+            this.cboCategoriaProductos.Location = new System.Drawing.Point(129, 31);
             this.cboCategoriaProductos.Margin = new System.Windows.Forms.Padding(1);
             this.cboCategoriaProductos.Name = "cboCategoriaProductos";
             this.cboCategoriaProductos.Size = new System.Drawing.Size(154, 21);
@@ -265,7 +269,7 @@
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(129, 160);
+            this.txtdescripcion.Location = new System.Drawing.Point(129, 173);
             this.txtdescripcion.Margin = new System.Windows.Forms.Padding(1);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(129, 20);
@@ -274,7 +278,7 @@
             // lbldescripcion
             // 
             this.lbldescripcion.AutoSize = true;
-            this.lbldescripcion.Location = new System.Drawing.Point(13, 163);
+            this.lbldescripcion.Location = new System.Drawing.Point(13, 176);
             this.lbldescripcion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldescripcion.Name = "lbldescripcion";
             this.lbldescripcion.Size = new System.Drawing.Size(83, 13);
@@ -283,7 +287,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(129, 115);
+            this.txtnombre.Location = new System.Drawing.Point(129, 128);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(1);
             this.txtnombre.Multiline = true;
             this.txtnombre.Name = "txtnombre";
@@ -293,7 +297,7 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.Location = new System.Drawing.Point(13, 122);
+            this.lblnombre.Location = new System.Drawing.Point(13, 135);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(57, 13);
@@ -302,7 +306,7 @@
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(129, 79);
+            this.txtcodigo.Location = new System.Drawing.Point(129, 93);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(1);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(76, 20);
@@ -311,7 +315,7 @@
             // lblcodigo
             // 
             this.lblcodigo.AutoSize = true;
-            this.lblcodigo.Location = new System.Drawing.Point(13, 86);
+            this.lblcodigo.Location = new System.Drawing.Point(13, 100);
             this.lblcodigo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblcodigo.Name = "lblcodigo";
             this.lblcodigo.Size = new System.Drawing.Size(52, 13);
@@ -328,6 +332,26 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "RECETA:";
+            // 
+            // CboReceta
+            // 
+            this.CboReceta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboReceta.FormattingEnabled = true;
+            this.CboReceta.Location = new System.Drawing.Point(129, 61);
+            this.CboReceta.Margin = new System.Windows.Forms.Padding(1);
+            this.CboReceta.Name = "CboReceta";
+            this.CboReceta.Size = new System.Drawing.Size(154, 21);
+            this.CboReceta.TabIndex = 16;
             // 
             // Fproductos_categorias
             // 
@@ -378,5 +402,7 @@
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label lblcodigo;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CboReceta;
     }
 }

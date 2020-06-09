@@ -42,9 +42,6 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimero = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotalVenta = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.comprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comprasTableAdapter = new Torres_Anibal_Parcial.DBDataSetcomprasTableAdapters.comprasTableAdapter();
             this.tableAdapterManager = new Torres_Anibal_Parcial.DBDataSetcomprasTableAdapters.TableAdapterManager();
@@ -70,6 +67,13 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTotalVenta = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblIvaVenta = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblSumaVenta = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             idcompraLabel = new System.Windows.Forms.Label();
             idproveedorLabel = new System.Windows.Forms.Label();
             idtipopagoLabel = new System.Windows.Forms.Label();
@@ -78,12 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.detallecomprasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetcompras)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comprasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipospagosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallecomprasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallecomprasDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // idcompraLabel
@@ -202,33 +206,6 @@
             this.btnPrimero.UseVisualStyleBackColor = true;
             this.btnPrimero.Click += new System.EventHandler(this.btnPrimero_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblTotalVenta);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(553, 378);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 43);
-            this.panel1.TabIndex = 16;
-            // 
-            // lblTotalVenta
-            // 
-            this.lblTotalVenta.AutoSize = true;
-            this.lblTotalVenta.Location = new System.Drawing.Point(140, 17);
-            this.lblTotalVenta.Name = "lblTotalVenta";
-            this.lblTotalVenta.Size = new System.Drawing.Size(46, 13);
-            this.lblTotalVenta.TabIndex = 5;
-            this.lblTotalVenta.Text = "0000.00";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "TOTAL:";
-            // 
             // comprasBindingSource
             // 
             this.comprasBindingSource.DataMember = "compras";
@@ -346,7 +323,7 @@
             this.detallecomprasDataGridView.Location = new System.Drawing.Point(19, 106);
             this.detallecomprasDataGridView.Name = "detallecomprasDataGridView";
             this.detallecomprasDataGridView.ReadOnly = true;
-            this.detallecomprasDataGridView.Size = new System.Drawing.Size(741, 255);
+            this.detallecomprasDataGridView.Size = new System.Drawing.Size(710, 255);
             this.detallecomprasDataGridView.TabIndex = 26;
             // 
             // dataGridViewTextBoxColumn3
@@ -354,6 +331,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "idproducto";
             this.dataGridViewTextBoxColumn3.HeaderText = "ID";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 70;
             // 
             // dataGridViewTextBoxColumn7
@@ -361,30 +339,35 @@
             this.dataGridViewTextBoxColumn7.DataPropertyName = "codigo";
             this.dataGridViewTextBoxColumn7.HeaderText = "Codigo";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "nombre";
             this.dataGridViewTextBoxColumn8.HeaderText = "Nombre Producto";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "descripcion";
             this.dataGridViewTextBoxColumn9.HeaderText = "Descripcion";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // cantidad
             // 
             this.cantidad.DataPropertyName = "cantidad";
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
             // 
             // precio
             // 
             this.precio.DataPropertyName = "precio";
             this.precio.HeaderText = "Precio";
             this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -406,6 +389,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "idcompra";
             this.dataGridViewTextBoxColumn2.HeaderText = "idcompra";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Visible = false;
             // 
             // btnVolver
@@ -419,12 +403,80 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblTotalVenta);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblIvaVenta);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblSumaVenta);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(529, 367);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 92);
+            this.panel1.TabIndex = 28;
+            // 
+            // lblTotalVenta
+            // 
+            this.lblTotalVenta.AutoSize = true;
+            this.lblTotalVenta.Location = new System.Drawing.Point(142, 61);
+            this.lblTotalVenta.Name = "lblTotalVenta";
+            this.lblTotalVenta.Size = new System.Drawing.Size(46, 13);
+            this.lblTotalVenta.TabIndex = 5;
+            this.lblTotalVenta.Text = "0000.00";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "TOTAL:";
+            // 
+            // lblIvaVenta
+            // 
+            this.lblIvaVenta.AutoSize = true;
+            this.lblIvaVenta.Location = new System.Drawing.Point(154, 36);
+            this.lblIvaVenta.Name = "lblIvaVenta";
+            this.lblIvaVenta.Size = new System.Drawing.Size(34, 13);
+            this.lblIvaVenta.TabIndex = 3;
+            this.lblIvaVenta.Text = "00.00";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "IVA:";
+            // 
+            // lblSumaVenta
+            // 
+            this.lblSumaVenta.AutoSize = true;
+            this.lblSumaVenta.Location = new System.Drawing.Point(142, 12);
+            this.lblSumaVenta.Name = "lblSumaVenta";
+            this.lblSumaVenta.Size = new System.Drawing.Size(46, 13);
+            this.lblSumaVenta.TabIndex = 1;
+            this.lblSumaVenta.Text = "0000.00";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "SUMA:";
+            // 
             // Fcompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(765, 471);
+            this.ClientSize = new System.Drawing.Size(747, 471);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.detallecomprasDataGridView);
             this.Controls.Add(idcompraLabel);
@@ -438,22 +490,21 @@
             this.Controls.Add(fechapagoLabel);
             this.Controls.Add(this.fechapagoDateTimePicker);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Fcompras";
-            this.Text = "Fcompras";
+            this.Text = "Compras";
             this.Load += new System.EventHandler(this.Fcompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.detallecomprasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetcompras)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comprasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipospagosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallecomprasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallecomprasDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,9 +524,6 @@
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimero;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblTotalVenta;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label idcompraLabel1;
         private System.Windows.Forms.ComboBox idproveedorComboBox;
         private System.Windows.Forms.ComboBox idtipopagoComboBox;
@@ -497,5 +545,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTotalVenta;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblIvaVenta;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSumaVenta;
+        private System.Windows.Forms.Label label1;
     }
 }

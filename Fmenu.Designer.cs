@@ -28,118 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.btnMateriales = new System.Windows.Forms.Button();
+            this.btnPanes = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.Btnsalir = new System.Windows.Forms.Button();
+            this.btnEmpleado = new System.Windows.Forms.Button();
+            this.btnVenta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // btnMateriales
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(137)))), ((int)(((byte)(147)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(-5, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 315);
-            this.panel1.TabIndex = 0;
+            this.btnMateriales.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnMateriales.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMateriales.Location = new System.Drawing.Point(481, 50);
+            this.btnMateriales.Name = "btnMateriales";
+            this.btnMateriales.Size = new System.Drawing.Size(145, 67);
+            this.btnMateriales.TabIndex = 11;
+            this.btnMateriales.Text = "Proveedores";
+            this.btnMateriales.UseVisualStyleBackColor = false;
+            this.btnMateriales.Click += new System.EventHandler(this.btnMateriales_Click);
             // 
-            // label1
+            // btnPanes
             // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(83, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 44);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Movies Play";
+            this.btnPanes.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnPanes.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPanes.Location = new System.Drawing.Point(481, 203);
+            this.btnPanes.Name = "btnPanes";
+            this.btnPanes.Size = new System.Drawing.Size(145, 67);
+            this.btnPanes.TabIndex = 10;
+            this.btnPanes.Text = "Productos";
+            this.btnPanes.UseVisualStyleBackColor = false;
+            this.btnPanes.Click += new System.EventHandler(this.BtnProducto_Click);
             // 
-            // button4
+            // btnCliente
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(110)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(12, 272);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 28);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Cerrar";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnCliente.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnCliente.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.Location = new System.Drawing.Point(71, 50);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(145, 67);
+            this.btnCliente.TabIndex = 9;
+            this.btnCliente.Text = "Clientes";
+            this.btnCliente.UseVisualStyleBackColor = false;
+            this.btnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
             // 
-            // button3
+            // Btnsalir
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(176)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(248, 138);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 40);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Alquilar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.Btnsalir.BackColor = System.Drawing.Color.Red;
+            this.Btnsalir.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btnsalir.Location = new System.Drawing.Point(12, 408);
+            this.Btnsalir.Name = "Btnsalir";
+            this.Btnsalir.Size = new System.Drawing.Size(91, 33);
+            this.Btnsalir.TabIndex = 8;
+            this.Btnsalir.Text = "Salir";
+            this.Btnsalir.UseVisualStyleBackColor = false;
+            this.Btnsalir.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // button2
+            // btnEmpleado
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(176)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(126, 138);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 40);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Peliculas";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnEmpleado.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnEmpleado.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleado.Location = new System.Drawing.Point(71, 203);
+            this.btnEmpleado.Name = "btnEmpleado";
+            this.btnEmpleado.Size = new System.Drawing.Size(145, 67);
+            this.btnEmpleado.TabIndex = 12;
+            this.btnEmpleado.Text = "Empleados";
+            this.btnEmpleado.UseVisualStyleBackColor = false;
+            this.btnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
             // 
-            // button1
+            // btnVenta
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(176)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(214)))), ((int)(((byte)(81)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 40);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Clientes";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnVenta.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnVenta.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenta.Location = new System.Drawing.Point(279, 340);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(145, 67);
+            this.btnVenta.TabIndex = 13;
+            this.btnVenta.UseVisualStyleBackColor = false;
+            this.btnVenta.Click += new System.EventHandler(this.BtnVenta_Click);
             // 
             // Fmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(176)))));
-            this.ClientSize = new System.Drawing.Size(347, 312);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ClientSize = new System.Drawing.Size(718, 453);
+            this.Controls.Add(this.btnVenta);
+            this.Controls.Add(this.btnEmpleado);
+            this.Controls.Add(this.btnMateriales);
+            this.Controls.Add(this.btnPanes);
+            this.Controls.Add(this.btnCliente);
+            this.Controls.Add(this.Btnsalir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fmenu";
-            this.Text = "Menu";
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMateriales;
+        private System.Windows.Forms.Button btnPanes;
+        private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.Button Btnsalir;
+        private System.Windows.Forms.Button btnEmpleado;
+        private System.Windows.Forms.Button btnVenta;
     }
 }

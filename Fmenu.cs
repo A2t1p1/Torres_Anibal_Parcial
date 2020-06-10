@@ -17,30 +17,43 @@ namespace Torres_Anibal_Parcial
             InitializeComponent();
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        private void BtnCliente_Click(object sender, EventArgs e)
+        {
+            Fusuarios cambio = new Fusuarios();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnProducto_Click(object sender, EventArgs e)
+        {
+            Fproductos_categorias cambio = new Fproductos_categorias();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnEmpleado_Click(object sender, EventArgs e)
+        {
+            Fempleados cambio = new Fempleados();
+            this.Hide();
+            cambio.ShowDialog();
+            this.Close();
+        }
+          
+        private void BtnVenta_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnMateriales_Click(object sender, EventArgs e)
         {
-            FClientes cambio = new FClientes();
-            this.Hide();
-            cambio.ShowDialog();
-            this.Close();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            FPeliculas cambio = new FPeliculas();
-            this.Hide();
-            cambio.ShowDialog();
-            this.Close();
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            FAlquiler cambio = new FAlquiler();
+            Fproveedores cambio = new Fproveedores();
             this.Hide();
             cambio.ShowDialog();
             this.Close();

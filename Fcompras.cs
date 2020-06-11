@@ -27,14 +27,14 @@ namespace Torres_Anibal_Parcial
 
         private void Fcompras_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras1.tipodocumento' Puede moverla o quitarla según sea necesario.
+            this.tipodocumentoTableAdapter.Fill(this.dBDataSetcompras1.tipodocumento);
             // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.tipospagos' Puede moverla o quitarla según sea necesario.
             this.tipospagosTableAdapter.Fill(this.dBDataSetcompras.tipospagos);
             // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.proveedores' Puede moverla o quitarla según sea necesario.
             this.proveedoresTableAdapter.Fill(this.dBDataSetcompras.proveedores);
-            // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.detallecompras' Puede moverla o quitarla según sea necesario.
-            this.detallecomprasTableAdapter.Filldetallecompras(this.dBDataSetcompras.detallecompras);
-            // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.detallecompras' Puede moverla o quitarla según sea necesario.
-            this.detallecomprasTableAdapter.Filldetallecompras(this.dBDataSetcompras.detallecompras);
+            // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.detallescompras' Puede moverla o quitarla según sea necesario.
+            this.detallescomprasTableAdapter.Fill(this.dBDataSetcompras.detallescompras);
             // TODO: esta línea de código carga datos en la tabla 'dBDataSetcompras.compras' Puede moverla o quitarla según sea necesario.
             try
             {
@@ -43,26 +43,29 @@ namespace Torres_Anibal_Parcial
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            totalizar();
-           
-
+                throw;
+            }totalizar();
         }
         private void totalizar()
         {
-            int  nfilas = 0;
-            double cantidad = 0, precio = 0, total = 0;
-            nfilas = detallecomprasDataGridView.RowCount;
+            int desc = 0, nfilas = 0;
+            double cantidad = 0, precio = 0, suma = 0, iva = 0, total = 0;
+            nfilas = detallescomprasDataGridView.RowCount;
             DataGridViewRow fila = new DataGridViewRow();
             for (int i = 0; i < nfilas; i++)
             {
-                fila = detallecomprasDataGridView.Rows[i];
-                cantidad = double.Parse(fila.Cells["cantidad"].Value.ToString());
+                fila = detallescomprasDataGridView.Rows[i];
                 precio = double.Parse(fila.Cells["precio"].Value.ToString());
-                total = cantidad * precio;
+                desc = int.Parse(fila.Cells["descuento"].Value.ToString());
+                cantidad = double.Parse(fila.Cells["cantidad"].Value.ToString());
+
+                suma += cantidad * precio * (1-desc/100);
             }
-            lblTotalVenta.Text = "$" + Math.Round(total, 2);
-            lblregistroxden.Text = comprasBindingSource.Position + 1 + " de " + comprasBindingSource.Count;
+            iva = int.Parse(idtipoComboBox.SelectedValue.ToString()) == 2 ? suma * 13 / 100 : 0;
+            total = suma + iva;
+            lblSumacompra.Text = "$" + Math.Round(suma, 2);
+            lblIvacompra.Text = "$" + Math.Round(iva, 2);
+            lblTotalcompra.Text = "$" + Math.Round(total, 2);
         }
 
         private void btnPrimero_Click(object sender, EventArgs e)
@@ -79,23 +82,14 @@ namespace Torres_Anibal_Parcial
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-
-            comprasBindingSource.MoveNext();
+            comprasBindingSource.MovePrevious();
             totalizar();
         }
 
         private void btnUltimo_Click(object sender, EventArgs e)
         {
-            comprasBindingSource.MoveLast();
+            comprasBindingSource.MoveNext();
             totalizar();
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            Fmenu cambio = new Fmenu();
-            this.Hide();
-            cambio.ShowDialog();
-            this.Close();
         }
     }
 }

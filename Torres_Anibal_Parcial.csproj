@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBDataSetcompras.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBDataSetrecetas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBDataSetrecetas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DBDataSetventas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,6 +126,12 @@
     </Compile>
     <Compile Include="FPagos-Empleados.Designer.cs">
       <DependentUpon>FPagos-Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frecetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frecetas.Designer.cs">
+      <DependentUpon>Frecetas.cs</DependentUpon>
     </Compile>
     <Compile Include="Fusuarios.cs">
       <SubType>Form</SubType>
@@ -190,6 +201,9 @@
     <EmbeddedResource Include="FPagos-Empleados.resx">
       <DependentUpon>FPagos-Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frecetas.resx">
+      <DependentUpon>Frecetas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fusuarios.resx">
       <DependentUpon>Fusuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +244,17 @@
     </None>
     <None Include="DBDataSetcompras.xss">
       <DependentUpon>DBDataSetcompras.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSetrecetas.xsc">
+      <DependentUpon>DBDataSetrecetas.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSetrecetas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBDataSetrecetas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBDataSetrecetas.xss">
+      <DependentUpon>DBDataSetrecetas.xsd</DependentUpon>
     </None>
     <None Include="DBDataSetventas.xsc">
       <DependentUpon>DBDataSetventas.xsd</DependentUpon>

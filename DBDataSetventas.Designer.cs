@@ -4130,7 +4130,7 @@ namespace Torres_Anibal_Parcial.DBDataSetventasTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class dventasTableAdapter : global::System.ComponentModel.Component {
+    public partial class dventasTableAdapter1 : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4144,7 +4144,7 @@ namespace Torres_Anibal_Parcial.DBDataSetventasTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dventasTableAdapter() {
+        public dventasTableAdapter1() {
             this.ClearBeforeFill = true;
         }
         
@@ -6756,7 +6756,7 @@ FROM            dventas INNER JOIN
         
         private UpdateOrderOption _updateOrder;
         
-        private dventasTableAdapter _dventasTableAdapter;
+        private dventasTableAdapter1 _dventasTableAdapter1;
         
         private productosTableAdapter _productosTableAdapter;
         
@@ -6788,12 +6788,12 @@ FROM            dventas INNER JOIN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public dventasTableAdapter dventasTableAdapter {
+        public dventasTableAdapter1 dventasTableAdapter1 {
             get {
-                return this._dventasTableAdapter;
+                return this._dventasTableAdapter1;
             }
             set {
-                this._dventasTableAdapter = value;
+                this._dventasTableAdapter1 = value;
             }
         }
         
@@ -6886,9 +6886,9 @@ FROM            dventas INNER JOIN
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._dventasTableAdapter != null) 
-                            && (this._dventasTableAdapter.Connection != null))) {
-                    return this._dventasTableAdapter.Connection;
+                if (((this._dventasTableAdapter1 != null) 
+                            && (this._dventasTableAdapter1.Connection != null))) {
+                    return this._dventasTableAdapter1.Connection;
                 }
                 if (((this._productosTableAdapter != null) 
                             && (this._productosTableAdapter.Connection != null))) {
@@ -6923,7 +6923,7 @@ FROM            dventas INNER JOIN
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._dventasTableAdapter != null)) {
+                if ((this._dventasTableAdapter1 != null)) {
                     count = (count + 1);
                 }
                 if ((this._productosTableAdapter != null)) {
@@ -6997,12 +6997,12 @@ FROM            dventas INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._dventasTableAdapter != null)) {
+            if ((this._dventasTableAdapter1 != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.dventas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._dventasTableAdapter.Update(updatedRows));
+                    result = (result + this._dventasTableAdapter1.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7056,11 +7056,11 @@ FROM            dventas INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._dventasTableAdapter != null)) {
+            if ((this._dventasTableAdapter1 != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.dventas.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._dventasTableAdapter.Update(addedRows));
+                    result = (result + this._dventasTableAdapter1.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7074,11 +7074,11 @@ FROM            dventas INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(DBDataSetventas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._dventasTableAdapter != null)) {
+            if ((this._dventasTableAdapter1 != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.dventas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._dventasTableAdapter.Update(deletedRows));
+                    result = (result + this._dventasTableAdapter1.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7161,8 +7161,8 @@ FROM            dventas INNER JOIN
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._dventasTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dventasTableAdapter.Connection) == false))) {
+            if (((this._dventasTableAdapter1 != null) 
+                        && (this.MatchTableAdapterConnection(this._dventasTableAdapter1.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -7223,13 +7223,13 @@ FROM            dventas INNER JOIN
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._dventasTableAdapter != null)) {
-                    revertConnections.Add(this._dventasTableAdapter, this._dventasTableAdapter.Connection);
-                    this._dventasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dventasTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dventasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dventasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dventasTableAdapter.Adapter);
+                if ((this._dventasTableAdapter1 != null)) {
+                    revertConnections.Add(this._dventasTableAdapter1, this._dventasTableAdapter1.Connection);
+                    this._dventasTableAdapter1.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._dventasTableAdapter1.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._dventasTableAdapter1.Adapter.AcceptChangesDuringUpdate) {
+                        this._dventasTableAdapter1.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._dventasTableAdapter1.Adapter);
                     }
                 }
                 if ((this._productosTableAdapter != null)) {
@@ -7335,9 +7335,9 @@ FROM            dventas INNER JOIN
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._dventasTableAdapter != null)) {
-                    this._dventasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dventasTableAdapter]));
-                    this._dventasTableAdapter.Transaction = null;
+                if ((this._dventasTableAdapter1 != null)) {
+                    this._dventasTableAdapter1.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dventasTableAdapter1]));
+                    this._dventasTableAdapter1.Transaction = null;
                 }
                 if ((this._productosTableAdapter != null)) {
                     this._productosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._productosTableAdapter]));

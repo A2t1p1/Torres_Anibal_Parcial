@@ -15,6 +15,7 @@ namespace Torres_Anibal_Parcial
     {
         ConexionDB objConexion = new ConexionDB();
         public int _idproducto;
+        public string _nombrep, _codigo;
         public Fbusquedaproductos()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace Torres_Anibal_Parcial
             if (grdBusquedaproductos.RowCount > 0)
             {
                 _idproducto = int.Parse(grdBusquedaproductos.CurrentRow.Cells["idproducto"].Value.ToString());
+                _nombrep=grdBusquedaproductos.CurrentRow.Cells["nombrep"].Value.ToString();
+                _codigo=grdBusquedaproductos.CurrentRow.Cells["codigo"].Value.ToString();
                 Close();
             }
             else

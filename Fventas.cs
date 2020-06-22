@@ -14,7 +14,7 @@ namespace Torres_Anibal_Parcial
 {
     public partial class Fventas : Form
     {
-        private int _idventa = 0;
+        private int _idventa=0;
         public Fventas()
         {
             InitializeComponent();
@@ -31,12 +31,25 @@ namespace Torres_Anibal_Parcial
 
         private void Fventas_Load(object sender, EventArgs e)
         {
+           
             actualizarDS();
         }
         private void actualizarDS()
         {
             try
             {
+                // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.dventas' Puede moverla o quitarla según sea necesario.
+                this.dventasTableAdapter1.Fill(this.dBDataSetventas.dventas);
+                // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.detallesventas' Puede moverla o quitarla según sea necesario.
+                this.detallesventasTableAdapter.Fill(this.dBDataSetventas.detallesventas);
+                // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.tipodocumento' Puede moverla o quitarla según sea necesario.
+                this.tipodocumentoTableAdapter.Fill(this.dBDataSetventas.tipodocumento);
+                // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.tipospagos' Puede moverla o quitarla según sea necesario.
+                this.tipospagosTableAdapter.Fill(this.dBDataSetventas.tipospagos);
+                // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.usuarios' Puede moverla o quitarla según sea necesario.
+                this.usuariosTableAdapter.Fill(this.dBDataSetventas.usuarios);
+                // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.ventas' Puede moverla o quitarla según sea necesario.
+                this.ventasTableAdapter.Fill(this.dBDataSetventas.ventas);
                 // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.tipodocumento' Puede moverla o quitarla según sea necesario.
                 this.tipodocumentoTableAdapter.Fill(this.dBDataSetventas.tipodocumento);
                 // TODO: esta línea de código carga datos en la tabla 'dBDataSetventas.tipospagos' Puede moverla o quitarla según sea necesario.
@@ -120,12 +133,12 @@ namespace Torres_Anibal_Parcial
 
         private void habdes_controles(Boolean estado)
         {
-            idventaTextBox.Enabled = !estado;
+            idusuarioComboBox.Enabled = !estado;
             fechaventaDateTimePicker.Enabled = !estado;
             idtipoComboBox.Enabled = !estado;
             idtipopagoComboBox.Enabled = !estado;
-            nfvvComboBox.Enabled = !estado;
-
+            
+            nfvvTextBox.ReadOnly= estado;
             detallesventasDataGridView.ReadOnly = estado;
             pnlProductosGrid.Visible = !estado;
 
@@ -146,9 +159,8 @@ namespace Torres_Anibal_Parcial
                 ventasBindingSource.AddNew();
 
             }
-            else
             {
-               _idventa = int.Parse(idventaTextBox.Text);
+                //_idventa=int.Parse(idventaTextBox.Text);
                 this.Validate();
                 this.ventasBindingSource.EndEdit();
 
@@ -178,16 +190,16 @@ namespace Torres_Anibal_Parcial
 
                     
                     dventas[i, 0] = fila.Cells["idproducto"].Value.ToString();
-                    dventas[i, 2] = fila.Cells["cantidad"].Value.ToString();
-                    dventas[i, 3] = fila.Cells["precio"].Value.ToString();
-                    dventas[i, 4] = fila.Cells["descuento"].Value.ToString();
+                    dventas[i, 1] = fila.Cells["cantidad"].Value.ToString();
+                    dventas[i, 2] = fila.Cells["precio"].Value.ToString();
+                    dventas[i, 3] = fila.Cells["descuento"].Value.ToString();
                 }
                 this.tableAdapterManager.UpdateAll(this.dBDataSetventas);
 
                 for (int i = 0; i < nfilas; i++)
                 {
 
-                    dventasTableAdapter11.Insert(
+                    dventasTableAdapter1.Insert(
                         _idventa,
                         int.Parse( dventas [ i,0 ] ),
                         int.Parse( dventas [i,1 ] ),
@@ -196,6 +208,8 @@ namespace Torres_Anibal_Parcial
                         ) ;
                     
                 }
+                ventasTableAdapter.Connection.Close();
+
                 actualizarDS();
                 ventasBindingSource.MoveLast();
 
@@ -240,13 +254,24 @@ namespace Torres_Anibal_Parcial
             buscarProductos.ShowDialog();
             if (buscarProductos._idproducto > 0)
             {
-                detallesventasBindingSource1.AddNew();
+                detallesventasBindingSource.AddNew();
 
                 detallesventasDataGridView.CurrentRow.Cells["idproducto"].Value = buscarProductos._idproducto;
                 detallesventasDataGridView.CurrentRow.Cells["codigo"].Value = buscarProductos._codigo;
                 detallesventasDataGridView.CurrentRow.Cells["nombrep"].Value = buscarProductos._nombrep;
                 detallesventasDataGridView.CurrentRow.Cells["cantidad"].Value = 1;
             }   
+        }
+
+        private void detallesventasDataGridView_RowLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

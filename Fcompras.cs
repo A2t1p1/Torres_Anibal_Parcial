@@ -108,15 +108,14 @@ namespace Torres_Anibal_Parcial
 
         private void habdes_controles(Boolean estado)
         {
-            idcompraTextBox.Enabled = !estado;
-            nfacturacComboBox.Enabled = !estado;
             idproveedorComboBox.Enabled = !estado;
             idtipopagoComboBox.Enabled = !estado;
             fechapagoComboBox.Enabled = !estado;
             idtipoComboBox.Enabled = !estado;
 
+            nfacturacComboBox.Enabled = estado;
             detallescomprasDataGridView.ReadOnly = estado;
-            pnlComprasGrid.Visible = !estado;
+            pnlComprasGrid.Visible = estado;
 
             panel2.Visible = estado;
             btnEliminar.Enabled = estado;
@@ -125,17 +124,17 @@ namespace Torres_Anibal_Parcial
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (btnAgregar.Text == "nuevo")
+            if (btnAgregar.Text == "Nuevo")
             {
-                btnAgregar.Text = "guardar";
-                btnModificar.Text = "cancelar";
+                btnAgregar.Text = "Guardar";
+                btnModificar.Text = "Cancelar";
 
                 habdes_controles(false);
                 comprasBindingSource.AddNew();
             }
             else
             {
-                _idcompra = int.Parse(idcompraTextBox.Text);
+                _idcompra = Convert.ToInt32(idcompraTextBox.Text);
                 this.Validate();
                 this.comprasBindingSource.EndEdit();
 
@@ -180,22 +179,24 @@ namespace Torres_Anibal_Parcial
                         int.Parse(dventas[i, 3])
                     );
                 }
+
+                comprasTableAdapter.Connection.Close();
                 actualizar();
                 comprasBindingSource.MoveLast();
 
                 habdes_controles(true);
-                btnAgregar.Text = "nuevo";
-                btnModificar.Text = "modificar";
+                btnAgregar.Text = "Nuevo";
+                btnModificar.Text = "Modificar";
             }
 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (btnModificar.Text == "modificar")
+            if (btnModificar.Text == "Modificar")
             {
-                btnAgregar.Text = "guardar";
-                btnModificar.Text = "cancelar";
+                btnAgregar.Text = "Guardar";
+                btnModificar.Text = "Cancelar";
 
                 habdes_controles(false);
             }
@@ -205,8 +206,8 @@ namespace Torres_Anibal_Parcial
                 detallescomprasBindingSource.CancelEdit();
 
                 habdes_controles(true);
-                btnAgregar.Text = "nuevo";
-                btnModificar.Text = "modificar";
+                btnAgregar.Text = "Nuevo";
+                btnModificar.Text = "Modificar";
             }
 
         }

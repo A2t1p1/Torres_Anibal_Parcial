@@ -33,8 +33,8 @@
             System.Windows.Forms.Label fechaventaLabel;
             System.Windows.Forms.Label idtipopagoLabel;
             System.Windows.Forms.Label idusuarioLabel;
-            System.Windows.Forms.Label nfvvLabel;
             System.Windows.Forms.Label idventaLabel;
+            System.Windows.Forms.Label nfvvLabel1;
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblregistroxden = new System.Windows.Forms.Label();
             this.btnUltimo = new System.Windows.Forms.Button();
@@ -56,54 +56,54 @@
             this.pnlProductosGrid = new System.Windows.Forms.Panel();
             this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
             this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
+            this.idtipoComboBox = new System.Windows.Forms.ComboBox();
+            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSetventas = new Torres_Anibal_Parcial.DBDataSetventas();
             this.tipodocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fechaventaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.idtipopagoComboBox = new System.Windows.Forms.ComboBox();
             this.tipospagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idusuarioComboBox = new System.Windows.Forms.ComboBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.detallesventasTableAdapter = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.detallesventasTableAdapter();
-            this.detallesventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idventaTextBox = new System.Windows.Forms.TextBox();
+            this.ventasTableAdapter = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.ventasTableAdapter();
             this.usuariosTableAdapter = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.usuariosTableAdapter();
             this.tipospagosTableAdapter = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.tipospagosTableAdapter();
             this.tipodocumentoTableAdapter = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.tipodocumentoTableAdapter();
+            this.detallesventasTableAdapter = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.detallesventasTableAdapter();
             this.tableAdapterManager = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.TableAdapterManager();
-            this.ventasTableAdapter = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.ventasTableAdapter();
-            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBDataSetventas = new Torres_Anibal_Parcial.DBDataSetventas();
-            this.idtipoComboBox = new System.Windows.Forms.ComboBox();
-            this.fechaventaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.idtipopagoComboBox = new System.Windows.Forms.ComboBox();
-            this.idusuarioComboBox = new System.Windows.Forms.ComboBox();
-            this.nfvvComboBox = new System.Windows.Forms.ComboBox();
-            this.idventaTextBox = new System.Windows.Forms.TextBox();
-            this.dventasTableAdapter11 = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.dventasTableAdapter1();
-            this.detallesventasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dventasTableAdapter1 = new Torres_Anibal_Parcial.DBDataSetventasTableAdapters.dventasTableAdapter1();
             this.detallesventasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nfvvTextBox = new System.Windows.Forms.TextBox();
+            this.detallesventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iddetalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idventaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idtipoLabel = new System.Windows.Forms.Label();
             fechaventaLabel = new System.Windows.Forms.Label();
             idtipopagoLabel = new System.Windows.Forms.Label();
             idusuarioLabel = new System.Windows.Forms.Label();
-            nfvvLabel = new System.Windows.Forms.Label();
             idventaLabel = new System.Windows.Forms.Label();
+            nfvvLabel1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlEdicion.SuspendLayout();
             this.pnlProductosGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetventas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipospagosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesventasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetventas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesventasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesventasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dventasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesventasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idtipoLabel
@@ -141,15 +141,6 @@
             idusuarioLabel.Size = new System.Drawing.Size(52, 13);
             idusuarioLabel.TabIndex = 37;
             idusuarioLabel.Text = "idusuario:";
-            // 
-            // nfvvLabel
-            // 
-            nfvvLabel.AutoSize = true;
-            nfvvLabel.Location = new System.Drawing.Point(143, 14);
-            nfvvLabel.Name = "nfvvLabel";
-            nfvvLabel.Size = new System.Drawing.Size(31, 13);
-            nfvvLabel.TabIndex = 35;
-            nfvvLabel.Text = "nfvv:";
             // 
             // idventaLabel
             // 
@@ -369,21 +360,91 @@
             this.btnAgregarProductosGrid.UseVisualStyleBackColor = true;
             this.btnAgregarProductosGrid.Click += new System.EventHandler(this.btnAgregarProductosGrid_Click);
             // 
+            // idtipoComboBox
+            // 
+            this.idtipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventasBindingSource, "idtipo", true));
+            this.idtipoComboBox.DataSource = this.tipodocumentoBindingSource;
+            this.idtipoComboBox.DisplayMember = "tipo";
+            this.idtipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.idtipoComboBox.Enabled = false;
+            this.idtipoComboBox.FormattingEnabled = true;
+            this.idtipoComboBox.Location = new System.Drawing.Point(586, 55);
+            this.idtipoComboBox.Name = "idtipoComboBox";
+            this.idtipoComboBox.Size = new System.Drawing.Size(100, 21);
+            this.idtipoComboBox.TabIndex = 44;
+            this.idtipoComboBox.ValueMember = "idtipo";
+            // 
+            // ventasBindingSource
+            // 
+            this.ventasBindingSource.DataMember = "ventas";
+            this.ventasBindingSource.DataSource = this.dBDataSetventas;
+            // 
+            // dBDataSetventas
+            // 
+            this.dBDataSetventas.DataSetName = "DBDataSetventas";
+            this.dBDataSetventas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tipodocumentoBindingSource
             // 
             this.tipodocumentoBindingSource.DataMember = "tipodocumento";
+            this.tipodocumentoBindingSource.DataSource = this.dBDataSetventas;
+            // 
+            // fechaventaDateTimePicker
+            // 
+            this.fechaventaDateTimePicker.Enabled = false;
+            this.fechaventaDateTimePicker.Location = new System.Drawing.Point(486, 12);
+            this.fechaventaDateTimePicker.Name = "fechaventaDateTimePicker";
+            this.fechaventaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaventaDateTimePicker.TabIndex = 42;
+            // 
+            // idtipopagoComboBox
+            // 
+            this.idtipopagoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventasBindingSource, "idtipopago", true));
+            this.idtipopagoComboBox.DataSource = this.tipospagosBindingSource;
+            this.idtipopagoComboBox.DisplayMember = "tipopago";
+            this.idtipopagoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.idtipopagoComboBox.Enabled = false;
+            this.idtipopagoComboBox.FormattingEnabled = true;
+            this.idtipopagoComboBox.Location = new System.Drawing.Point(384, 52);
+            this.idtipopagoComboBox.Name = "idtipopagoComboBox";
+            this.idtipopagoComboBox.Size = new System.Drawing.Size(101, 21);
+            this.idtipopagoComboBox.TabIndex = 40;
+            this.idtipopagoComboBox.ValueMember = "idtipopago";
             // 
             // tipospagosBindingSource
             // 
             this.tipospagosBindingSource.DataMember = "tipospagos";
+            this.tipospagosBindingSource.DataSource = this.dBDataSetventas;
+            // 
+            // idusuarioComboBox
+            // 
+            this.idusuarioComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventasBindingSource, "idusuario", true));
+            this.idusuarioComboBox.DataSource = this.usuariosBindingSource;
+            this.idusuarioComboBox.DisplayMember = "nombre";
+            this.idusuarioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.idusuarioComboBox.Enabled = false;
+            this.idusuarioComboBox.FormattingEnabled = true;
+            this.idusuarioComboBox.Location = new System.Drawing.Point(75, 49);
+            this.idusuarioComboBox.Name = "idusuarioComboBox";
+            this.idusuarioComboBox.Size = new System.Drawing.Size(200, 21);
+            this.idusuarioComboBox.TabIndex = 38;
+            this.idusuarioComboBox.ValueMember = "idusuario";
             // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.dBDataSetventas;
             // 
-            // detallesventasTableAdapter
+            // idventaTextBox
             // 
-            this.detallesventasTableAdapter.ClearBeforeFill = true;
+            this.idventaTextBox.Location = new System.Drawing.Point(75, 12);
+            this.idventaTextBox.Name = "idventaTextBox";
+            this.idventaTextBox.Size = new System.Drawing.Size(41, 20);
+            this.idventaTextBox.TabIndex = 34;
+            // 
+            // ventasTableAdapter
+            // 
+            this.ventasTableAdapter.ClearBeforeFill = true;
             // 
             // usuariosTableAdapter
             // 
@@ -397,10 +458,14 @@
             // 
             this.tipodocumentoTableAdapter.ClearBeforeFill = true;
             // 
+            // detallesventasTableAdapter
+            // 
+            this.detallesventasTableAdapter.ClearBeforeFill = true;
+            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.dventasTableAdapter1 = null;
+            this.tableAdapterManager.dventasTableAdapter1 = this.dventasTableAdapter1;
             this.tableAdapterManager.productosTableAdapter = null;
             this.tableAdapterManager.tipodocumentoTableAdapter = this.tipodocumentoTableAdapter;
             this.tableAdapterManager.tipospagosTableAdapter = this.tipospagosTableAdapter;
@@ -408,175 +473,123 @@
             this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
             this.tableAdapterManager.ventasTableAdapter = this.ventasTableAdapter;
             // 
-            // ventasTableAdapter
+            // dventasTableAdapter1
             // 
-            this.ventasTableAdapter.ClearBeforeFill = true;
-            // 
-            // ventasBindingSource
-            // 
-            this.ventasBindingSource.DataMember = "ventas";
-            // 
-            // dBDataSetventas
-            // 
-            this.dBDataSetventas.DataSetName = "DBDataSetventas";
-            this.dBDataSetventas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // idtipoComboBox
-            // 
-            this.idtipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "idtipo", true));
-            this.idtipoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventasBindingSource, "idtipo", true));
-            this.idtipoComboBox.DataSource = this.tipodocumentoBindingSource;
-            this.idtipoComboBox.DisplayMember = "tipo";
-            this.idtipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.idtipoComboBox.FormattingEnabled = true;
-            this.idtipoComboBox.Location = new System.Drawing.Point(586, 55);
-            this.idtipoComboBox.Name = "idtipoComboBox";
-            this.idtipoComboBox.Size = new System.Drawing.Size(100, 21);
-            this.idtipoComboBox.TabIndex = 44;
-            this.idtipoComboBox.ValueMember = "idtipo";
-            // 
-            // fechaventaDateTimePicker
-            // 
-            this.fechaventaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.ventasBindingSource, "fechaventa", true));
-            this.fechaventaDateTimePicker.Location = new System.Drawing.Point(486, 12);
-            this.fechaventaDateTimePicker.Name = "fechaventaDateTimePicker";
-            this.fechaventaDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fechaventaDateTimePicker.TabIndex = 42;
-            // 
-            // idtipopagoComboBox
-            // 
-            this.idtipopagoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "idtipopago", true));
-            this.idtipopagoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventasBindingSource, "idtipopago", true));
-            this.idtipopagoComboBox.DataSource = this.tipospagosBindingSource;
-            this.idtipopagoComboBox.DisplayMember = "tipopago";
-            this.idtipopagoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.idtipopagoComboBox.FormattingEnabled = true;
-            this.idtipopagoComboBox.Location = new System.Drawing.Point(384, 52);
-            this.idtipopagoComboBox.Name = "idtipopagoComboBox";
-            this.idtipopagoComboBox.Size = new System.Drawing.Size(101, 21);
-            this.idtipopagoComboBox.TabIndex = 40;
-            this.idtipopagoComboBox.ValueMember = "idtipopago";
-            // 
-            // idusuarioComboBox
-            // 
-            this.idusuarioComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "idusuario", true));
-            this.idusuarioComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventasBindingSource, "idusuario", true));
-            this.idusuarioComboBox.DataSource = this.usuariosBindingSource;
-            this.idusuarioComboBox.DisplayMember = "nombre";
-            this.idusuarioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.idusuarioComboBox.FormattingEnabled = true;
-            this.idusuarioComboBox.Location = new System.Drawing.Point(75, 49);
-            this.idusuarioComboBox.Name = "idusuarioComboBox";
-            this.idusuarioComboBox.Size = new System.Drawing.Size(200, 21);
-            this.idusuarioComboBox.TabIndex = 38;
-            this.idusuarioComboBox.ValueMember = "idusuario";
-            // 
-            // nfvvComboBox
-            // 
-            this.nfvvComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "nfvv", true));
-            this.nfvvComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ventasBindingSource, "idventa", true));
-            this.nfvvComboBox.DataSource = this.ventasBindingSource;
-            this.nfvvComboBox.DisplayMember = "nfvv";
-            this.nfvvComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.nfvvComboBox.FormattingEnabled = true;
-            this.nfvvComboBox.Location = new System.Drawing.Point(213, 11);
-            this.nfvvComboBox.Name = "nfvvComboBox";
-            this.nfvvComboBox.Size = new System.Drawing.Size(42, 21);
-            this.nfvvComboBox.TabIndex = 36;
-            this.nfvvComboBox.ValueMember = "idventa";
-            // 
-            // idventaTextBox
-            // 
-            this.idventaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "idventa", true));
-            this.idventaTextBox.Location = new System.Drawing.Point(75, 12);
-            this.idventaTextBox.Name = "idventaTextBox";
-            this.idventaTextBox.Size = new System.Drawing.Size(41, 20);
-            this.idventaTextBox.TabIndex = 34;
-            // 
-            // dventasTableAdapter11
-            // 
-            this.dventasTableAdapter11.ClearBeforeFill = true;
-            // 
-            // detallesventasBindingSource1
-            // 
-            this.detallesventasBindingSource1.DataMember = "detallesventas";
-            this.detallesventasBindingSource1.DataSource = this.dBDataSetventas;
+            this.dventasTableAdapter1.ClearBeforeFill = true;
             // 
             // detallesventasDataGridView
             // 
+            this.detallesventasDataGridView.AllowUserToAddRows = false;
+            this.detallesventasDataGridView.AllowUserToDeleteRows = false;
             this.detallesventasDataGridView.AutoGenerateColumns = false;
             this.detallesventasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.detallesventasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.detallesventasDataGridView.DataSource = this.detallesventasBindingSource1;
-            this.detallesventasDataGridView.Location = new System.Drawing.Point(8, 124);
+            this.codigoDataGridViewTextBoxColumn,
+            this.nombre,
+            this.cantidad,
+            this.descuento,
+            this.precio,
+            this.subtotal,
+            this.idproducto,
+            this.iddetalleDataGridViewTextBoxColumn,
+            this.idventaDataGridViewTextBoxColumn});
+            this.detallesventasDataGridView.DataSource = this.detallesventasBindingSource;
+            this.detallesventasDataGridView.Location = new System.Drawing.Point(24, 103);
             this.detallesventasDataGridView.Name = "detallesventasDataGridView";
-            this.detallesventasDataGridView.Size = new System.Drawing.Size(717, 189);
+            this.detallesventasDataGridView.ReadOnly = true;
+            this.detallesventasDataGridView.Size = new System.Drawing.Size(643, 220);
             this.detallesventasDataGridView.TabIndex = 48;
+            this.detallesventasDataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.detallesventasDataGridView_RowLeave);
             // 
-            // dataGridViewTextBoxColumn1
+            // dventasBindingSource
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "iddetalle";
-            this.dataGridViewTextBoxColumn1.HeaderText = "iddetalle";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dventasBindingSource.DataMember = "FK_dventas_ventas";
+            this.dventasBindingSource.DataSource = this.ventasBindingSource;
             // 
-            // dataGridViewTextBoxColumn2
+            // nfvvLabel1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "idventa";
-            this.dataGridViewTextBoxColumn2.HeaderText = "idventa";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            nfvvLabel1.AutoSize = true;
+            nfvvLabel1.Location = new System.Drawing.Point(194, 17);
+            nfvvLabel1.Name = "nfvvLabel1";
+            nfvvLabel1.Size = new System.Drawing.Size(31, 13);
+            nfvvLabel1.TabIndex = 48;
+            nfvvLabel1.Text = "nfvv:";
             // 
-            // dataGridViewTextBoxColumn3
+            // nfvvTextBox
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "idproducto";
-            this.dataGridViewTextBoxColumn3.HeaderText = "idproducto";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.nfvvTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "nfvv", true));
+            this.nfvvTextBox.Location = new System.Drawing.Point(231, 14);
+            this.nfvvTextBox.Name = "nfvvTextBox";
+            this.nfvvTextBox.Size = new System.Drawing.Size(65, 20);
+            this.nfvvTextBox.TabIndex = 49;
             // 
-            // dataGridViewTextBoxColumn4
+            // detallesventasBindingSource
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "cantidad";
-            this.dataGridViewTextBoxColumn4.HeaderText = "cantidad";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.detallesventasBindingSource.DataMember = "FK_dventas_ventas1";
+            this.detallesventasBindingSource.DataSource = this.ventasBindingSource;
             // 
-            // dataGridViewTextBoxColumn5
+            // codigoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "descuento";
-            this.dataGridViewTextBoxColumn5.HeaderText = "descuento";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // nombre
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "precio";
-            this.dataGridViewTextBoxColumn6.HeaderText = "precio";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // cantidad
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "codigo";
-            this.dataGridViewTextBoxColumn7.HeaderText = "codigo";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.cantidad.DataPropertyName = "cantidad";
+            this.cantidad.HeaderText = "cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // descuento
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn8.HeaderText = "nombre";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.descuento.DataPropertyName = "descuento";
+            this.descuento.HeaderText = "descuento";
+            this.descuento.Name = "descuento";
+            this.descuento.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn9
+            // precio
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "subtotal";
-            this.dataGridViewTextBoxColumn9.HeaderText = "subtotal";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.precio.DataPropertyName = "precio";
+            this.precio.HeaderText = "precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.DataPropertyName = "subtotal";
+            this.subtotal.HeaderText = "subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            // 
+            // idproducto
+            // 
+            this.idproducto.DataPropertyName = "idproducto";
+            this.idproducto.HeaderText = "idproducto";
+            this.idproducto.Name = "idproducto";
+            this.idproducto.ReadOnly = true;
+            // 
+            // iddetalleDataGridViewTextBoxColumn
+            // 
+            this.iddetalleDataGridViewTextBoxColumn.DataPropertyName = "iddetalle";
+            this.iddetalleDataGridViewTextBoxColumn.HeaderText = "iddetalle";
+            this.iddetalleDataGridViewTextBoxColumn.Name = "iddetalleDataGridViewTextBoxColumn";
+            this.iddetalleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idventaDataGridViewTextBoxColumn
+            // 
+            this.idventaDataGridViewTextBoxColumn.DataPropertyName = "idventa";
+            this.idventaDataGridViewTextBoxColumn.HeaderText = "idventa";
+            this.idventaDataGridViewTextBoxColumn.Name = "idventaDataGridViewTextBoxColumn";
+            this.idventaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Fventas
             // 
@@ -584,13 +597,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(737, 509);
+            this.Controls.Add(nfvvLabel1);
+            this.Controls.Add(this.nfvvTextBox);
             this.Controls.Add(this.detallesventasDataGridView);
             this.Controls.Add(this.pnlProductosGrid);
             this.Controls.Add(this.pnlEdicion);
             this.Controls.Add(idventaLabel);
             this.Controls.Add(this.idventaTextBox);
-            this.Controls.Add(nfvvLabel);
-            this.Controls.Add(this.nfvvComboBox);
             this.Controls.Add(idusuarioLabel);
             this.Controls.Add(this.idusuarioComboBox);
             this.Controls.Add(idtipopagoLabel);
@@ -611,14 +624,14 @@
             this.panel1.PerformLayout();
             this.pnlEdicion.ResumeLayout(false);
             this.pnlProductosGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetventas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipospagosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesventasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetventas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detallesventasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesventasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dventasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesventasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,27 +659,11 @@
         private System.Windows.Forms.Panel pnlProductosGrid;
         private System.Windows.Forms.Button btnQuitarProductosGrid;
         private System.Windows.Forms.Button btnAgregarProductosGrid;
-        private System.Windows.Forms.BindingSource tipodocumentoBindingSource;
-        private System.Windows.Forms.BindingSource tipospagosBindingSource;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private DBDataSetventasTableAdapters.detallesventasTableAdapter detallesventasTableAdapter;
-        private System.Windows.Forms.BindingSource detallesventasBindingSource;
-        private DBDataSetventasTableAdapters.usuariosTableAdapter usuariosTableAdapter;
-        private DBDataSetventasTableAdapters.tipospagosTableAdapter tipospagosTableAdapter;
-        private DBDataSetventasTableAdapters.tipodocumentoTableAdapter tipodocumentoTableAdapter;
-        private DBDataSetventasTableAdapters.TableAdapterManager tableAdapterManager;
-        private DBDataSetventasTableAdapters.ventasTableAdapter ventasTableAdapter;
-        private System.Windows.Forms.BindingSource ventasBindingSource;
-        private DBDataSetventas dBDataSetventas;
         private System.Windows.Forms.ComboBox idtipoComboBox;
         private System.Windows.Forms.DateTimePicker fechaventaDateTimePicker;
         private System.Windows.Forms.ComboBox idtipopagoComboBox;
         private System.Windows.Forms.ComboBox idusuarioComboBox;
-        private System.Windows.Forms.ComboBox nfvvComboBox;
         private System.Windows.Forms.TextBox idventaTextBox;
-        private DBDataSetventasTableAdapters.dventasTableAdapter1 dventasTableAdapter11;
-        private System.Windows.Forms.BindingSource detallesventasBindingSource1;
-        private System.Windows.Forms.DataGridView detallesventasDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -676,5 +673,30 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DBDataSetventas dBDataSetventas;
+        private System.Windows.Forms.BindingSource ventasBindingSource;
+        private DBDataSetventasTableAdapters.ventasTableAdapter ventasTableAdapter;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private DBDataSetventasTableAdapters.usuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource tipospagosBindingSource;
+        private DBDataSetventasTableAdapters.tipospagosTableAdapter tipospagosTableAdapter;
+        private System.Windows.Forms.BindingSource tipodocumentoBindingSource;
+        private DBDataSetventasTableAdapters.tipodocumentoTableAdapter tipodocumentoTableAdapter;
+        private DBDataSetventasTableAdapters.detallesventasTableAdapter detallesventasTableAdapter;
+        private DBDataSetventasTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView detallesventasDataGridView;
+        private DBDataSetventasTableAdapters.dventasTableAdapter1 dventasTableAdapter1;
+        private System.Windows.Forms.BindingSource dventasBindingSource;
+        private System.Windows.Forms.TextBox nfvvTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idventaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource detallesventasBindingSource;
     }
 }
